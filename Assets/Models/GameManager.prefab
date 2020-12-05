@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &979090563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 979090564}
+  m_Layer: 0
+  m_Name: ObjectPools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &979090564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979090563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 108342419496094505}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &108342419496094507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 108342419496094505}
+  - component: {fileID: 108342419496094506}
+  - component: {fileID: 108342419496094504}
+  - component: {fileID: 108342419496094511}
+  - component: {fileID: 108342419496094510}
+  - component: {fileID: 108342419496094509}
+  - component: {fileID: 108342419496094508}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &108342419496094505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108342419496094507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4093729, y: 1.2007607, z: -0.10543421}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 979090564}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108342419496094506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108342419496094507}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab81a33bb2557a4bb485000e5b522de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponDB: {fileID: 0}
+  weaponFactory: {fileID: 0}
+  playerWM: {fileID: 0}
+--- !u!114 &108342419496094504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108342419496094507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366a52feca81c7140868f411e25a6415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a02: {fileID: 22100000, guid: df1e14ca0d2c61249a89bd5070d0c7db, type: 2}
+  a03: {fileID: 22100000, guid: dd08c74cb1f7cee4294062ef468ab5ba, type: 2}
+  sword2H: {fileID: 22100000, guid: e3b4fb069c9fed848bf468dd4295d028, type: 2}
+  great2H: {fileID: 22100000, guid: 222ee9bce171cba4bae71141140be29b, type: 2}
+  bow: {fileID: 22100000, guid: 07188bc1d0c6b734d96d88994a8a4242, type: 2}
+  shield_Fists: {fileID: 22100000, guid: 281f2017025e0734081021a674ef339f, type: 2}
+--- !u!114 &108342419496094511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108342419496094507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93632eb8043efe48b392f29d0c28a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objNames:
+  - name: Blood
+    capacity: 6
+  - name: Spark
+    capacity: 15
+  - name: Arrow_stick
+    capacity: 6
+--- !u!114 &108342419496094510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108342419496094507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392d0c5c6f224e1408966997cf09db92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &108342419496094509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108342419496094507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b315f43e88de5941b2c5f4a0dfe5ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &108342419496094508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108342419496094507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e8adf91a9015546ac72ca98ec0ffc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a23attack:
+  - {fileID: 8300000, guid: 84ea9bb40fe9d764488147d92cc4f128, type: 3}
+  - {fileID: 8300000, guid: d65c6ff96ed0a7248b8343ecb67c1ea2, type: 3}
+  shield:
+  - {fileID: 8300000, guid: 964da91028386174ebe66a366756bf4c, type: 3}
+  - {fileID: 8300000, guid: bae4308b30416ab469350c7a96637220, type: 3}
+  counter_succesful: {fileID: 8300000, guid: 660d668b88f414a4fbac19dc28cf187c, type: 3}
+  heal: {fileID: 8300000, guid: 3e8dc1a7030fa874595af628df200fe9, type: 3}
+  Bow_shoot: {fileID: 8300000, guid: c1eba2e88ccb8844d92ed9fe5c4893c6, type: 3}
+  pickUp: {fileID: 8300000, guid: 6fe6626faaadbfb4b8efa44219631ff4, type: 3}

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Administrator\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_DS_Remasted.1018123349.00" t="ExcludeRecursive" />
+    <e p="D:\Unity Projects\DS_Remasted" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AllSkyFree" t="Include">
+          <e p="AllSkyFree_Menu.cs" t="Include" />
+          <e p="AllSkyFree_Readme.txt" t="Include" />
+        </e>
+        <e p="DotPos.cs" t="Include" />
+        <e p="JSON" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JSONChecker.cs" t="Include" />
+          </e>
+          <e p="JSONObject.cs" t="Include" />
+          <e p="readme.txt" t="Include" />
+          <e p="VectorTemplates.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Weapon" t="Include">
+            <e p="Free medieval weapons" t="Include">
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="MyPlayable" t="Include">
+          <e p="Editor" t="Include">
+            <e p="MyPlayableDrawer.cs" t="Include" />
+          </e>
+          <e p="MyPlayableBehaviour.cs" t="Include" />
+          <e p="MyPlayableClip.cs" t="Include" />
+          <e p="MyPlayableMixerBehaviour.cs" t="Include" />
+          <e p="MyPlayableTrack.cs" t="Include" />
+        </e>
+        <e p="OrbitCamera.cs" t="Include" />
+        <e p="ParticleTest.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="ActorController.cs" t="Include" />
+          <e p="ActorInput.cs" t="Include" />
+          <e p="ActorManager.cs" t="Include" />
+          <e p="AIController.cs" t="Include" />
+          <e p="AILancer.cs" t="Include" />
+          <e p="AISniper.cs" t="Include" />
+          <e p="AnimatorFactory.cs" t="Include" />
+          <e p="Arrow.cs" t="Include" />
+          <e p="Artorias.cs" t="Include" />
+          <e p="ArtoriasControllor.cs" t="Include" />
+          <e p="BaseStates.cs" t="Include" />
+          <e p="BattleManager.cs" t="Include" />
+          <e p="CameraController.cs" t="Include" />
+          <e p="CloseOffFatherCol.cs" t="Include" />
+          <e p="Damage.cs" t="Include" />
+          <e p="Database.cs" t="Include" />
+          <e p="DirectorManager.cs" t="Include" />
+          <e p="EnemyHealthBar.cs" t="Include" />
+          <e p="EventCasterManager.cs" t="Include" />
+          <e p="FixedPosition.cs" t="Include" />
+          <e p="FSMClearSignals.cs" t="Include" />
+          <e p="FSMManager.cs" t="Include" />
+          <e p="FSMOnEnter.cs" t="Include" />
+          <e p="FSMOnExit.cs" t="Include" />
+          <e p="FSMOnUpdate.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="GroundChecker.cs" t="Include" />
+          <e p="IActorManagerInterface.cs" t="Include" />
+          <e p="IInput.cs" t="Include" />
+          <e p="InteractionManager.cs" t="Include" />
+          <e p="InventoryManager.cs" t="Include" />
+          <e p="ItemFactory.cs" t="Include" />
+          <e p="ItemOnGround.cs" t="Include" />
+          <e p="ObjectPool.cs" t="Include" />
+          <e p="OnDrawUpdate.cs" t="Include" />
+          <e p="PlayerInput.cs" t="Include" />
+          <e p="SimpleCameraController.cs" t="Include" />
+          <e p="SoundFactory.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
+          <e p="StateManager.cs" t="Include" />
+          <e p="TimeExtendMethod.cs" t="Include" />
+          <e p="TransfromHelper.cs" t="Include" />
+          <e p="TriggerController.cs" t="Include" />
+          <e p="UIManager.cs" t="Include" />
+          <e p="VFXToggle.cs" t="Include" />
+          <e p="VirutalPlayerInput.cs" t="Include" />
+          <e p="WeaponController.cs" t="Include" />
+          <e p="WeaponData.cs" t="Include" />
+          <e p="WeaponFactory.cs" t="Include" />
+          <e p="WeaponManager.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="TutorialInfo" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ReadmeEditor.cs" t="Include" />
+            </e>
+            <e p="Readme.cs" t="Include" />
+          </e>
+        </e>
+        <e p="VFX" t="Include">
+          <e p="KriptoFX" t="Include">
+            <e p="MeshEffect" t="Include">
+              <e p="DemoResources" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="ME_DemoGUI.cs" t="Include" />
+                  <e p="ME_MouseOrbit.cs" t="Include" />
+                  <e p="ME_RealtimeReflection.cs" t="Include" />
+                </e>
+              </e>
+              <e p="readme.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="MeshRendererEditor.cs" t="Include" />
+                </e>
+                <e p="Helpers" t="Include">
+                  <e p="ME_AnimatorEvents.cs" t="Include" />
+                  <e p="ME_ColorHelper.cs" t="Include" />
+                  <e p="ME_EffectSettingColor.cs" t="Include" />
+                </e>
+                <e p="ME_CustomLight.cs" t="Include" />
+                <e p="ME_FixParticlesAligment.cs" t="Include" />
+                <e p="ME_LightCurves.cs" t="Include" />
+                <e p="ME_MeshMaterialEffect.cs" t="Include" />
+                <e p="ME_ParticleCollisionDecal.cs" t="Include" />
+                <e p="ME_ParticleGravityPoint.cs" t="Include" />
+                <e p="ME_ParticleTrails.cs" t="Include" />
+                <e p="ME_Reflection.cs" t="Include" />
+                <e p="ME_TrailRendererNoise.cs" t="Include" />
+                <e p="PSMeshRendererUpdater.cs" t="Include" />
+                <e p="Rendering" t="Include">
+                  <e p="ME_PerPlatformSettings.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="ME_CustomShaderGUI.cs" t="Include" />
+                  <e p="ME_UberParticleGUI.cs" t="Include" />
+                </e>
+                <e p="ME_DistortionPasses.cginc" t="Include" />
+                <e p="ME_DistortionPerlin.shader" t="Include" />
+                <e p="ME_DistortionSlime.shader" t="Include" />
+                <e p="ME_GlowCutout.shader" t="Include" />
+                <e p="ME_GlowCutoutGradient.shader" t="Include" />
+                <e p="ME_Gold.shader" t="Include" />
+                <e p="ME_LightningParticles.shader" t="Include" />
+                <e p="ME_UberDistortionStandard.shader" t="Include" />
+                <e p="ME_UberParticleShader.shader" t="Include" />
+              </e>
+            </e>
+            <e p="VolumetricBloodFX" t="Include">
+              <e p="DemoScene" t="Include">
+                <e p="BFX_DemoTest.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="BFX_BloodDecalLayers.cs" t="Include" />
+                <e p="BFX_BloodSettings.cs" t="Include" />
+                <e p="BFX_DecaGizmo.cs" t="Include" />
+                <e p="BFX_DecalSettings.cs" t="Include" />
+                <e p="BFX_ManualAnimationUpdate.cs" t="Include" />
+                <e p="BFX_MouseOrbit.cs" t="Include" />
+                <e p="BFX_RenderDepth.cs" t="Include" />
+                <e p="BFX_ShaderProperies.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="BFX_Blood.shader" t="Include" />
+                <e p="BFX_Decal.shader" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="XWeaponTrail" t="Include">
+            <e p="Editor" t="Include">
+              <e p="XWeaponTrailEditor.cs" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Spline.cs" t="Include" />
+              <e p="SplineControlPoint.cs" t="Include" />
+              <e p="VertexPool.cs" t="Include" />
+              <e p="XWeaponTrail.cs" t="Include" />
+              <e p="XWeaponTrailDemo.cs" t="Include" />
+            </e>
+            <e p="Shader" t="Include">
+              <e p="xft_displacement_screen.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="WeaponAddDynamic.cs" t="Include" />
+      </e>
+      <e p="DS_Remasted.sln" t="IncludeFlat" />
+      <e p="LocalPackages" t="Include">
+        <e p="com.unity.render-pipelines.high-definition-config" t="Include">
+          <e p="Runtime" t="Include">
+            <e p="ShaderConfig.cs" t="Include" />
+            <e p="ShaderConfig.cs.hlsl" t="Include" />
+            <e p="Unity.RenderPipelines.HighDefinition.Config.Runtime.asmdef" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>

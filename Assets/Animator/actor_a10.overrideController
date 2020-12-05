@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: actor_a10
+  m_Controller: {fileID: 9100000, guid: c67a942b11f0c5a4288f8b45786cae3c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 2207850806306222022, guid: 1de965f799c83754ea031193e40d1f03,
+      type: 3}
+    m_OverrideClip: {fileID: 2207850806306222022, guid: 8cd31b56c8d40a34c94b9188d302d5bd,
+      type: 3}
+  - m_OriginalClip: {fileID: 2207850806306222022, guid: 2a75a5c9bcd5c7e4aaa144d0eb85fa74,
+      type: 3}
+    m_OverrideClip: {fileID: 2207850806306222022, guid: 98f894d48026c044ab2b8519ade3787f,
+      type: 3}
+  - m_OriginalClip: {fileID: 2207850806306222022, guid: e939ebd5bf2c214438cb41447b8efdc8,
+      type: 3}
+    m_OverrideClip: {fileID: 2207850806306222022, guid: afa5373de18abc24bb3db3eb9b4a9f40,
+      type: 3}
+  - m_OriginalClip: {fileID: 2207850806306222022, guid: f40b7fb671398c24fa0f063b6ece56ca,
+      type: 3}
+    m_OverrideClip: {fileID: 2207850806306222022, guid: d5b3c7ddb1d6573418cf428df70525f5,
+      type: 3}
+  - m_OriginalClip: {fileID: 2207850806306222022, guid: 8f14a58f23a367b4a860b2e4d4fa130d,
+      type: 3}
+    m_OverrideClip: {fileID: 2207850806306222022, guid: 255fbb442a6aff64088b8b4f9b6b4bd2,
+      type: 3}
+  - m_OriginalClip: {fileID: 2207850806306222022, guid: 66be26aa4e37ba5498bf9a931768257d,
+      type: 3}
+    m_OverrideClip: {fileID: 2207850806306222022, guid: 02a973bb564d1684cb2238ed824ba60b,
+      type: 3}
+  - m_OriginalClip: {fileID: 2207850806306222022, guid: f692c5315eafe0745baa14d39c12e793,
+      type: 3}
+    m_OverrideClip: {fileID: 2207850806306222022, guid: 8d144584188dcb54faf49cde1dfc1e55,
+      type: 3}
+  - m_OriginalClip: {fileID: 2207850806306222022, guid: be60da1d38edb2f4fb1024ffd95441b2,
+      type: 3}
+    m_OverrideClip: {fileID: 2207850806306222022, guid: 542669a10e228a3488a4e0fa06d30a8b,
+      type: 3}

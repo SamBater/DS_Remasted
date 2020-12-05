@@ -1,0 +1,154 @@
+{
+  "Fist": {
+    "AtkMotionID": 42,
+    "iconID": 0,
+    "SpAtkMotionID": 23,
+    "LocalMotionID1h": 3,
+    "LocalMotionID2h": 15,
+    "ATK": {
+      "physical" : 1,
+      "magical" : 0,
+      "fire" : 0,
+      "dark" : 0,
+      "thunder" : 0
+    },
+    "Bonus":{
+      "strength" : 1,
+      "dexterity" : 1,
+      "intelligence" : 0
+    }
+  },
+  "DarkSword": {
+    "AtkMotionID": 23,
+    "iconID": 16,
+    "Bonus":{
+      "strength" : 3,
+      "dexterity" : 2,
+      "intelligence" : 0
+    },
+    "SpAtkMotionID": 23,
+    "LocalMotionID1h": 3,
+    "LocalMotionID2h": 10,
+    "ATK": {
+      "physical" : 10,
+      "magical" : 0,
+      "fire" : 0,
+      "dark" : 0,
+      "thunder" : 0
+    }
+  },
+  "GreatSword": {
+    "AtkMotionID": 25,
+    "iconID": 29,
+    "Bonus":{
+      "strength" : 5,
+      "dexterity" : 1,
+      "intelligence" : 0
+    },
+    "SpAtkMotionID": 25,
+    "LocalMotionID1h": 2,
+    "LocalMotionID2h": 15,
+    "ATK": {
+      "physical" : 22,
+      "magical" : 0,
+      "fire" : 0,
+      "dark" : 0,
+      "thunder" : 0
+    }
+  },
+  "AbyssGreatSword": {
+    "AtkMotionID": 23,
+    "iconID": 21,
+    "Bonus":{
+      "strength" : 10,
+      "dexterity" : 2,
+      "intelligence" : 0
+    },
+    "SpAtkMotionID": 23,
+    "LocalMotionID1h": 2,
+    "LocalMotionID2h": 15,
+    "ATK": {
+      "physical" : 64,
+      "magical" : 0,
+      "fire" : 0,
+      "dark" : 22,
+      "thunder" : 0
+    }
+  },
+  "Sliver Knight Spear": {
+    "AtkMotionID": 36,
+    "iconID": 78,
+    "Bonus":{
+      "strength" : 2,
+      "dexterity" : 3,
+      "intelligence" : 0
+    },
+    "SpAtkMotionID": 23,
+    "LocalMotionID1h": 3,
+    "LocalMotionID2h": 10,
+    "ATK": {
+      "physical" : 12,
+      "magical" : 0,
+      "fire" : 0,
+      "dark" : 0,
+      "thunder" : 0
+    }
+  },
+  "Knight Shield": {
+    "AtkMotionID": 48,
+    "iconID": 122,
+    "Bonus":{
+      "strength" : 1,
+      "dexterity" : 1,
+      "intelligence" : 0
+    },
+    "SpAtkMotionID": 23,
+    "LocalMotionID1h": 3,
+    "LocalMotionID2h": 15,
+    "ATK": {
+      "physical" : 3,
+      "magical" : 0,
+      "fire" : 0,
+      "dark" : 0,
+      "thunder" : 0
+    }
+  },
+  "Bow": {
+    "AtkMotionID": 45,
+    "iconID": 0,
+    "Bonus":{
+      "strength" : 1,
+      "dexterity" : 1,
+      "intelligence" : 0
+    },
+    "SpAtkMotionID": 44,
+    "LocalMotionID1h": 3,
+    "LocalMotionID2h": 15,
+    "ATK": {
+      "physical" : 11,
+      "magical" : 0,
+      "fire" : 0,
+      "dark" : 0,
+      "thunder" : 0
+    }
+  },
+  "Arrow_stick":{
+    "AtkMotionID": 1,
+    "iconID": 0,
+    "Bonus":{
+      "strength" : 1,
+      "dexterity" : 1,
+      "intelligence" : 0
+    },
+    "SpAtkMotionID": 0,
+    "LocalMotionID1h": 0,
+    "LocalMotionID2h": 0,
+    "ATK": {
+      "physical" : 12,
+      "magical" : 0,
+      "fire" : 0,
+      "dark" : 0,
+      "thunder" : 0
+    }
+  }
+}
