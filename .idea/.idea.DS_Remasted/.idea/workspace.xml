@@ -1,137 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b47bb101-870f-413d-bb12-19abb39699d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/Bridge.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/Bridge.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/Ruins.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/Ruins.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/Stone_Bridges.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/Stone_Bridges.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/crops.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/crops.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/crops2.fbx.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/crops2.fbx.obj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/crops3.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/crops3.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9050B1A12out.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9050B1A12out.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9060B1A12out.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9060B1A12out.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9070B1A12out.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9070B1A12out.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9080B1A12.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9080B1A12.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9090B1A12out.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/m9090B1A12out.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/一群雕像.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Enviroment/DSMAP/一群雕像.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleAssets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleAssets/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleAssets/Textures/Metal.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleAssets/Textures/Metal/Metal_Albedo.tif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ExampleAssets/Textures/Metal/Metal_Albedo.tif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armLorygin.part1-mat021_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armLorygin.part1-mat021_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat008_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat008_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat009_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat009_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat009_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat009_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat005_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat005_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat010_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat010_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Materials/Robot_Color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Materials/Robot_Color.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2793_WP_A_0221.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2793_WP_A_0221.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_AM_A_9490.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_AM_A_9490.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_BD_A_9490_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_BD_A_9490_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_BD_A_9490_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_BD_A_9490_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_HD_A_9490.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_HD_A_9490.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_LG_M_9490.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_LG_M_9490.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_WP_A_1514.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Black Knight/Materials/c2799_WP_A_1514.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_0200out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_0200out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_0700out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_0700out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3000out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3000out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3001out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3001out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3004out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3004out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3005out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3005out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3007out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3007out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3009out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3009out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3010out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3010out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3011out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3011out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3013out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3013out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_AM_A_9700.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_AM_A_9700.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_BD_A_9700_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_BD_A_9700_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_BD_A_9700_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_BD_A_9700_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_HD_A_9700.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_HD_A_9700.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_LG_M_9700.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_LG_M_9700.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_WP_A_0274.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Materials/c4100_WP_A_0274.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/c4100.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/c4100.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_AM_A_9560.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_AM_A_9560.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_BD_A_9560_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_BD_A_9560_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_BD_A_9560_2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_BD_A_9560_2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_HD_A_9560.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_HD_A_9560.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_LG_M_9560.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_LG_M_9560.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_WP_A_0212.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_WP_A_0212.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_WP_A_1101.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_WP_A_1101.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_WP_A_1360.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_WP_A_1360.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_WP_M_1533.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_WP_M_1533.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_arrow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_arrow.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/c2410out(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/c2410out(Clone).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Objects/o0110/materials/o0110.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Objects/o0110/materials/o0110.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Objects/o7201/Materials/m17_00_lever_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Objects/o7201/Materials/m17_00_lever_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PlayerHandle (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PlayerHandle (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/DarkSword/Materials/WP_A_0260.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/DarkSword/Materials/WP_A_0260.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/Free medieval weapons/Materials/Arrows_Arrows_AlbedoTransparency.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/Free medieval weapons/Materials/Arrows_Arrows_AlbedoTransparency.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/Free medieval weapons/Materials/Swords_DH_low_Sword_DH_AlbedoTransparency.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/Free medieval weapons/Materials/Swords_DH_low_Sword_DH_AlbedoTransparency.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/Free medieval weapons/Materials/Swords_low_Swords_OH_AlbedoTransparency.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/Free medieval weapons/Materials/Swords_low_Swords_OH_AlbedoTransparency.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/GreatSword/Materials/WP_A_0251.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/GreatSword/Materials/WP_A_0251.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/GreatSword/WP_A_0251out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/GreatSword/WP_A_0251out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/Knight Shield/Materials/WP_A_1516.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/Knight Shield/Materials/WP_A_1516.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/WeaponTrail.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/WeaponTrail.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Arrow_stick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Arrow_stick.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Blood.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Blood.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Blood.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Spark.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDatabase.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/WeaponDatabase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AIController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AIController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdvancedFSM.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdvancedFSM.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Aiming.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Aiming.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArtoriasControllor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ArtoriasControllor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Database.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSM.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSM.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixedPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FixedPosition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFXToggle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFXToggle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +37,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1lF0WLra8sGqZ57rPy3WMcF0HdE" />
   <component name="ProjectViewState">
@@ -150,6 +55,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -180,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607177565994</updated>
-      <workItem from="1607177578834" duration="613000" />
+      <workItem from="1607177578834" duration="1210000" />
     </task>
     <servers />
   </component>
@@ -189,7 +95,24 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="355" y="104" key="SettingsEditor" timestamp="1607182886037">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="355" y="104" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1607182886037" />
   </component>
 </project>

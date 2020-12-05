@@ -26,12 +26,12 @@ public class WeaponData : MonoBehaviour
     public int iconId = 0;
     public Sprite icon;
     public WpAtkMotionID wpAtkMotionID;
-    public int LocalMotionID1h;
-    public int LocalMotionID2h;
+    public int localMotionID1H;
+    public int localMotionID2H;
     public BattleManager battleManager;
-    public Action<int,Vector3,Vector3> hitSurfaceEvent;
+    public Action<int,Vector3,Vector3> HitSurfaceEvent;
     private void Awake() {
-        hitSurfaceEvent = InitialSparkOnSurface;
+        HitSurfaceEvent = InitialSparkOnSurface;
 
     }
     public static bool IsShield(WeaponData wd)
@@ -47,7 +47,7 @@ public class WeaponData : MonoBehaviour
         Vector3 normal = hitPoint - transform.position;
         
         battleManager.TryDoDmage(go, hitPoint, normal, wpAtkMotionID == WpAtkMotionID.Arrow);
-        hitSurfaceEvent.Invoke(other.gameObject.layer,hitPoint,normal);
+        HitSurfaceEvent.Invoke(other.gameObject.layer,hitPoint,normal);
     }
 
     public void InitialSparkOnSurface(int hitLayer,Vector3 hitPoint,Vector3 normal)

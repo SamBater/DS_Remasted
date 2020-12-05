@@ -54,7 +54,7 @@ public class ActorManager : MonoBehaviour
         }
     }
 
-    public T Bind<T>(GameObject go) where T : IActorManagerInterface
+    T Bind<T>(GameObject go) where T : IActorManagerInterface
     {
         if(go == null) return null;
         T temp = go.GetComponent<T>();
@@ -71,21 +71,21 @@ public class ActorManager : MonoBehaviour
     {
         if(actorType != ActorType.Static)
         {
-        //    if(!ac.animator.GetBool("onGround"))
-        //     {
-        //         OnSkyTime += Time.deltaTime;
-        //     }
-        //     else
-        //     {
-        //         OnSkyTime = 0.0f;
-        //     }
+            if(!ac.animator.GetBool("onGround"))
+            {
+                 OnSkyTime += Time.deltaTime;
+            }
+            else
+            { 
+                OnSkyTime = 0.0f;
+            }
 
-        //     if(OnSkyTime > OnSkyMaxTime && !sm.isDead)
-        //     {
-        //         bm.Die();
-        //     }
+            if(OnSkyTime > OnSkyMaxTime && !sm.isDead)
+            {
+                bm.Die();
+            }
 
-        //     ac.animator.SetFloat("skyTime", OnSkyTime);
+            ac.animator.SetFloat("skyTime", OnSkyTime);
 
         }
     }
@@ -124,14 +124,14 @@ public class ActorManager : MonoBehaviour
                 wm.SetWeaponOnUseVisiable(false, false);
                 WeaponData wd = wm.GetWeaponDataOnUse(true);
                 SetAtkAnimationInt(wd.wpAtkMotionID);
-                AnimatorFactory.SetLocalMotion(ac.animator,wd.LocalMotionID2h);
+                AnimatorFactory.SetLocalMotion(ac.animator,wd.localMotionID2H);
             }
             else
             {
                 wm.SetWeaponOnUseVisiable(false, true);
                 WeaponData wd = wm.GetWeaponDataOnUse(false);
                 SetAtkAnimationInt(wd.wpAtkMotionID);
-                AnimatorFactory.SetLocalMotion(ac.animator, wd.LocalMotionID2h);
+                AnimatorFactory.SetLocalMotion(ac.animator, wd.localMotionID2H);
                 //TODO:并且将左手武器送入又手
             }
            
@@ -141,10 +141,10 @@ public class ActorManager : MonoBehaviour
         {
             wm.SetAllWeaponOnUseVisiable(true);
             SetAtkAnimationInt(wm.wcR.wdOnUse.wpAtkMotionID);
-            AnimatorFactory.SetLocalMotion(ac.animator, wm.wcR.wdOnUse.LocalMotionID1h);
+            AnimatorFactory.SetLocalMotion(ac.animator, wm.wcR.wdOnUse.localMotionID1H);
         }
 
-         ac.animator.SetBool("twoHand",!twoHand); 
+        ac.animator.SetBool("twoHand",!twoHand); 
     }
 
     public void DoAction()

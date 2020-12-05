@@ -42,7 +42,6 @@
           <e p="ActorController.cs" t="Include" />
           <e p="ActorInput.cs" t="Include" />
           <e p="ActorManager.cs" t="Include" />
-          <e p="AIController.cs" t="Include" />
           <e p="AILancer.cs" t="Include" />
           <e p="AISniper.cs" t="Include" />
           <e p="AnimatorFactory.cs" t="Include" />

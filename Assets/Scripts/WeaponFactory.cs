@@ -38,8 +38,8 @@ public class WeaponFactory : MonoBehaviour
                 wd.bounusLv.intelligence = (int)weaponDB.database[i]["Bonus"]["intelligence"].i;
 
                 wd.wpAtkMotionID = (WpAtkMotionID)weaponDB.database[i]["AtkMotionID"].i;
-                wd.LocalMotionID1h = (int)weaponDB.database[i]["LocalMotionID1h"].i;
-                wd.LocalMotionID2h = (int)weaponDB.database[i]["LocalMotionID2h"].i;
+                wd.localMotionID1H = (int)weaponDB.database[i]["LocalMotionID1h"].i;
+                wd.localMotionID2H = (int)weaponDB.database[i]["LocalMotionID2h"].i;
                 wd.iconId = (int)weaponDB.database[i]["iconID"].i;
                 wd.icon = weaponIcons[wd.iconId];
                 weapons.Add(weaponDB.database.keys[i],go);
@@ -64,8 +64,8 @@ public class WeaponFactory : MonoBehaviour
         wd.bounusLv.strength = (int)weaponDB.database[weaponName]["Bonus"]["strength"].i;
         wd.bounusLv.dexterity = (int)weaponDB.database[weaponName]["Bonus"]["dexterity"].i;
         wd.bounusLv.intelligence = (int)weaponDB.database[weaponName]["Bonus"]["intelligence"].i;
-        wd.LocalMotionID1h = (int)weaponDB.database[weaponName]["LocalMotionID1h"].i;
-        wd.LocalMotionID2h = (int)weaponDB.database[weaponName]["LocalMotionID2h"].i;
+        wd.localMotionID1H = (int)weaponDB.database[weaponName]["LocalMotionID1h"].i;
+        wd.localMotionID2H = (int)weaponDB.database[weaponName]["LocalMotionID2h"].i;
     }
 
     public static void CreateWeapon(string wpName,Transform parent)

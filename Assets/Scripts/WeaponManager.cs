@@ -141,7 +141,7 @@ public class WeaponManager : IActorManagerInterface
             UIManager.instance.UpdateWeaponIcon(wc.wdOnUse.icon,rh);
 
         am.SetAtkAnimationInt(wc.wdOnUse.wpAtkMotionID);
-        AnimatorFactory.SetLocalMotion(animator,wc.wdOnUse.LocalMotionID1h);
+        AnimatorFactory.SetLocalMotion(animator,wc.wdOnUse.localMotionID1H);
 
         SetAllWeaponOnUseVisiable(true);
     }
