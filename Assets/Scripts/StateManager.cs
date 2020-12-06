@@ -77,7 +77,7 @@ public class StateManager : IActorManagerInterface
         isCountBackSuccess =  isCountBack && isCountBackEnable; //isCountBackEnable 由动画事件控制 打开有限时间
         isLock = am.ac.CheckState("lock");
         isHeal = am.ac.CheckStateTag("heal");
-        isWalk = isGround && am.ac.playerInput.inputMag > 0.3f;
+        isWalk = isGround && am.ac.playerInput.GetInputmag() > 0.3f;
         
         //TODO：作为一次修改
         try

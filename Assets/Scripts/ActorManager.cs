@@ -109,7 +109,7 @@ public class ActorManager : MonoBehaviour
     public void ToggleLock(bool value)
     {
         ac.animator.SetBool("lock",value);
-        if(!value) ac.playerInput.enableInput = true;
+        if(!value) ac.EnableInput();
     }
 
 

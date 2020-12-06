@@ -19,15 +19,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b47bb101-870f-413d-bb12-19abb39699d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="b47bb101-870f-413d-bb12-19abb39699d1" name="Default Changelist" comment="rename files">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AIController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AIController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/c4100.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/c4100.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AISniper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AISniper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArtoriasControllor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ArtoriasControllor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GroundChecker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GroundChecker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VirutalPlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VirutalPlayerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +48,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Dupezez.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/DS_Remasted/Assets/Scripts/ActorController.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AISniper.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ArtoriasControllor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
+        <option value="$USER_HOME$/AppData/Local/Temp/Dupezez.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
       </list>
     </option>
   </component>
@@ -52,10 +76,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -86,8 +111,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607177565994</updated>
-      <workItem from="1607177578834" duration="1210000" />
+      <workItem from="1607177578834" duration="1861000" />
+      <workItem from="1607194166300" duration="1709000" />
+      <workItem from="1607279003224" duration="4246000" />
     </task>
+    <task id="LOCAL-00001" summary="rename files">
+      <created>1607183673002</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607183673002</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,14 +140,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="rename files" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename files" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="355" y="104" key="SettingsEditor" timestamp="1607182886037">
+    <state x="93" y="93" width="1521" height="735" maximized="true" key="DiffContextDialog" timestamp="1607282207582">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="355" y="104" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1607182886037" />
+    <state x="93" y="93" width="1521" height="735" maximized="true" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1607282207582" />
+    <state x="355" y="104" key="SettingsEditor" timestamp="1607280986385">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="355" y="104" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1607280986385" />
+    <state x="446" y="193" key="Vcs.Push.Dialog.v2" timestamp="1607183680597">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="446" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1607183680597" />
+    <state x="393" y="104" width="672" height="678" key="search.everywhere.popup" timestamp="1607194249221">
+      <screen x="0" y="0" width="1234" height="783" />
+    </state>
+    <state x="393" y="104" width="672" height="678" key="search.everywhere.popup/0.0.1234.783@0.0.1234.783" timestamp="1607194249221" />
   </component>
 </project>

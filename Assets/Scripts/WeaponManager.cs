@@ -164,7 +164,7 @@ public class WeaponManager : IActorManagerInterface
     public void AttackStart()
     {
         WeaponEnable();
-        am.ac.playerInput.enableInput = false;
+        am.ac.playerInput.InputToggle(false);
         am.ac.enableTurnDirection = false;
         SetWeaponVFX(true);
     }
@@ -172,7 +172,7 @@ public class WeaponManager : IActorManagerInterface
     public void AttackEnd()
     {
         WeaponDisable();
-        am.ac.playerInput.enableInput = true;
+        am.ac.playerInput.InputToggle(true);
         am.ac.EnableCombo(true);
         SetWeaponVFX(false);
     } 
@@ -187,7 +187,7 @@ public class WeaponManager : IActorManagerInterface
     public void TurnAbleAttackEnd()
     {
         WeaponDisable();
-        am.ac.playerInput.enableInput = true;
+        am.ac.playerInput.InputToggle(true);
         am.ac.EnableCombo(true);
         am.ac.enableTurnDirection = false;
         SetWeaponVFX(false);

@@ -11,6 +11,7 @@ public class ObjectPool : MonoBehaviour
         public string name;
         public int capacity;
     }
+    [SerializeField]
     public static ObjectPool instance;
     public Dictionary<string,List<GameObject>> pools;
     [SerializeField]

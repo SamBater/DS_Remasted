@@ -253,7 +253,7 @@ public class VirutalPlayerInput : PlayerInput
         //if(ac.enableTurnDirection)
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 8.0f);
         
-        MovingVec = Vector3.forward;
+        movingVec = Vector3.forward;
         inputMag = mag;
     }
 }

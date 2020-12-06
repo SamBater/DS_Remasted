@@ -14,7 +14,7 @@ public class ActorController : MonoBehaviour
     [Range(0,100)]
     public float turnDirectionSpeed = 0.75f;
     public GameObject model;
-    public PlayerInput playerInput;
+    public ActorInput playerInput;
     public CameraController cc;
 
     public Animator animator;
@@ -47,7 +47,7 @@ public class ActorController : MonoBehaviour
 
     void Awake()
     {
-        playerInput = GetComponent<PlayerInput>();
+        playerInput = GetComponent<ActorInput>();
         animator = model.GetComponent<Animator>();
         sm = GetComponent<StateManager>();
         characterController = GetComponent<CharacterController>();
@@ -73,121 +73,24 @@ public class ActorController : MonoBehaviour
         {
             HandleMoveWhenLockOn();
         }
-
-
-        ParseInput();
-    }
-
-
-
-    private void ParseInput()
-    {
-        if(!playerInput.enableInput) return;
-        WeaponData leftHand = sm.am.wm.GetWeaponDataOnUse(false);
-        WeaponData rightHand = sm.am.wm.GetWeaponDataOnUse(true);
-        if (sm.weaponHold == WeaponHold._1h)
-        {
-            //如果左手持盾
-            if(leftHand)
-            {
-                if (leftHand.wpAtkMotionID == WpAtkMotionID.Shield)
-                {
-                    // float oldWeight = animator.GetLayerWeight(1);
-                    // int index = animator.GetLayerIndex("defence");
-                    //只能在Localmothion状态持盾，否则设置盾权重为0.
-                    if (playerInput.pressOnLB)
-                    {
-                        //animator.SetLayerWeight(index, Mathf.Lerp(oldWeight,1.0f,0.15f));
-                        Defence();
-                    }
-                    else
-                    {
-                        //animator.SetLayerWeight(index, Mathf.Lerp(oldWeight,0.0f,0.15f));
-                        DefenceOff();
-                    }
-                }
-
-                //如果持有常规武器，并且按下LB
-                else if (playerInput.pressLB)
-                {
-                    int index = animator.GetLayerIndex("defence");
-                    animator.SetLayerWeight(index, 0.0f);
-                    animator.SetBool("R0L1", true);
-                    animator.SetInteger("attackMotionType", (int)leftHand.wpAtkMotionID);
-                    Attack();
-                }
-            }
-        }
-
-        if(playerInput.pressR)
-        {
-            cc.LockOnToggle();
-        }
-
-        if (playerInput.pressRB)
-        {
-            animator.SetBool("R0L1", false);
-            animator.SetInteger("attackMotionType", (int)rightHand.wpAtkMotionID);
-            Attack();
-        }
-
-        animator.SetBool("holdOnRB",playerInput.pressOnRB);
-
-
-        //响应弓箭的长按.
-        if(playerInput.pressOnRB && animator.GetInteger("attackMotionType") == 44)
-        {
-            if(Input.GetMouseButtonUp(0))
-            {
-                animator.SetTrigger("attack");
-            }
-        }
-
-        if (playerInput.pressRT)
-        {
-            animator.SetTrigger("Hattack");
-        }
-
-        if (playerInput.pressLT)
-        {
-            if (CheckStateTag("attack") || CheckState("Ground"))
-            {
-                //如果左手为盾牌
-                if (WeaponData.IsShield(sm.am.wm.GetWeaponDataOnUse(false)))
-                {
-                    animator.SetTrigger("countBack");
-                }
-            }
-        }
-
-        if (playerInput.pressB)
-        {
-            Roll();
-        }
-
     }
 
     protected void HandleMoveOnNormal()
     {
-        if (!cc.isAI && playerInput.inputMag > 0.1f)
+        if (!cc.isAI && playerInput.GetInputmag() > 0.1f)
         {
             if(!enableTurnDirection) return;
             Vector3 vec = cc.transform.forward;
             vec.y = 0;
             transform.forward = Vector3.Lerp(transform.forward, vec, turnDirectionSpeed);
-
-
-
-
-            if(playerInput.MovingVec != Vector3.zero)
-                model.transform.forward = Vector3.Lerp(model.transform.forward, playerInput.MovingVec, turnDirectionSpeed);
+            if(playerInput.GetMoveVec() != Vector3.zero)
+                model.transform.forward = Vector3.Lerp(model.transform.forward, playerInput.GetMoveVec(), turnDirectionSpeed);
         }
 
         //运动向量 = 输入轴大小 * 模型方向 * 跑/走 给予的速度
-        planarVec = dontMove ? Vector3.zero : playerInput.inputMag * model.transform.forward * (playerInput.running ? runSpeed : walkSpeed);
+        planarVec = dontMove ? Vector3.zero : playerInput.GetInputmag() * model.transform.forward * (playerInput.running ? runSpeed : walkSpeed);
 
-        float oldF = animator.GetFloat("forward");
-        float newF = playerInput.inputMag * (playerInput.running ? 2.0f : 1.0f);
+        float newF = playerInput.GetInputmag() * (playerInput.running ? 2.0f : 1.0f);
         animator.SetFloat("forward", newF > 0.1f ? newF : 0.0f, 0.25f, Time.deltaTime);
         animator.SetFloat("right", 0);
     }
@@ -200,7 +103,7 @@ public class ActorController : MonoBehaviour
         //resulution2: 用水平轴和竖直轴的输入构造向量.上面同理
         //TODO:BUGS:在root mothion下 仍然会圆周运动.
         
-        Vector3 localMovingVec = transform.InverseTransformVector(playerInput.MovingVec);
+        Vector3 localMovingVec = transform.InverseTransformVector(playerInput.GetMoveVec());
         if (modelForwardTrackMovingVec)
         {
             // model.transform.forward = thusVec.normalized;
@@ -211,8 +114,8 @@ public class ActorController : MonoBehaviour
         {
             model.transform.forward = transform.forward;
         }
-        planarVec = dontMove ? Vector3.zero : playerInput.inputMag * playerInput.MovingVec * (playerInput.running ? runSpeed : walkSpeed);
-
+        //planarVec = dontMove ? Vector3.zero : playerInput.inputMag * playerInput.GetMoveVec() * (playerInput.running ? runSpeed : walkSpeed);
+        planarVec = dontMove ? Vector3.zero : playerInput.GetMoveVec();
         animator.SetFloat("forward", localMovingVec.z * (playerInput.running ? 2.0f : 1.0f), 0.35f, Time.deltaTime);
         animator.SetFloat("right", localMovingVec.x * (playerInput.running ? 2.0f : 1.0f), 0.35f, Time.deltaTime);
     }
@@ -250,9 +153,9 @@ public class ActorController : MonoBehaviour
         
     }
 
-    private void Roll()
+    public void Roll()
     {
-        if(playerInput.MovingVec != Vector3.zero)
+        if(playerInput.GetMoveVec() != Vector3.zero)
             animator.SetTrigger("roll");
         else
             animator.SetTrigger("jab");

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 611865341}
-  m_IndirectSpecularColor: {r: 0.11841433, g: 0.18280503, b: 0.32895905, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15761,14 +15761,14 @@ GameObject:
   - component: {fileID: 666233996}
   - component: {fileID: 666233995}
   - component: {fileID: 666234003}
-  - component: {fileID: 666234000}
+  - component: {fileID: 666233997}
   m_Layer: 8
   m_Name: Artorias
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!143 &666233995
 CharacterController:
   m_ObjectHideFlags: 0
@@ -15800,6 +15800,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   am: {fileID: 0}
+--- !u!114 &666233997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666233994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b8b8ee3a26a5d429e14dc76a98b92e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 2.5
+  walkSpeed: 1
+  runSpeed: 2
+  turnDirectionSpeed: 0.75
+  model: {fileID: 678085077}
+  playerInput: {fileID: 666234001}
+  cc: {fileID: 1560186248}
+  animator: {fileID: 678085079}
+  planarVec: {x: 0, y: 0, z: 0}
+  thusVec: {x: 0, y: 0, z: 0}
+  deltaPos: {x: 0, y: 0, z: 0}
+  dontMove: 0
+  modelForwardTrackMovingVec: 0
+  wineCount: 10
+  enableTurnDirection: 1
+  neckPos: {fileID: 2003384491}
+  isOnScreen: 0
 --- !u!114 &666233998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15874,7 +15903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bm: {fileID: 666233996}
-  ac: {fileID: 0}
+  ac: {fileID: 666233997}
   wm: {fileID: 1019880714}
   sm: {fileID: 666233998}
   dm: {fileID: 0}
@@ -15887,35 +15916,6 @@ MonoBehaviour:
     m_Bits: 512
   OnSkyTime: 0
   OnSkyMaxTime: 5
---- !u!114 &666234000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666233994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3340ad0b5e469ec4f8df6632ef586a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 2.5
-  walkSpeed: 1
-  runSpeed: 2
-  turnDirectionSpeed: 0.75
-  model: {fileID: 678085077}
-  playerInput: {fileID: 666234001}
-  cc: {fileID: 1560186248}
-  animator: {fileID: 678085079}
-  planarVec: {x: 0, y: 0, z: 0}
-  thusVec: {x: 0, y: 0, z: 0}
-  deltaPos: {x: 0, y: 0, z: 0}
-  dontMove: 0
-  modelForwardTrackMovingVec: 0
-  wineCount: 10
-  enableTurnDirection: 1
-  neckPos: {fileID: 2003384491}
-  isOnScreen: 0
 --- !u!114 &666234001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15928,29 +15928,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833af4ae5154169469209e7ac807a3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyRun: 0
-  keyAction: 101
-  keyUseItem: 114
-  keyDualWeapon: 102
-  keyNextRHWeapon: 108
-  keyAttack: 323
-  keyNextItem: 111
-  keyLockOn: 113
-  inputMag: 0
-  MovingVec: {x: 0, y: 0, z: 0}
-  running: 0
-  enableInput: 1
-  pressOnLB: 0
-  pressLB: 0
-  pressLT: 0
-  pressRB: 0
-  pressOnRB: 0
-  pressRT: 0
-  pressB: 0
-  pressR: 0
-  switchWeapon: 121
-  ac: {fileID: 666234000}
   am: {fileID: 666233999}
+  running: 0
+  ac: {fileID: 666233997}
   distance: 0
   againstTime: 0
 --- !u!4 &666234002
@@ -21469,17 +21449,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e58971cac28b0fd4dbf105fb5d642786,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e58971cac28b0fd4dbf105fb5d642786,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e58971cac28b0fd4dbf105fb5d642786,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e58971cac28b0fd4dbf105fb5d642786,
         type: 3}

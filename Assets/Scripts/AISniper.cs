@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AISniper : PlayerInput
+public class AISniper : ActorInput
 {
     enum FSMState 
     {
@@ -26,7 +26,8 @@ public class AISniper : PlayerInput
         player = GameObject.FindGameObjectWithTag("Player").transform;
         state = FSMState.idle;
     }
-    private void Update() {
+    private void Update() 
+    {
         ac.animator.SetInteger("attackMotionType",45);
         distanceAI_player = Vector3.Distance(transform.position,player.position);
         Aiming();

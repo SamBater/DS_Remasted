@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerInput : ActorInput
 {
     [Header("==== Key Settings ====")]
 
@@ -25,13 +26,8 @@ public class PlayerInput : MonoBehaviour
     protected float rightAxis;
 
     public float inputMag; //运动幅度 [0,1]
-
     
-    public Vector3  MovingVec; //运动方向 [-1.1]^3
     Vector2 playerInput;
-
-    public bool running;
-    public bool enableInput = true;
 
     public bool pressOnLB = false;
     public bool pressLB = false;
@@ -44,9 +40,6 @@ public class PlayerInput : MonoBehaviour
     public bool pressR = false;
     public KeyCode switchWeapon = KeyCode.Y;
 
-    public ActorController ac;
-    public ActorManager am;
-
     void Start()
     {
         am = GetComponent<ActorManager>();
@@ -57,7 +50,12 @@ public class PlayerInput : MonoBehaviour
     {   rightAxis = Input.GetAxis("Horizontal");
         forwardAxis = Input.GetAxis("Vertical");
         MoveInput();
+        InputDetecte();
+        ParseInput();
+    }
 
+    private void InputDetecte()
+    {
         running = Input.GetKey(keyRun);
         pressRB = Input.GetMouseButtonDown(0);
         pressOnLB = Input.GetMouseButton(1);
@@ -67,23 +65,6 @@ public class PlayerInput : MonoBehaviour
         pressB = Input.GetKeyDown(KeyCode.Space);
         pressOnRB = Input.GetKey(KeyCode.CapsLock);
         pressR = Input.GetKeyDown(keyLockOn);
-        
-        if(Input.GetKeyDown(keyAction))
-            am.DoAction();
-
-        if (Input.GetKeyDown(keyDualWeapon))
-            am.ChangeDualHand(true);
-        
-        if(Input.GetKeyDown(keyNextRHWeapon))
-            am.ChangeWeapon(false);
-
-        if(Input.GetKeyDown(keyNextItem))
-            am.NextItem();
-
-        if(Input.GetKeyDown(keyUseItem))
-            am.UseItem();
-
-        
     }
 
     //将输入映射成球体
@@ -101,12 +82,12 @@ public class PlayerInput : MonoBehaviour
         if(!enableInput)
         {
             inputMag = 0.0f;
-            MovingVec = Vector3.zero;
+            movingVec = Vector3.zero;
             return;
         }
-        MovingVec.x = rightAxis;
-        MovingVec.z = forwardAxis;
-        MovingVec = SquareToCircle(playerInput);
+        movingVec.x = rightAxis;
+        movingVec.z = forwardAxis;
+        movingVec = SquareToCircle(playerInput);
         
         //输入的运动幅度
         inputMag = Mathf.Sqrt(forwardAxis * forwardAxis + rightAxis * rightAxis);
@@ -115,12 +96,12 @@ public class PlayerInput : MonoBehaviour
         if(inputMag > 0.1f)
         {
             //移动
-            MovingVec = forwardAxis * transform.forward + rightAxis * transform.right;
+            movingVec = forwardAxis * transform.forward + rightAxis * transform.right;
         }
 
         else
         {
-            MovingVec = Vector3.zero;
+            movingVec = Vector3.zero;
         }
     }
 
@@ -129,11 +110,106 @@ public class PlayerInput : MonoBehaviour
         enableInput = value;
     }
 
-    private void OnGUI() {
-        // if(GUI.Button(new Rect(100,100,200,200),"PickUp"))
-        // {
+    void ParseInput()
+    {
+        if(!enableInput) return;
+        WeaponData leftHand = am.wm.GetWeaponDataOnUse(false);
+        WeaponData rightHand = am.wm.GetWeaponDataOnUse(true);
+        if (am.sm.weaponHold == WeaponHold._1h)
+        {
+            //如果左手持盾
+            if(leftHand)
+            {
+                if (leftHand.wpAtkMotionID == WpAtkMotionID.Shield)
+                {
+                    // float oldWeight = animator.GetLayerWeight(1);
+                    // int index = animator.GetLayerIndex("defence");
+                    //只能在Localmothion状态持盾，否则设置盾权重为0.
+                    if (pressOnLB)
+                    {
+                        //animator.SetLayerWeight(index, Mathf.Lerp(oldWeight,1.0f,0.15f));
+                        ac.Defence();
+                    }
+                    else
+                    {
+                        //animator.SetLayerWeight(index, Mathf.Lerp(oldWeight,0.0f,0.15f));
+                        ac.DefenceOff();
+                    }
+                }
 
-        // }
-    }    
+                //如果持有常规武器，并且按下LB
+                else if (pressLB)
+                {
+                    int index = ac.animator.GetLayerIndex("defence");
+                    ac.animator.SetLayerWeight(index, 0.0f);
+                    ac.animator.SetBool("R0L1", true);
+                    ac.animator.SetInteger("attackMotionType", (int)leftHand.wpAtkMotionID);
+                    ac.Attack();
+                }
+            }
+        }
 
+        if(pressR)
+        {
+            ac.cc.LockOnToggle();
+        }
+
+        if (pressRB)
+        {
+            ac.animator.SetBool("R0L1", false);
+            ac.animator.SetInteger("attackMotionType", (int)rightHand.wpAtkMotionID);
+            ac.Attack();
+        }
+
+        ac.animator.SetBool("holdOnRB",pressOnRB);
+
+
+        //响应弓箭的长按.
+        if(pressOnRB && ac.animator.GetInteger("attackMotionType") == 44)
+        {
+            if(Input.GetMouseButtonUp(0))
+            {
+                ac.animator.SetTrigger("attack");
+            }
+        }
+
+        if (pressRT)
+        {
+            ac.animator.SetTrigger("Hattack");
+        }
+
+        if (pressLT)
+        {
+            if (ac.CheckStateTag("attack") || ac.CheckState("Ground"))
+            {
+                //如果左手为盾牌
+                if (WeaponData.IsShield(am.wm.GetWeaponDataOnUse(false)))
+                {
+                    ac.animator.SetTrigger("countBack");
+                }
+            }
+        }
+
+        if (pressB)
+        {
+            ac.Roll();
+        }
+                
+        if(Input.GetKeyDown(keyAction))
+            am.DoAction();
+
+        if (Input.GetKeyDown(keyDualWeapon))
+            am.ChangeDualHand(true);
+        
+        if(Input.GetKeyDown(keyNextRHWeapon))
+            am.ChangeWeapon(false);
+
+        if(Input.GetKeyDown(keyNextItem))
+            am.NextItem();
+
+        if(Input.GetKeyDown(keyUseItem))
+            am.UseItem();
+
+
+    }
 }

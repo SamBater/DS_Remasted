@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Artorias : PlayerInput
+public class Artorias : ActorInput
 {
     private Animator animator;
     private bool phrth2 = false;
@@ -16,48 +16,29 @@ public class Artorias : PlayerInput
         player_sm = GameObject.FindWithTag("Player").GetComponent<ActorManager>();
         //ac.cc.LockOnToggle();
     }
-    private void Update() 
+    private void Update()
     {
-        MoveInput();
-        //改成监听AddHP
-        // if(am.sm.hp <= am.sm.hp / 2.0f)
-        // {
-        //     phrth2 = true;
-        // }
-        // distance = Vector3.Distance(transform.position,player_sm.transform.position);
-
+        //if (!enableInput) return;
+        // 改成监听AddHP
+        if(am.sm.hp <= am.sm.hp / 2.0f)
+        {
+            phrth2 = true;
+        }
+        distance = Vector3.Distance(transform.position,player_sm.transform.position);
+        
         // if(againstTime > 3.0f)
-        //     Roll();
-        // if(player_sm)
-        // {            
-        //     if(distance > 5.0f)
-        //     {
-        //         forwardAxis = 0.0f;
-        //         Charge();
-        //     }
-        //     if(distance < 3.0f)
-        //     {
-        //         forwardAxis = 0.0f;
-        //         againstTime += Time.deltaTime;
-        //         NormalAttack();
-        //     }
+        //     WolfxRollBack();
+        if(player_sm)
+        {
+            MoveToPlayerPos();
+        }
+    }
 
-        //     else if(distance < 5.0f)
-        //     {
-        //         forwardAxis = 0.0f;
-        //         Charge();
-        //     }
-
-        //     else 
-        //     {
-        //         if(am.sm.isAttack) return;
-        //         ac.animator.SetFloat("forward",1.0f);
-        //         Quaternion r = Quaternion.LookRotation(player_sm.transform.position - transform.position,Vector3.up);
-        //         transform.rotation = Quaternion.Lerp(transform.rotation,r,Time.deltaTime * 2.0f);
-        //         ac.model.transform.rotation = transform.rotation;
-        //     }
-
-        // }
+    private void MoveToPlayerPos()
+    {
+        movingVec = Vector3.forward;
+        Quaternion r = Quaternion.LookRotation(player_sm.transform.position - transform.position, Vector3.up);
+        transform.rotation = Quaternion.Lerp(transform.rotation, r, Time.deltaTime * 2.0f);
     }
 
     void Charge()
@@ -76,6 +57,16 @@ public class Artorias : PlayerInput
         {
             animator.Play("c4100_slowWolfAttack");
         }
+    }
+    
+    void WolfAttackx3()
+    {
+        animator.SetTrigger("wolfx3");
+    }
+
+    void WolfxRollBack()
+    {
+        animator.SetTrigger("wolfBack");
     }
 
     void NormalAttack()

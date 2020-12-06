@@ -47,7 +47,6 @@
           <e p="AnimatorFactory.cs" t="Include" />
           <e p="Arrow.cs" t="Include" />
           <e p="Artorias.cs" t="Include" />
-          <e p="ArtoriasControllor.cs" t="Include" />
           <e p="BaseStates.cs" t="Include" />
           <e p="BattleManager.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
@@ -64,7 +63,6 @@
           <e p="FSMOnExit.cs" t="Include" />
           <e p="FSMOnUpdate.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
-          <e p="GroundChecker.cs" t="Include" />
           <e p="IActorManagerInterface.cs" t="Include" />
           <e p="IInput.cs" t="Include" />
           <e p="InteractionManager.cs" t="Include" />
