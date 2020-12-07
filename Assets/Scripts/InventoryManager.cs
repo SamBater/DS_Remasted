@@ -41,11 +41,11 @@ public class InventoryManager : MonoBehaviour
         inventory.Add(ItemEnum.FlySword,2);
         //TODO:测试用
         
-        // quickUse.Add(ItemFactory.GetItem(5));
-        // quickUse.Add(ItemFactory.GetItem(4));
-        // quickUse.Add(ItemFactory.GetItem(60));
-        // quickUse.Add(ItemFactory.GetItem(23));
-        // quickUse.Add(ItemFactory.GetItem(21));
+        quickUse.Add(ItemFactory.GetItem(5));
+        quickUse.Add(ItemFactory.GetItem(4));
+        quickUse.Add(ItemFactory.GetItem(60));
+        quickUse.Add(ItemFactory.GetItem(23));
+        quickUse.Add(ItemFactory.GetItem(21));
     }
 
     private void Start() {

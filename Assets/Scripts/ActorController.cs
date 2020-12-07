@@ -141,7 +141,7 @@ public class ActorController : MonoBehaviour
 
     public void Attack()
     {
-        if (CheckState("Ground") && !animator.GetNextAnimatorStateInfo(0).IsTag("attack"))
+        if (CheckState("Ground"))
         {
             animator.SetTrigger("attack");
         }
@@ -151,6 +151,15 @@ public class ActorController : MonoBehaviour
             animator.SetTrigger("attack");
         }
         
+        else
+            animator.SetTrigger("attack");
+        
+    }
+
+    public void Attack(int atkMotionID)
+    {
+        animator.SetInteger("attackMotionType",atkMotionID);
+        Attack();
     }
 
     public void Roll()

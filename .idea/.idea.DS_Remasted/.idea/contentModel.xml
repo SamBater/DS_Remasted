@@ -42,6 +42,7 @@
           <e p="ActorController.cs" t="Include" />
           <e p="ActorInput.cs" t="Include" />
           <e p="ActorManager.cs" t="Include" />
+          <e p="ActorUiBarManager.cs" t="Include" />
           <e p="AILancer.cs" t="Include" />
           <e p="AISniper.cs" t="Include" />
           <e p="AnimatorFactory.cs" t="Include" />
@@ -54,7 +55,6 @@
           <e p="Damage.cs" t="Include" />
           <e p="Database.cs" t="Include" />
           <e p="DirectorManager.cs" t="Include" />
-          <e p="EnemyHealthBar.cs" t="Include" />
           <e p="EventCasterManager.cs" t="Include" />
           <e p="FixedPosition.cs" t="Include" />
           <e p="FSMClearSignals.cs" t="Include" />

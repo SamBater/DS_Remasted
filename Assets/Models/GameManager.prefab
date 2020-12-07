@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objNames:
   - name: Blood
-    capacity: 6
+    capacity: 10
   - name: Spark
     capacity: 15
   - name: Arrow_stick

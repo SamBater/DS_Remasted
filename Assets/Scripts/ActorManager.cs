@@ -71,21 +71,21 @@ public class ActorManager : MonoBehaviour
     {
         if(actorType != ActorType.Static)
         {
-            if(!ac.animator.GetBool("onGround"))
-            {
-                 OnSkyTime += Time.deltaTime;
-            }
-            else
-            { 
-                OnSkyTime = 0.0f;
-            }
-
-            if(OnSkyTime > OnSkyMaxTime && !sm.isDead)
-            {
-                bm.Die();
-            }
-
-            ac.animator.SetFloat("skyTime", OnSkyTime);
+            // if(!ac.animator.GetBool("onGround"))
+            // {
+            //      OnSkyTime += Time.deltaTime;
+            // }
+            // else
+            // { 
+            //     OnSkyTime = 0.0f;
+            // }
+            //
+            // if(OnSkyTime > OnSkyMaxTime && !sm.isDead)
+            // {
+            //     bm.Die();
+            // }
+            //
+            // ac.animator.SetFloat("skyTime", OnSkyTime);
 
         }
     }

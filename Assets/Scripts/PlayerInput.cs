@@ -104,15 +104,10 @@ public class PlayerInput : ActorInput
             movingVec = Vector3.zero;
         }
     }
-
-    public void InputToggle(bool value)
-    {
-        enableInput = value;
-    }
-
     void ParseInput()
     {
         if(!enableInput) return;
+        if(am.sm.Naili < 2.5f) return;    //至少Ground 0.5s才能继续行动
         WeaponData leftHand = am.wm.GetWeaponDataOnUse(false);
         WeaponData rightHand = am.wm.GetWeaponDataOnUse(true);
         if (am.sm.weaponHold == WeaponHold._1h)

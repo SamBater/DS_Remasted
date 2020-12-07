@@ -56,6 +56,7 @@ public class FSMManager : MonoBehaviour
         ac.playerInput.InputToggle(false);
         ac.enableTurnDirection = true;
         ac.EnableCombo(false);
+        sm.AddEndurance(-10);
     }
 
     public void OnAttackExit()
@@ -127,8 +128,8 @@ public class FSMManager : MonoBehaviour
         ac.modelForwardTrackMovingVec = false;
 
         ac.playerInput.InputToggle(true);
-        //
-        //gameObject.SendMessage("OnFoot");
+        
+        sm.AddEndurance(ac.playerInput.running ? -5.0f * Time.deltaTime : 5.0f * Time.deltaTime);
     }
 
     public void OnGroundExit()
@@ -162,6 +163,8 @@ public class FSMManager : MonoBehaviour
         //thusVec = model.transform.forward * rollSpeed;
 
         ac.modelForwardTrackMovingVec = true;
+        
+        sm.AddEndurance(-15f);
 
     }
     
@@ -235,6 +238,16 @@ public class FSMManager : MonoBehaviour
     public void OnDefenceEnter()
     {
         ac.playerInput.InputToggle(false);
+    }
+
+    public void OnBlockedEnter()
+    {
+        sm.AddEndurance(-10.0f);
+    }
+
+    public void OnDrinkEnter()
+    {
+        sm.AddHp(200.0f);
     }
 
     

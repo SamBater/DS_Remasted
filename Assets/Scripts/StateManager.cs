@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum WeaponHold
 {
@@ -14,6 +15,10 @@ public class StateManager : IActorManagerInterface
     [Header("Common proproties")]
     public float hp;
     public float maxhp;
+
+    public float Naili;
+    public float maxEndurance;
+    
     public Damage defenceRate = new Damage(); //减伤率
 
     public Damage rhATK; //右手面板伤害
@@ -50,6 +55,7 @@ public class StateManager : IActorManagerInterface
     public bool isCountBackSuccess;
 
     public event Action<float> onHealthPctChanged = delegate {};
+    public event Action<float> onEndurancePctChanged = delegate {};
 
     public static char[] levelMap = new char[6] { 'E', 'D' ,'C','B','A','S'};
     private void Awake() {
@@ -58,6 +64,8 @@ public class StateManager : IActorManagerInterface
     void Start()
     {
         hp = maxhp;
+        Naili = maxEndurance;
+        
     }
 
     void Update() 
@@ -98,6 +106,14 @@ public class StateManager : IActorManagerInterface
         hp = Mathf.Clamp(hp,0,maxhp);
         float pct = hp / maxhp;
         onHealthPctChanged(pct);
+    }
+
+    public void AddEndurance(float value)
+    {
+        Naili += value;
+        Naili = Mathf.Clamp(Naili, 0f, maxEndurance);
+        float pct = Naili / maxEndurance;
+        onEndurancePctChanged(pct);
     }
 
     //返回面板伤害：武器伤害+补正
