@@ -19067,10 +19067,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 0}
-  bg: {fileID: 1093824930}
-  mg: {fileID: 1127833990}
-  fg: {fileID: 181090278}
   updateSpeedSeconds: 0.3
+  hpBar:
+    bg: {fileID: 0}
+    mg: {fileID: 0}
+    fg: {fileID: 0}
+  NlBar:
+    bg: {fileID: 0}
+    mg: {fileID: 0}
+    fg: {fileID: 0}
 --- !u!1 &255621563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2202269448604456347, guid: 7ac4be6e42a391149bc63d44f1f29c0a,
@@ -19093,6 +19098,99 @@ MonoBehaviour:
   weaponTransforms: []
   wd_list: []
   wdOnUse: {fileID: 0}
+--- !u!1 &271965916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 271965920}
+  - component: {fileID: 271965919}
+  - component: {fileID: 271965918}
+  - component: {fileID: 271965917}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &271965917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271965916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &271965918
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271965916}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &271965919
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271965916}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &271965920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271965916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -36.78, y: -14.27, z: -42.22}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315468806
 GameObject:
   m_ObjectHideFlags: 0
@@ -19253,10 +19351,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 0}
-  bg: {fileID: 1732911711}
-  mg: {fileID: 1551815922}
-  fg: {fileID: 461843403}
   updateSpeedSeconds: 0.3
+  hpBar:
+    bg: {fileID: 0}
+    mg: {fileID: 0}
+    fg: {fileID: 0}
+  NlBar:
+    bg: {fileID: 0}
+    mg: {fileID: 0}
+    fg: {fileID: 0}
 --- !u!1 &333742624
 GameObject:
   m_ObjectHideFlags: 0
@@ -19404,7 +19507,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   am: {fileID: 0}
-  interCol: {fileID: 0}
   overlapEcastms: []
 --- !u!1 &363108716
 GameObject:
@@ -19657,7 +19759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   am: {fileID: 0}
-  interCol: {fileID: 0}
   overlapEcastms: []
 --- !u!114 &400303539
 MonoBehaviour:
@@ -20449,7 +20550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   am: {fileID: 0}
-  interCol: {fileID: 0}
   overlapEcastms: []
 --- !u!114 &690691097
 MonoBehaviour:
@@ -21123,6 +21223,8 @@ MonoBehaviour:
   am: {fileID: 0}
   hp: 100
   maxhp: 100
+  Naili: 0
+  maxEndurance: 0
   defenceRate:
     physical: 0
     magical: 0
@@ -21844,6 +21946,8 @@ MonoBehaviour:
   am: {fileID: 0}
   hp: 100
   maxhp: 100
+  Naili: 0
+  maxEndurance: 0
   defenceRate:
     physical: 0
     magical: 0
@@ -23261,6 +23365,8 @@ MonoBehaviour:
   am: {fileID: 0}
   hp: 100
   maxhp: 100
+  Naili: 0
+  maxEndurance: 0
   defenceRate:
     physical: 0
     magical: 0
@@ -23539,10 +23645,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 1339910349}
-  bg: {fileID: 1064554294}
-  mg: {fileID: 1936783599}
-  fg: {fileID: 148412094}
   updateSpeedSeconds: 0.3
+  hpBar:
+    bg: {fileID: 0}
+    mg: {fileID: 0}
+    fg: {fileID: 0}
+  NlBar:
+    bg: {fileID: 0}
+    mg: {fileID: 0}
+    fg: {fileID: 0}
 --- !u!1 &1434381632
 GameObject:
   m_ObjectHideFlags: 0
@@ -24238,10 +24349,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 0}
-  bg: {fileID: 1747571452}
-  mg: {fileID: 1648261536}
-  fg: {fileID: 975791362}
   updateSpeedSeconds: 0.3
+  hpBar:
+    bg: {fileID: 0}
+    mg: {fileID: 0}
+    fg: {fileID: 0}
+  NlBar:
+    bg: {fileID: 0}
+    mg: {fileID: 0}
+    fg: {fileID: 0}
 --- !u!1 &1601119850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4983951380622014182, guid: 3c9f3d94a6122854fa1652eddd4eadea,

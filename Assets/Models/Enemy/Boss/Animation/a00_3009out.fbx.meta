@@ -59,26 +59,10 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
-        functionName: Play
-        data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 23ae43cab235d684ebdd402bdd493e0a,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
       - time: 0.3014427
         functionName: TurnAbleAttackStart
         data: 
         objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.32572928
-        functionName: Play
-        data: 
-        objectReferenceParameter: {fileID: 8300000, guid: 05ae8b0ab0d528e49b1cd968e1f6862e,
-          type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0

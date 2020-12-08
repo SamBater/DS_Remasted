@@ -47,7 +47,8 @@ public class PlayerInput : ActorInput
     }
 
     void Update()
-    {   rightAxis = Input.GetAxis("Horizontal");
+    {
+        rightAxis = Input.GetAxis("Horizontal");
         forwardAxis = Input.GetAxis("Vertical");
         MoveInput();
         InputDetecte();

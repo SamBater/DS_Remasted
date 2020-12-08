@@ -42,7 +42,7 @@ public class WeaponController : MonoBehaviour
         
         wdOnUse = wdOnUse == null ? wd_list[0] : wdOnUse;
         
-        if(wm.am.gameObject.tag == "Player")
+        if(wm.am.gameObject.tag == "Player" && UIManager.instance != null)
             UIManager.instance.UpdateWeaponIcon(wdOnUse.icon,wm.wcR == this);
 
         //隐藏未使用的武器.

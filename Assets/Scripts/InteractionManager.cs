@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 public enum InterractionEvent{
@@ -10,18 +12,17 @@ public enum InterractionEvent{
     pickup
 }
 
-[RequireComponent(typeof(CapsuleCollider))]
 public class InteractionManager : IActorManagerInterface
 {
-    public CapsuleCollider interCol;
     public List<EventCasterManager> overlapEcastms = new List<EventCasterManager>();
-    void Start()
+    void Awake()
     {
-        interCol = GetComponent<CapsuleCollider>();
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.layer != LayerMask.NameToLayer("Caster")) return;
         EventCasterManager[] ecastms = other.GetComponents<EventCasterManager>();
         foreach(var ecastm in ecastms)
         {
@@ -30,8 +31,6 @@ public class InteractionManager : IActorManagerInterface
                 overlapEcastms.Add(ecastm);
             }
         }
-
-
     }
 
     private void OnTriggerExit(Collider other) {
@@ -74,16 +73,13 @@ public class InteractionManager : IActorManagerInterface
                 PickUpItem();
                 return;
             }
-
             
-            //修正玩家朝向
-            transform.position = ecm.am.transform.position + ecm.am.transform.TransformVector(ecm.offset);
-            am.ac.model.transform.LookAt(ecm.am.transform,Vector3.up);
-            transform.LookAt(ecm.am.transform,Vector3.up);
-
-            transform.forward = ecm.am.transform.forward * -1.0f;
-            am.ac.model.transform.forward = ecm.am.transform.forward * -1.0f;
-
+            //修正位置、朝向
+            am.ToggleLock(true);
+            transform.position = overlapEcastms[0].am.transform.position +
+                                 overlapEcastms[0].am.transform.TransformVector(overlapEcastms[0].offset);
+            am.ac.model.transform.LookAt(ecm.am.transform.position, Vector3.up);
+            //Time.timeScale = 0.01f;
 
             am.ac.enableTurnDirection = false;
             if(ecm.interractionEvent == InterractionEvent.frontStab)
@@ -129,4 +125,5 @@ public class InteractionManager : IActorManagerInterface
         }
         UIManager.instance.ShowItemOnGround(items,counts);
     }
+    
 }

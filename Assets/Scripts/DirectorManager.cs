@@ -155,7 +155,6 @@ public class DirectorManager : IActorManagerInterface
             }
         }
 
-                        
         pd.Evaluate();
         pd.Play();
     }

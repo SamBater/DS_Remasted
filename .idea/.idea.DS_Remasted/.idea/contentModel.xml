@@ -44,6 +44,7 @@
           <e p="ActorManager.cs" t="Include" />
           <e p="ActorUiBarManager.cs" t="Include" />
           <e p="AILancer.cs" t="Include" />
+          <e p="AINormal.cs" t="Include" />
           <e p="AISniper.cs" t="Include" />
           <e p="AnimatorFactory.cs" t="Include" />
           <e p="Arrow.cs" t="Include" />
@@ -51,7 +52,6 @@
           <e p="BaseStates.cs" t="Include" />
           <e p="BattleManager.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
-          <e p="CloseOffFatherCol.cs" t="Include" />
           <e p="Damage.cs" t="Include" />
           <e p="Database.cs" t="Include" />
           <e p="DirectorManager.cs" t="Include" />
@@ -81,7 +81,6 @@
           <e p="TriggerController.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
           <e p="VFXToggle.cs" t="Include" />
-          <e p="VirutalPlayerInput.cs" t="Include" />
           <e p="WeaponController.cs" t="Include" />
           <e p="WeaponData.cs" t="Include" />
           <e p="WeaponFactory.cs" t="Include" />

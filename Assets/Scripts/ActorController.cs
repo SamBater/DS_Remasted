@@ -64,7 +64,7 @@ public class ActorController : MonoBehaviour
         if(playerInput.running) modelForwardTrackMovingVec = true;
         
         //更改整个朝向,模型transform始终朝向MovingVec，MovingVec取决于transform，所以的话
-        if (cc.cameraStatus == CameraStatus.FOLLOW || cc.cameraStatus == CameraStatus.AIM)
+        if (cc.cameraStatus == CameraStatus.FOLLOW && !sm.isLock)
         {
             HandleMoveOnNormal();
         }
@@ -133,17 +133,47 @@ public class ActorController : MonoBehaviour
     {
         if(characterController)
         {
-            Vector3 movement = planarVec + Physics.gravity;
-            characterController.Move(movement * Time.deltaTime + deltaPos );
-            deltaPos = Vector3.zero;
+            Physics.SyncTransforms();
+            // if(deltaPos.magnitude < 0.01f) return;
+            //  bool conditino1 = planarVec.magnitude > 0.1f;    //正常行走
+            //  bool condition2 = sm.isAttack || sm.isRoll;    //动作root motion
+            //  bool condition3 = sm.isLock;
+            //  if(conditino1 || condition2 || condition3)
+                characterController.Move(Physics.gravity * Time.deltaTime + deltaPos);
         }
+        
+        deltaPos = Vector3.zero;
+    }
+
+    public void Stab()
+    {
+        animator.SetInteger("attackMotionType",1);
+        animator.SetTrigger("attack");
+    }
+
+    public void Stabed()
+    {
+        animator.SetInteger("hitID",1);
+        animator.SetTrigger("hit");
     }
 
     public void Attack()
     {
+
+        
         if (CheckState("Ground"))
         {
-            animator.SetTrigger("attack");
+            EventCasterManager ecm = playerInput.am.im.GetFirstContactEventCaster();
+            if (ecm && ecm.active && ecm.interractionEvent == InterractionEvent.frontStab && planarVec.magnitude < 0.1f)
+            {
+                transform.position = ecm.am.transform.position +
+                                     ecm.am.transform.TransformVector(ecm.offset);
+                model.transform.LookAt(ecm.am.transform.position, Vector3.up);
+                Stab();
+                ecm.am.ac.Stabed();
+            }
+            else
+                animator.SetTrigger("attack");
         }
 
         else if(CheckStateTag("attack") && combo)

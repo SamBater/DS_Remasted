@@ -48,7 +48,7 @@ public class ActorManager : MonoBehaviour
             wm = Bind<WeaponManager>(model);
             sm = Bind<StateManager>(gameObject);
             dm = Bind<DirectorManager>(gameObject);
-            im = Bind<InteractionManager>(sensor);
+            im = Bind<InteractionManager>(gameObject);
             sfxm = Bind<SoundManager>(model);
             inventory = GetComponent<InventoryManager>();
         }
@@ -109,7 +109,8 @@ public class ActorManager : MonoBehaviour
     public void ToggleLock(bool value)
     {
         ac.animator.SetBool("lock",value);
-        if(!value) ac.EnableInput();
+        ac.playerInput.InputToggle(!value);
+        ac.StopMove(value);
     }
 
 
@@ -161,7 +162,6 @@ public class ActorManager : MonoBehaviour
 
     public void OnRootMotionUpdate(Vector3 vec)
     {
-        if (sm.isLock) return;
         ac.deltaPos += (1.0f * vec);
     }
 

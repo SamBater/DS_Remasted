@@ -124,10 +124,10 @@ public class FSMManager : MonoBehaviour
 
     public void OnGroundUpdate()
     {
-        ac.StopMove(false);
-        ac.modelForwardTrackMovingVec = false;
+        //ac.StopMove(false);
+        //ac.modelForwardTrackMovingVec = false;
 
-        ac.playerInput.InputToggle(true);
+        //ac.playerInput.InputToggle(true);
         
         sm.AddEndurance(ac.playerInput.running ? -5.0f * Time.deltaTime : 5.0f * Time.deltaTime);
     }

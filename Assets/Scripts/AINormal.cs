@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class VirutalPlayerInput : PlayerInput
+public class AINormal : PlayerInput
 {
     public enum FSMState
     {

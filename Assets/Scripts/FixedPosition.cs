@@ -19,8 +19,6 @@ public class FixedPosition : MonoBehaviour
 
     private void OnAnimatorMove() {
         gameObject.SendMessageUpwards("OnRootMotionUpdate",animator.deltaPosition);
-        if(animator.deltaPosition.y > 0.2f)
-        print(animator.deltaPosition);
     }
 
 }
