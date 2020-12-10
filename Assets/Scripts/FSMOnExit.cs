@@ -22,7 +22,7 @@ public class FSMOnExit : StateMachineBehaviour
     {
         foreach(var msg in onExitMessages)
         {
-            animator.SendMessageUpwards(msg);
+            animator.SendMessage(msg);
         }
     }
 

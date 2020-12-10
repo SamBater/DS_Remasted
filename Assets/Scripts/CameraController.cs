@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,6 +33,9 @@ public class CameraController : MonoBehaviour
     public float minVerticalMove = -30f;
     public float maxVerticalMove = 60.0f;
 
+    public bool fade = false;
+    public float fadeValue;
+    public Material material;
     private void Awake() 
     {
         lockDot.enabled = false;
@@ -46,6 +50,11 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
+        if (fade && material)
+        {
+            fadeValue = Mathf.Lerp(fadeValue, 1.0f, Time.deltaTime * 1.0f);
+            material.SetFloat("_Speed", fadeValue);
+        }
         float xInput = Input.GetAxis("Mouse X");
         float YInput = -1.0f * Input.GetAxis("Mouse Y");
 
@@ -160,10 +169,6 @@ public class CameraController : MonoBehaviour
             
 
             //TODO:超出屏幕自动解锁
-            if(lockOnTarget.am.ac.isOnScreen)
-            {
-                LockOff();
-            }
 
             //超出一定范围自动解锁
             if(distance > maxLockDistance*2.5f)
@@ -175,6 +180,17 @@ public class CameraController : MonoBehaviour
                 LockOff();
             }
         }
+        
+    }
+
+    private void OnRenderImage(RenderTexture src, RenderTexture dest)
+    {
+        if (material && fade)
+        {
+            Graphics.Blit(src, dest, material);
+        }
+        else
+            Graphics.Blit(src, dest);
     }
 
     public class LockTarget

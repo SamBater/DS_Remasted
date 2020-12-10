@@ -82,9 +82,7 @@ public class FSMManager : MonoBehaviour
 
     public void OnDieEnter()
     {
-        ac.model.SendMessage("WeaponDisable");
-        Collider col = GetComponentInParent<Collider>();
-        //col.isTrigger = true;
+        sm.am.Die();
     }
 
     public void OnJumpEnter()
@@ -93,12 +91,12 @@ public class FSMManager : MonoBehaviour
         
         ac.StopMove(false);
 
-        ac.thusVec = Vector3.up * 0.25f;
+
     }
 
     public void OnFallUpdate()
     {
-        ac.thusVec = Vector3.down * 0.4f;
+
     }
 
     public void OnGroundEnter()
@@ -107,8 +105,6 @@ public class FSMManager : MonoBehaviour
             ac.animator.SetFloat("forward", 0.3f);
 
         ac.StopMove(false);
-
-        ac.thusVec = Vector3.zero;
 
         ac.modelForwardTrackMovingVec = false;
 

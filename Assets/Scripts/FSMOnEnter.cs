@@ -5,13 +5,12 @@ using UnityEngine;
 public class FSMOnEnter : StateMachineBehaviour
 {
     public string[] onEnterMessages;
-    public FSMManager fSMManager;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        foreach(var msg in onEnterMessages)
        {
-           animator.gameObject.SendMessageUpwards(msg);
+           animator.gameObject.SendMessage(msg);
        }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public enum WeaponHold
@@ -10,6 +11,7 @@ public enum WeaponHold
     _2hR = 2,
     _2hL = 3
 }
+[System.Serializable]
 public class StateManager : IActorManagerInterface
 {
     [Header("Common proproties")]
@@ -56,16 +58,15 @@ public class StateManager : IActorManagerInterface
 
     public event Action<float> onHealthPctChanged = delegate {};
     public event Action<float> onEndurancePctChanged = delegate {};
-
     public static char[] levelMap = new char[6] { 'E', 'D' ,'C','B','A','S'};
     private void Awake() {
+        hp = maxhp;
+        Naili = maxEndurance;
 
     }
     void Start()
     {
-        hp = maxhp;
-        Naili = maxEndurance;
-        
+
     }
 
     void Update() 
@@ -143,4 +144,6 @@ public class StateManager : IActorManagerInterface
         else return lhATK = ComputerPanelATK(rh);
     }
 
+
+    
 }

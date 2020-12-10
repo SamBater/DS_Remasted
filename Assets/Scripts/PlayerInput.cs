@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+
 
 public class PlayerInput : ActorInput
 {
@@ -39,6 +41,11 @@ public class PlayerInput : ActorInput
 
     public bool pressR = false;
     public KeyCode switchWeapon = KeyCode.Y;
+
+    private void Awake()
+    {
+        
+    }
 
     void Start()
     {
@@ -205,7 +212,12 @@ public class PlayerInput : ActorInput
 
         if(Input.GetKeyDown(keyUseItem))
             am.UseItem();
-
+        
+        if(Input.GetKeyDown(KeyCode.LeftAlt))
+            am.Die();
+        
+        if(Input.GetKeyDown(KeyCode.I))
+            UIManager.instance.ShowOptionPanel();
 
     }
 }

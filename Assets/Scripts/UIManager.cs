@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     public Image itemOnGroundIcon;
     public Text itemOnGroundName;
     public Text itemOnGroundCount;
+    public GameObject optionsPanel;
+    public GameObject firePanel;
     public static UIManager instance;
     
     private void Awake() 
@@ -75,5 +77,15 @@ public class UIManager : MonoBehaviour
             yield return new WaitForSeconds(1.5f);
         }
         itemTips.SetActive(false);
+    }
+
+    public void ShowOptionPanel()
+    {
+        optionsPanel.SetActive(!optionsPanel.activeSelf);
+    }
+
+    public void ShowFirePanel()
+    {
+        firePanel.SetActive(!firePanel.activeSelf);
     }
 }

@@ -16,15 +16,4 @@ public class EventCasterManager : IActorManagerInterface
             am = GetComponentInParent<ActorManager>();
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public Vector3 FixedPosition()
-    {
-        return transform.position + offset;
-    }
 }

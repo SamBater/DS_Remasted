@@ -7,7 +7,6 @@ public class ActorController : MonoBehaviour
     // Start is called before the first frame update
 
     [Header("==== Speed Settings")]
-    public float jumpForce = 2.5f;
     public float walkSpeed = 1.0f;
     public float runSpeed = 2.0f;
 
@@ -22,7 +21,6 @@ public class ActorController : MonoBehaviour
     private CharacterController characterController;
 
     public Vector3 planarVec;
-    public Vector3 thusVec;
     public Vector3 deltaPos;
 
     [SerializeField]
@@ -35,16 +33,7 @@ public class ActorController : MonoBehaviour
     private bool combo = false;
 
     public Transform neckPos;
-
-    public bool isOnScreen;
-
-    private void OnBecameInvisible() {
-        isOnScreen = false;
-    }
-    private void OnBecameVisible() {
-        isOnScreen = true;
-    }
-
+    
     void Awake()
     {
         playerInput = GetComponent<ActorInput>();
@@ -106,7 +95,6 @@ public class ActorController : MonoBehaviour
         Vector3 localMovingVec = transform.InverseTransformVector(playerInput.GetMoveVec());
         if (modelForwardTrackMovingVec)
         {
-            // model.transform.forward = thusVec.normalized;
             if (planarVec != Vector3.zero)
                 model.transform.forward = planarVec.normalized;
         }
@@ -134,12 +122,7 @@ public class ActorController : MonoBehaviour
         if(characterController)
         {
             Physics.SyncTransforms();
-            // if(deltaPos.magnitude < 0.01f) return;
-            //  bool conditino1 = planarVec.magnitude > 0.1f;    //正常行走
-            //  bool condition2 = sm.isAttack || sm.isRoll;    //动作root motion
-            //  bool condition3 = sm.isLock;
-            //  if(conditino1 || condition2 || condition3)
-                characterController.Move(Physics.gravity * Time.deltaTime + deltaPos);
+            characterController.Move(Physics.gravity * Time.deltaTime + deltaPos);
         }
         
         deltaPos = Vector3.zero;
@@ -164,7 +147,7 @@ public class ActorController : MonoBehaviour
         if (CheckState("Ground"))
         {
             EventCasterManager ecm = playerInput.am.im.GetFirstContactEventCaster();
-            if (ecm && ecm.active && ecm.interractionEvent == InterractionEvent.frontStab && planarVec.magnitude < 0.1f)
+            if (ecm && ecm.active && ecm.interractionEvent == InterractionEvent.FrontStab && planarVec.magnitude < 0.1f && cc.cameraStatus == CameraStatus.FOLLOW)
             {
                 transform.position = ecm.am.transform.position +
                                      ecm.am.transform.TransformVector(ecm.offset);
@@ -254,5 +237,22 @@ public class ActorController : MonoBehaviour
     public void EnableCombo(bool v)
     {
         combo = v;
+    }
+
+    public void LitFire()
+    {
+        animator.Play("bonefire_lit");
+    }
+
+    public void SitFire()
+    {
+        animator.Play("bonefire_rest");
+    }
+
+    public void StandUpFire()
+    {
+        animator.SetTrigger("Leave");
+        playerInput.am.wm.SetAllWeaponOnUseVisiable(true);
+        UIManager.instance.ShowFirePanel();
     }
 }

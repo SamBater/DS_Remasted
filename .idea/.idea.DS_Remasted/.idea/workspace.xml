@@ -22,35 +22,32 @@
     <list default="true" id="b47bb101-870f-413d-bb12-19abb39699d1" name="Default Changelist" comment="rename files">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/a02_Player/a02_0000out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/a02_Player/a02_0000out.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/a0/c2410_die.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/a0/c2410_die.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/a0/jab.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/a0/jab.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/a0/jab.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/a0/jab.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animator/Actor.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Actor.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3002out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3002out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3007out.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3007out.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3009out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/Animation/a00_3009out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/c4100.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/Boss/c4100.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_HD_A_9560.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/Materials/c2410_HD_A_9560.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/a20_3201out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/a20_3201out.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/c2410out(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/c2410out(Clone).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PlayerHandle (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PlayerHandle (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyPlayable/MyPlayableBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MyPlayable/MyPlayableBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EffectExamples/Shared/Prefabs/ParticlesLight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EffectExamples/Shared/Prefabs/ParticlesLight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/bornfire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/bornfire.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CloseOffFatherCol.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CloseOffFatherCol.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DirectorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DirectorManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventCasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventCasterManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FixedPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FixedPosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMOnEnter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMOnEnter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMOnExit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMOnExit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMOnUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMOnUpdate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IActorManagerInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IActorManagerInterface.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VirutalPlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AINormal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VirutalPlayerInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AINormal.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timeline/New Timeline.playable" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timeline/New Timeline.playable.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Timeline/stab_timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/stab_timeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +58,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/03/5fdf3e59/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Editor/State/WindowState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3BF131DB-B369-4DC8-A0C9-A3CA7B3825F8/df/24eb423d/PlayableDirector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Dupezez.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/TimelinePlayable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Events/MarkerTrack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DontDestoy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/f8/e697eb78/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/03/5fdf3e59/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BoneFire.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Dupezez.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,7 +80,6 @@
         <option value="$USER_HOME$/AppData/Local/Temp/Dupezez.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActorAttributionBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" />
@@ -87,13 +88,34 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AINormal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DirectorManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FixedPosition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" />
         <option value="$PROJECT_DIR$/Assets/MyPlayable/MyPlayableBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FSMOnEnter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FSMOnUpdate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FSMOnExit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Death.shader" />
+        <option value="$PROJECT_DIR$/Assets/DeathHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/DontDestoy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PersistObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/IActorManagerInterface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameDataWriter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameDataReader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EventCasterManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PersistStenStorage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveObjects.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FileManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DummyTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/BoneFire.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" />
       </list>
     </option>
   </component>
@@ -142,6 +164,9 @@
       <workItem from="1607194166300" duration="1709000" />
       <workItem from="1607279003224" duration="5341000" />
       <workItem from="1607310348935" duration="49358000" />
+      <workItem from="1607462774962" duration="645000" />
+      <workItem from="1607481018949" duration="21307000" />
+      <workItem from="1607573541558" duration="15272000" />
     </task>
     <task id="LOCAL-00001" summary="rename files">
       <created>1607183673002</created>
@@ -164,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607333983041</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="FrontStab Bug Fix">
+      <created>1607463215819</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607463215819</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +221,8 @@
     <MESSAGE value="rename files" />
     <MESSAGE value="BUG FIXS" />
     <MESSAGE value="add 耐力" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 耐力" />
+    <MESSAGE value="FrontStab Bug Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="FrontStab Bug Fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1521" height="735" maximized="true" key="DiffContextDialog" timestamp="1607282207582">
@@ -276,6 +309,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="831" height="220" key="GridCell.Tab.3.right/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
+    <state x="610" y="161" key="RiderGenerateDialog" timestamp="1607633205426">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="610" y="161" key="RiderGenerateDialog/0.0.1707.920@0.0.1707.920" timestamp="1607633205426" />
     <state x="355" y="104" key="SettingsEditor" timestamp="1607280986385">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -288,6 +325,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="446" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1607334001205" />
+    <state x="496" y="174" width="1451" height="670" key="dock-window-1" timestamp="1607580472666">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="496" y="174" width="1451" height="670" key="dock-window-1/0.0.1707.920@0.0.1707.920" timestamp="1607580472666" />
     <state x="544" y="122" width="930" height="797" key="search.everywhere.popup" timestamp="1607459292171">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -309,19 +350,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/StateManager.cs</url>
-          <line>127</line>
-          <properties documentPath="D:\Unity Projects\DS_Remasted\Assets\Scripts\StateManager.cs" initialLine="127">
-            <startOffsets>
-              <option value="3349" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3437" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

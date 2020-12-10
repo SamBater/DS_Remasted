@@ -10,7 +10,7 @@ public enum ActorType
     Static = 3
 }
 
-public class ActorManager : MonoBehaviour
+public class ActorManager : MonoBehaviour,ISaveable
 {
 
     public BattleManager bm;
@@ -27,20 +27,19 @@ public class ActorManager : MonoBehaviour
 
     public float OnSkyTime = 0.0f;
     public float OnSkyMaxTime = 5.0f;
+    public GameObject model;
+    private ISaveable saveableImplementation;
 
-    private void Awake() {
-        
-        ac = GetComponent<ActorController>();
-        GameObject model = ac.model;
-        GameObject sensor = null;
-
+    private void Awake()
+    {
         try
         {
-            sensor = transform.Find("sensor").gameObject;
+            ac = GetComponent<ActorController>();
+            model = ac.model;
         }
         catch (System.Exception)
         {
-
+            model = gameObject;
         }
         if(actorType != ActorType.Static)
         {
@@ -186,7 +185,61 @@ public class ActorManager : MonoBehaviour
     {
         inventory.NextItem();
     }
-
-
     
+    public void Die()
+    {
+        wm.WeaponDisable();
+        if (CompareTag("Player"))
+        {
+            //屏幕置灰,播放"You died"
+            ac.cc.fade = true;
+            
+            
+            //在五秒前的位置生成 "魂" 带有EventCast
+
+            //重载场景,插入过渡LoadScene
+            //不重载的物体：玩家信息；Boss、精英怪；宝箱、拉杆、门的状态；
+            GameManager.LoadScene();
+        }
+
+        else if (CompareTag("Enemy"))
+        {
+            
+        }
+    }
+
+
+    public void PopulateSaveData(SaveData saveData)
+    {
+        if (CompareTag("Player"))
+        {
+            saveData.player_pos = transform.position;
+        }
+        else if(CompareTag("BornFire"))
+        {
+            BoneFire boneFire = GetComponent<BoneFire>();
+            SaveData.MyStruct myStruct;
+            myStruct.u_id = GetInstanceID();
+            myStruct.activity = boneFire.lit;
+            saveData.reborn.Add(myStruct);
+        }
+    }
+
+    public void LoadFromSaveData(SaveData saveData)
+    {
+        if (CompareTag("Player"))
+        {
+            transform.position = saveData.player_pos;
+        }
+        else if(CompareTag("BornFire"))
+        {
+            for (int i = 0; i < saveData.reborn.Capacity; i++)
+            {
+                if (saveData.reborn[i].u_id == GetInstanceID())
+                {
+                    GetComponent<BoneFire>().lit = saveData.reborn[i].activity;
+                }
+            }
+        }
+    }
 }

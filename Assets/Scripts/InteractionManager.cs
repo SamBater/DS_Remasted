@@ -6,10 +6,12 @@ using UnityEngine.UIElements;
 
 
 public enum InterractionEvent{
-    frontStab,
-    openbox,
-    pullLevel,
-    pickup
+    FrontStab,
+    Openbox,
+    PullLevel,
+    Pickup,
+    BornFireLit,
+    BornFireSit
 }
 
 public class InteractionManager : IActorManagerInterface
@@ -68,38 +70,60 @@ public class InteractionManager : IActorManagerInterface
             if(!ecm.active) return;
             //if(!BattleManager.CheckAnglePlayer(ac.model,im.overlapEcastms[0].am.gameObject,30.0f)) return;
             //im.overlapEcastms[0].active = false;
-            if(ecm.interractionEvent == InterractionEvent.pickup)
+            if(ecm.interractionEvent == InterractionEvent.Pickup)
             {
                 PickUpItem();
                 return;
             }
             
             //修正位置、朝向
-            am.ToggleLock(true);
-            transform.position = overlapEcastms[0].am.transform.position +
-                                 overlapEcastms[0].am.transform.TransformVector(overlapEcastms[0].offset);
+
+            if (ecm.offset != Vector3.zero)
+            {
+                am.ToggleLock(true);
+                transform.position = overlapEcastms[0].am.transform.position +
+                                     overlapEcastms[0].am.transform.TransformVector(overlapEcastms[0].offset);
+            }
             am.ac.model.transform.LookAt(ecm.am.transform.position, Vector3.up);
-            //Time.timeScale = 0.01f;
 
             am.ac.enableTurnDirection = false;
-            if(ecm.interractionEvent == InterractionEvent.frontStab)
+            if(ecm.interractionEvent == InterractionEvent.FrontStab)
             {
                 am.ac.model.SendMessage("WeaponDisable");
                 overlapEcastms[0].am.ac.model.SendMessage("WeaponDisable");
                 am.dm.PlayTimeLine("frontStab",am,ecm.am);
             }
-            else if(ecm.interractionEvent == InterractionEvent.openbox)
+            else if(ecm.interractionEvent == InterractionEvent.Openbox)
             {
                 am.wm.SetAllWeaponOnUseVisiable(false);
                 am.dm.PlayTimeLine("openBox",am,ecm.am);
             }
-            else if(ecm.interractionEvent == InterractionEvent.pullLevel)
+            else if(ecm.interractionEvent == InterractionEvent.PullLevel)
             {
                 am.dm.PlayTimeLine("leverUp",am,ecm.am);
             }
-            else if(ecm.interractionEvent == InterractionEvent.pickup)
+            else if(ecm.interractionEvent == InterractionEvent.Pickup)
             {
                 PickUpItem();
+            }
+            else if (ecm.interractionEvent == InterractionEvent.BornFireLit)
+            {
+                //玩家播放点火动画,特定时间点播放声效.
+                am.ac.LitFire();
+                //篝火燃起来
+                BoneFire boneFire = ecm.GetComponentInParent<BoneFire>();
+                boneFire.Fire();
+                boneFire.FireBurst();
+                //保存篝火信息
+                
+                
+                //TODO UI显示 BONE FIRE LIT
+            }
+            else if (ecm.interractionEvent == InterractionEvent.BornFireSit)
+            {
+                am.ac.SitFire();
+                am.wm.SetAllWeaponOnUseVisiable(false);
+                UIManager.instance.ShowFirePanel();
             }
             
         }

@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 2207850806306222022
-    second: a0_jab
+    second: jab
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -21,9 +21,9 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
       copied configuration does not match position in animation file:\n\t'Spine'
-      : position error = 1.094079 mm\nCopied Avatar Rig Configuration mis-match.
+      : position error = 2.437487 mm\nCopied Avatar Rig Configuration mis-match.
       Inbetween bone rotation in copied configuration does not match rotation in
-      animation file:\n\t'Upper_Root' : rotation error = 30.020607 deg\n"
+      animation file:\n\t'Upper_Root' : rotation error = 18.790371 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Noesis Frames' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -45,11 +45,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: a0_jab
+      name: jab
       takeName: Noesis Frames
       internalID: 0
       firstFrame: 0
-      lastFrame: 55
+      lastFrame: 44
       wrapMode: 0
       orientationOffsetY: 180
       level: 0
@@ -62,9 +62,9 @@ ModelImporter:
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []

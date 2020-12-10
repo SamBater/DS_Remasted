@@ -11,6 +11,8 @@
           <e p="AllSkyFree_Menu.cs" t="Include" />
           <e p="AllSkyFree_Readme.txt" t="Include" />
         </e>
+        <e p="BoneFire.cs" t="Include" />
+        <e p="DontDestoy.cs" t="Include" />
         <e p="DotPos.cs" t="Include" />
         <e p="JSON" t="Include">
           <e p="Editor" t="Include">
@@ -56,6 +58,7 @@
           <e p="Database.cs" t="Include" />
           <e p="DirectorManager.cs" t="Include" />
           <e p="EventCasterManager.cs" t="Include" />
+          <e p="FileManager.cs" t="Include" />
           <e p="FixedPosition.cs" t="Include" />
           <e p="FSMClearSignals.cs" t="Include" />
           <e p="FSMManager.cs" t="Include" />
@@ -72,6 +75,7 @@
           <e p="ObjectPool.cs" t="Include" />
           <e p="OnDrawUpdate.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
+          <e p="SaveData.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="SoundFactory.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
@@ -85,6 +89,9 @@
           <e p="WeaponData.cs" t="Include" />
           <e p="WeaponFactory.cs" t="Include" />
           <e p="WeaponManager.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Death.shader" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
