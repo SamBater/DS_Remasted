@@ -29,7 +29,7 @@ public class ActorManager : MonoBehaviour,ISaveable
     public float OnSkyMaxTime = 5.0f;
     public GameObject model;
     private ISaveable saveableImplementation;
-
+    public UIManager ActorUIManager = new UIManager();
     private void Awake()
     {
         try

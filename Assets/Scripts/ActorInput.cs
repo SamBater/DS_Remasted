@@ -6,6 +6,7 @@ public abstract class ActorInput : IActorManagerInterface
     protected bool EnableInput;
     public bool running;
     public ActorController ac;
+  
     public Vector3 GetMoveVec()
     {
         return MovingVec;

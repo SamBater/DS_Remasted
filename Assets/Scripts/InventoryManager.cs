@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine;using UnityEngine.Events;
+
+[Serializable]
+public class NextEvent : UnityEvent<Item>{}
 
 public enum ItemEnum
 {
@@ -16,7 +20,7 @@ public class InventoryManager : MonoBehaviour
     public Dictionary<ItemEnum,int> inventory;  //物品：数量
     public List<Item> quickUse = new List<Item>();
     public int current;
-    
+    public NextEvent NextItemEvent = new NextEvent();
     
     private void Awake() 
     {
@@ -24,13 +28,14 @@ public class InventoryManager : MonoBehaviour
         
         inventory.Add(ItemEnum.EstusFlask,10);
         inventory.Add(ItemEnum.FlySword,2);
+        
         //TODO:测试用
-        //
-        // quickUse.Add(ItemFactory.GetItem(5));
-        // quickUse.Add(ItemFactory.GetItem(4));
-        // quickUse.Add(ItemFactory.GetItem(60));
-        // quickUse.Add(ItemFactory.GetItem(23));
-        // quickUse.Add(ItemFactory.GetItem(21));
+        GameDatabase ItemFactory = GameDatabase.GetInstance();
+        quickUse.Add(ItemFactory.GetItem(0));
+        quickUse.Add(ItemFactory.GetItem(1));
+        quickUse.Add(ItemFactory.GetItem(2));
+        quickUse.Add(ItemFactory.GetItem(3));
+        quickUse.Add(ItemFactory.GetItem(4));
     }
 
     private void Start() {
@@ -40,14 +45,14 @@ public class InventoryManager : MonoBehaviour
         {
             Item item = GetCurrentItem();
             if(item != null)
-            UIManager.instance.UpdateItemIcon((int)item.GetID());
+            NextItemEvent.Invoke(GetCurrentItem());
         }
     }
 
     public void NextItem()
     {
         current = (current + 1) % quickUse.Count;
-        UIManager.instance.UpdateItemIcon((int)GetCurrentItem().GetID());
+        NextItemEvent.Invoke(GetCurrentItem());
     }
 
     public Item GetCurrentItem()

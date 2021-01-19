@@ -1,7 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
+
+[Serializable]
+public class UpdateEvent : UnityEvent<int,bool>{}
 
 public class WeaponManager : IActorManagerInterface
 {
@@ -14,7 +19,7 @@ public class WeaponManager : IActorManagerInterface
     private Animator animator;
     bool r0l1;
     public GameObject weaponVFX;
-    
+    public UpdateEvent ChangeWeaponEvent = null;
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -39,6 +44,7 @@ public class WeaponManager : IActorManagerInterface
         {
 
         }
+
     }
 
     private void Start() {
@@ -51,6 +57,12 @@ public class WeaponManager : IActorManagerInterface
         catch (System.Exception)
         {
 
+        }
+
+        if (gameObject.CompareTag("Player"))
+        {
+            ChangeWeaponEvent.Invoke((int)wcR.weaponDataOnUse.weapon.GetID(),true);
+            ChangeWeaponEvent.Invoke((int)wcL.weaponDataOnUse.weapon.GetID(),false);
         }
     }
 
@@ -135,8 +147,7 @@ public class WeaponManager : IActorManagerInterface
         wc.weaponDataOnUse = next;
 
         //如果是玩家，则进行UI更新.
-        if(am.gameObject.tag == "Player")
-            UIManager.instance.UpdateWeaponIcon(wc.weaponDataOnUse.weapon.icon,rh);
+        ChangeWeaponEvent.Invoke((int)wc.weaponDataOnUse.weapon.GetID(),rh);
 
         am.SetAtkAnimationInt(wc.weaponDataOnUse.weapon.wpAtkMotionID);
         AnimatorFactory.SetLocalMotion(animator,wc.weaponDataOnUse.weapon.localMotionID1H);

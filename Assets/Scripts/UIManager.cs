@@ -17,26 +17,15 @@ public class UIManager : MonoBehaviour
     public Text itemOnGroundCount;
     public GameObject optionsPanel;
     public GameObject firePanel;
-    public static UIManager instance;
-    
-    private void Awake() 
+    public void UpdateWeaponIcon(int id,bool rh)
     {
-        if(instance) Destroy(this);
-        else
-        {
-            instance = this;
-        }
-    }
-
-    public void UpdateWeaponIcon(Sprite icon,bool rh)
-    {
+        Sprite icon = GameDatabase.GetInstance().GetItem(id).icon;
         if(rh) weaponIconR.sprite = icon;
         else weaponIconL.sprite = icon;
     }
 
-    public void UpdateItemIcon(int id)
+    public void UpdateItemIcon(Item newItem)
     {
-        Item newItem = GameDatabase.GetInstance().GetItem(id);
         itemIcon.sprite = newItem.GetIcon();
         itemName.text = newItem.GetName();
     }

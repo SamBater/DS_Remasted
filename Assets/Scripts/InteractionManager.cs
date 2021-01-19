@@ -115,15 +115,12 @@ public class InteractionManager : IActorManagerInterface
                 boneFire.Fire();
                 boneFire.FireBurst();
                 //保存篝火信息
-                
-                
-                //TODO UI显示 BONE FIRE LIT
             }
             else if (ecm.interractionEvent == InterractionEvent.BornFireSit)
             {
                 am.ac.SitFire();
                 am.wm.SetAllWeaponOnUseVisiable(false);
-                UIManager.instance.ShowFirePanel();
+                am.ActorUIManager.ShowFirePanel();
             }
             
         }
@@ -147,7 +144,7 @@ public class InteractionManager : IActorManagerInterface
             else
                 am.inventory.inventory.Add(items[i],counts[i]);
         }
-        UIManager.instance.ShowItemOnGround(items,counts);
+        am.ActorUIManager.ShowItemOnGround(items,counts);
     }
     
 }

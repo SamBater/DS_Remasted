@@ -24,14 +24,7 @@ public class WeaponController : MonoBehaviour
         }
         
         FillFists();
-
-        //TODO:读取上次退出时的武器数据,这里暂时默认第一个武器.
-        
         LoadWeapon();
-        
-        if(wm.am.gameObject.tag == "Player" && UIManager.instance != null)
-            UIManager.instance.UpdateWeaponIcon(weaponDataOnUse.weapon.icon,wm.wcR == this);
-        
         HideWeaponOnUnuse();
     }
     

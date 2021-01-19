@@ -225,7 +225,6 @@ public class PlayerInput : ActorInput
             am.Die();
         
         if(Input.GetKeyDown(KeyCode.I))
-            UIManager.instance.ShowOptionPanel();
-
+            am.ActorUIManager.ShowOptionPanel();
     }
 }

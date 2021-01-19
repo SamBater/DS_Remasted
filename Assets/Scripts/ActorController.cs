@@ -253,6 +253,6 @@ public class ActorController : MonoBehaviour
     {
         animator.SetTrigger("Leave");
         playerInput.am.wm.SetAllWeaponOnUseVisiable(true);
-        UIManager.instance.ShowFirePanel();
+        playerInput.am.ActorUIManager.ShowFirePanel();
     }
 }
