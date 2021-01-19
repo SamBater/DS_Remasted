@@ -20,34 +20,371 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47bb101-870f-413d-bb12-19abb39699d1" name="Default Changelist" comment="rename files">
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/原素瓶.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/原素瓶.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/原素瓶（空）.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/原素瓶（空）.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/火焰壶.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/火焰壶.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/王的灵魂.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/王的灵魂.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/飞刀.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Consumables/飞刀.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/b.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/b.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/巨剑.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/巨剑.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/弓.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/弓.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/弓箭.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/弓箭.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/拳头.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/拳头.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/深渊大剑.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/深渊大剑.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/银骑士枪.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/银骑士枪.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/骑士盾.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/骑士盾.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/黑暗剑.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/黑暗剑.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Item.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tables.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tables/Consumables.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tables/Consumables.csv.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tables/Weapons.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Tables/Weapons.csv.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/a0/c2410_die.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/a0/c2410_die.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/a0/jab.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/a0/jab.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/a0/jab.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/a0/jab.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animator/Actor.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Actor.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EffectExamples/Shared/Prefabs/ParticlesLight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EffectExamples/Shared/Prefabs/ParticlesLight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AdditiveSprite.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AdditiveSprite.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSkyDemoEnvironment_Unity4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSkyDemoEnvironment_Unity4.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_DemoEnvironment.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_DemoEnvironment.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_DemoEnvironment02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_DemoEnvironment_Center.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_DemoEnvironment_Center.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_DemoEnvironment_Light.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_DemoEnvironment_Light.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/AllSky_Logo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/BlackTransparentGradient.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/BlackTransparentGradient.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/HowToUpResSkies.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/HowToUpResSkies.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Building.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Building.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_FlagGreen.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_FlagGreen.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Blue.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Blue.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Gold.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Gold.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Flag_Red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Landscape.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Landscape.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_LightIllum.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_LightIllum.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_LightMetal.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_LightMetal.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_MountainGlow.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_MountainGlow.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Rock.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_Rock.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_SphereSkyReflect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_SphereSkyReflect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_TreeLeaves.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_TreeLeaves.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_TreeTrunk.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/AllSkyDemoEnv_TreeTrunk.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/Landscape.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/Landscape.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/TreeLeaves.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/TreeLeaves.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/TreeTrunk.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/TreeTrunk.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/rock.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Materials/rock.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Moon Glare.flare" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Moon Glare.flare.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/MoonGlow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/MoonGlow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Mountain Glare.flare" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Mountain Glare.flare.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Sun Glare.flare" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/Sun Glare.flare.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/SunGlare.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/SunGlare.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/SunGlow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyDemoEnvironment/SunGlow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyFree_Menu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyFree_Menu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyFree_Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/AllSkyFree_Readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Day_BlueSky_Nothing Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Day_BlueSky_Nothing Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Day_BlueSky_Nothing.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Day_BlueSky_Nothing.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Day_BlueSky_Nothing.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Day_BlueSky_Nothing.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Equirect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Equirect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base BlueSky/Sky_Day_BlueSky_Nothing_Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky Equirect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky Equirect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cartoon Base NightSky/Cartoon Base NightSky_Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night Equirect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night Equirect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Night/Cold Night__Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset Equirect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset Equirect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Cold Sunset/Cold Sunset__Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk Equirect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk Equirect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Deep Dusk/Deep Dusk__Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_EquiRect_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_BlueSunset/Epic_BlueSunset_EquiRect_flat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_EquiRect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Epic_GloriousPink/Epic_GloriousPink_EquiRect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/AllSky_Night_MoonBurst Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/AllSky_Night_MoonBurst Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/AllSky_Night_MoonBurst Equirect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/AllSky_Night_MoonBurst Equirect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Night MoonBurst/Night Moon Burst_Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/AllSky_Overcast4_Low.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Overcast Low/Sky_AllSky_Overcast4_Low_Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet Equirect.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet Equirect.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet Equirect.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet Equirect.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_0_Front+Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_0_Front+Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_1_Back-Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_1_Back-Z.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_2_Left+X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_2_Left+X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_3_Right-X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_3_Right-X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_4_Up+Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_4_Up+Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_5_Down-Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AllSkyFree/Space_AnotherPlanet/AllSky_Space_AnotherPlanet_Cam_5_Down-Y.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/c2410out(Clone).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Enemy/SilverKnight/C2410/c2410out(Clone).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/PlayerHandle (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PlayerHandle (1).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/bornfire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/bornfire.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AINormal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AINormal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventCasterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventCasterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMOnEnter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMOnEnter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMOnExit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMOnExit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMOnUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMOnUpdate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IActorManagerInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IActorManagerInterface.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemFactory.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimeExtendMethod.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TimeExtendMethod.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timeline/stab_timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/stab_timeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_Grass 1Grass 1 Nb3407d0e55802f81.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_Grass 1Grass 1 Nb3407d0e55802f81.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_Grass 3Grass 3 N793646612c42751.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_Grass 3Grass 3 N793646612c42751.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_Ground 1Ground 1 N2023054508611406.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_Ground 1Ground 1 N2023054508611406.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_Rock Grs 2Rock Grs 2 N793646612c42751.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_TerrainAutoUpgrade/layer_Rock Grs 2Rock Grs 2 N793646612c42751.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,88 +394,75 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Editor/State/WindowState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3BF131DB-B369-4DC8-A0C9-A3CA7B3825F8/df/24eb423d/PlayableDirector.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/TimelinePlayable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Events/MarkerTrack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Consumable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DontDestoy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/f8/e697eb78/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/03/5fdf3e59/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BoneFire.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Dupezez.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Events/MarkerTrack.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Editor/State/WindowState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/TimelinePlayable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AISniper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ArtoriasControllor.cs" />
-        <option value="$USER_HOME$/AppData/Local/Temp/Dupezez.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHealthBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ActorAttributionBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Artorias.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ActorUIBarManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AINormal.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DirectorManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FixedPosition.cs" />
-        <option value="$PROJECT_DIR$/Assets/MyPlayable/MyPlayableBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FSMOnEnter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FSMOnUpdate.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FSMOnExit.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/Death.shader" />
-        <option value="$PROJECT_DIR$/Assets/DeathHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/DontDestoy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PersistObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/IActorManagerInterface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameDataWriter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameDataReader.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EventCasterManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PersistStenStorage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveObjects.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FileManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DummyTest.cs" />
-        <option value="$PROJECT_DIR$/Assets/BoneFire.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameDataBase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ItemFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Consumable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1lF0WLra8sGqZ57rPy3WMcF0HdE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.4658003" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.3764706" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11328">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="11328" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -147,7 +471,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -166,7 +490,12 @@
       <workItem from="1607310348935" duration="49358000" />
       <workItem from="1607462774962" duration="645000" />
       <workItem from="1607481018949" duration="21307000" />
-      <workItem from="1607573541558" duration="15272000" />
+      <workItem from="1607573541558" duration="15953000" />
+      <workItem from="1607636847409" duration="33000" />
+      <workItem from="1607992807242" duration="512000" />
+      <workItem from="1610978565423" duration="177000" />
+      <workItem from="1610978759767" duration="13644000" />
+      <workItem from="1611025286820" duration="6928000" />
     </task>
     <task id="LOCAL-00001" summary="rename files">
       <created>1607183673002</created>
@@ -196,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607463215819</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Save &amp;&amp; Load">
+      <created>1607636460093</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607636460093</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,123 +553,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="rename files" />
     <MESSAGE value="BUG FIXS" />
     <MESSAGE value="add 耐力" />
     <MESSAGE value="FrontStab Bug Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrontStab Bug Fix" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="93" y="93" width="1521" height="735" maximized="true" key="DiffContextDialog" timestamp="1607282207582">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="93" y="93" width="1521" height="735" maximized="true" key="DiffContextDialog/0.0.1707.920@0.0.1707.920" timestamp="1607282207582" />
-    <state width="831" height="220" key="GridCell.Tab.-1.bottom" timestamp="1607388377687">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.-1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607388377687" />
-    <state width="831" height="220" key="GridCell.Tab.-1.center" timestamp="1607388377687">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.-1.center/0.0.1707.920@0.0.1707.920" timestamp="1607388377687" />
-    <state width="831" height="220" key="GridCell.Tab.-1.left" timestamp="1607388377687">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.-1.left/0.0.1707.920@0.0.1707.920" timestamp="1607388377687" />
-    <state width="831" height="220" key="GridCell.Tab.-1.right" timestamp="1607388377687">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.-1.right/0.0.1707.920@0.0.1707.920" timestamp="1607388377687" />
-    <state width="831" height="220" key="GridCell.Tab.0.bottom" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.0.center" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.0.left" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.0.right" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.1.bottom" timestamp="1607461461222">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607461461222" />
-    <state width="831" height="220" key="GridCell.Tab.1.center" timestamp="1607461461222">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1607461461222" />
-    <state width="831" height="220" key="GridCell.Tab.1.left" timestamp="1607461461222">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1607461461222" />
-    <state width="831" height="220" key="GridCell.Tab.1.right" timestamp="1607461461222">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1607461461222" />
-    <state width="831" height="220" key="GridCell.Tab.2.bottom" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.2.center" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.2.left" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.2.right" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.3.bottom" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.3.bottom/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.3.center" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.3.center/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.3.left" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.3.left/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state width="831" height="220" key="GridCell.Tab.3.right" timestamp="1607461461223">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state width="831" height="220" key="GridCell.Tab.3.right/0.0.1707.920@0.0.1707.920" timestamp="1607461461223" />
-    <state x="610" y="161" key="RiderGenerateDialog" timestamp="1607633205426">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="610" y="161" key="RiderGenerateDialog/0.0.1707.920@0.0.1707.920" timestamp="1607633205426" />
-    <state x="355" y="104" key="SettingsEditor" timestamp="1607280986385">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="355" y="104" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1607280986385" />
-    <state x="93" y="93" width="1521" height="735" key="VCS.FileHistoryDialog" timestamp="1607320780917">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="93" y="93" width="1521" height="735" key="VCS.FileHistoryDialog/0.0.1707.920@0.0.1707.920" timestamp="1607320780917" />
-    <state x="446" y="193" key="Vcs.Push.Dialog.v2" timestamp="1607334001205">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="446" y="193" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1607334001205" />
-    <state x="496" y="174" width="1451" height="670" key="dock-window-1" timestamp="1607580472666">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="496" y="174" width="1451" height="670" key="dock-window-1/0.0.1707.920@0.0.1707.920" timestamp="1607580472666" />
-    <state x="544" y="122" width="930" height="797" key="search.everywhere.popup" timestamp="1607459292171">
-      <screen x="0" y="0" width="1707" height="920" />
-    </state>
-    <state x="393" y="104" width="672" height="678" key="search.everywhere.popup/0.0.1234.783@0.0.1234.783" timestamp="1607194249221" />
-    <state x="544" y="122" width="930" height="797" key="search.everywhere.popup/0.0.1707.920@0.0.1707.920" timestamp="1607459292171" />
+    <MESSAGE value="Save &amp;&amp; Load" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save &amp;&amp; Load" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -341,15 +568,21 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/DirectorManager.cs</url>
           <line>159</line>
-          <properties documentPath="D:\Unity Projects\DS_Remasted\Assets\Scripts\DirectorManager.cs" initialLine="159">
+          <properties documentPath="D:\Unity Projects\DS_Remasted\Assets\Scripts\DirectorManager.cs" initialLine="159" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/StateManager.cs</url>
+          <line>124</line>
+          <properties documentPath="D:\Unity Project\DS_Remasted\Assets\Scripts\StateManager.cs" initialLine="124" containingFunctionPresentation="method 'ComputerPanelATK'">
             <startOffsets>
-              <option value="6197" />
+              <option value="3367" />
             </startOffsets>
             <endOffsets>
-              <option value="6198" />
+              <option value="3469" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

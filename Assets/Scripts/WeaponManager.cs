@@ -46,16 +46,12 @@ public class WeaponManager : IActorManagerInterface
         try
         {
             WeaponData wd = GetWeaponDataOnUse(true);
-            animator.SetInteger("attackMotionType",(int)wd.wpAtkMotionID);
+            animator.SetInteger("attackMotionType",(int)wd.weapon.wpAtkMotionID);
         }
         catch (System.Exception)
         {
 
         }
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        //print(other.name);
     }
 
     public WeaponController BindWeaponController(GameObject go)
@@ -88,7 +84,9 @@ public class WeaponManager : IActorManagerInterface
         SetWeaponVFX(true);
     }
 
-    //FUNCTION:在攻击后摇阶段调用：关闭武器的触发器、
+    /// <summary>
+    /// 关闭武器触发器
+    /// </summary>
     public void WeaponDisable()
     {
         if(weaponColL && weaponColR)
@@ -107,14 +105,14 @@ public class WeaponManager : IActorManagerInterface
 
     public void SetAllWeaponOnUseVisiable(bool value)
     {
-        wcL.wdOnUse.gameObject.SetActive(value);
-        wcR.wdOnUse.gameObject.SetActive(value);
+        wcL.weaponDataOnUse.gameObject.SetActive(value);
+        wcR.weaponDataOnUse.gameObject.SetActive(value);
     }
 
     public void SetWeaponOnUseVisiable(bool value,bool rh)
     {
-        if(rh) wcR.wdOnUse.gameObject.SetActive(true);
-        else wcL.wdOnUse.gameObject.SetActive(false);
+        if(rh) wcR.weaponDataOnUse.gameObject.SetActive(true);
+        else wcL.weaponDataOnUse.gameObject.SetActive(false);
     }
 
     public void UpdateWeaponCollider(Collider col,bool rightCol=true)
@@ -126,22 +124,22 @@ public class WeaponManager : IActorManagerInterface
     public void ChangeWeapon(bool rh)
     {
         WeaponController wc = rh ? wcR : wcL;
-        WeaponData wd_cur = wc.wdOnUse;
-        WeaponData wd_next = wc.GetNextWeapon();
+        WeaponData current = wc.weaponDataOnUse;
+        WeaponData next = wc.GetNextWeapon();
 
-        wc.SetWeaponVisiable(wd_cur.gameObject,false);
-        wc.SetWeaponVisiable(wd_next.gameObject,true);
+        wc.SetWeaponVisiable(current.gameObject,false);
+        wc.SetWeaponVisiable(next.gameObject,true);
 
-        UpdateWeaponCollider(wd_next.gameObject.GetComponent<Collider>(),rh);
+        UpdateWeaponCollider(next.gameObject.GetComponent<Collider>(),rh);
 
-        wc.wdOnUse = wd_next;
+        wc.weaponDataOnUse = next;
 
         //如果是玩家，则进行UI更新.
         if(am.gameObject.tag == "Player")
-            UIManager.instance.UpdateWeaponIcon(wc.wdOnUse.icon,rh);
+            UIManager.instance.UpdateWeaponIcon(wc.weaponDataOnUse.weapon.icon,rh);
 
-        am.SetAtkAnimationInt(wc.wdOnUse.wpAtkMotionID);
-        AnimatorFactory.SetLocalMotion(animator,wc.wdOnUse.localMotionID1H);
+        am.SetAtkAnimationInt(wc.weaponDataOnUse.weapon.wpAtkMotionID);
+        AnimatorFactory.SetLocalMotion(animator,wc.weaponDataOnUse.weapon.localMotionID1H);
 
         SetAllWeaponOnUseVisiable(true);
     }
@@ -157,10 +155,13 @@ public class WeaponManager : IActorManagerInterface
     public WeaponData GetWeaponDataOnUse(bool right)
     {
         if (!wcR && !wcL) return null;
-        if (right) return wcR.wdOnUse;
-        else return wcL.wdOnUse;
+        if (right) return wcR.weaponDataOnUse;
+        else return wcL.weaponDataOnUse;
     }
-
+    
+    /// <summary>
+    /// 动画事件，启动攻击判定，同时关闭玩家输入
+    /// </summary>
     public void AttackStart()
     {
         WeaponEnable();
@@ -168,7 +169,10 @@ public class WeaponManager : IActorManagerInterface
         am.ac.enableTurnDirection = false;
         SetWeaponVFX(true);
     }
-
+    
+    /// <summary>
+    /// 动画事件，攻击结束，同时打开玩家输入，允许连击
+    /// </summary>
     public void AttackEnd()
     {
         WeaponDisable();

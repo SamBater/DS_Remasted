@@ -20,7 +20,6 @@ public class Arrow : MonoBehaviour
         origin = transform.position;
         wd = gameObject.AddComponent<WeaponData>();
         rbd = GetComponent<Rigidbody>();
-        WeaponFactory.SetWeaponData(wd,"Arrow_stick");
         wd.HitSurfaceEvent += ReadyToHide;
         col = GetComponent<Collider>();
         trail = GetComponentInChildren<ParticleSystem>();

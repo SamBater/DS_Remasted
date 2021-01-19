@@ -21,13 +21,7 @@ public enum WpAtkMotionID{
 
 public class WeaponData : MonoBehaviour
 {
-    public Damage ATK;
-    public BaseStates bounusLv;
-    public int iconId = 0;
-    public Sprite icon;
-    public WpAtkMotionID wpAtkMotionID;
-    public int localMotionID1H;
-    public int localMotionID2H;
+    public Weapon weapon;
     public BattleManager battleManager;
     public Action<int,Vector3,Vector3> HitSurfaceEvent;
     private void Awake() {
@@ -36,7 +30,7 @@ public class WeaponData : MonoBehaviour
     }
     public static bool IsShield(WeaponData wd)
     {
-        return wd.wpAtkMotionID == WpAtkMotionID.Shield;
+        return wd.weapon.wpAtkMotionID == WpAtkMotionID.Shield;
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -46,7 +40,15 @@ public class WeaponData : MonoBehaviour
         Vector3 hitPoint = other.ClosestPoint(transform.position);
         Vector3 normal = hitPoint - transform.position;
         
-        battleManager.TryDoDmage(go, hitPoint, normal, wpAtkMotionID == WpAtkMotionID.Arrow);
+        battleManager.TryDoDmage(go, hitPoint, normal, weapon.wpAtkMotionID == WpAtkMotionID.Arrow);
+        HitSurfaceEvent.Invoke(other.gameObject.layer,hitPoint,normal);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        GameObject go = other.gameObject;
+        Vector3 hitPoint = other.ClosestPoint(transform.position);
+        Vector3 normal = hitPoint - transform.position;
         HitSurfaceEvent.Invoke(other.gameObject.layer,hitPoint,normal);
     }
 

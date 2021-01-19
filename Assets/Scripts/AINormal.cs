@@ -253,7 +253,7 @@ public class AINormal : PlayerInput
         //if(ac.enableTurnDirection)
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 8.0f);
         
-        movingVec = Vector3.forward;
+        MovingVec = Vector3.forward;
         inputMag = mag;
     }
 }

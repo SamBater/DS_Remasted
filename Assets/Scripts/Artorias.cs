@@ -38,7 +38,7 @@ public class Artorias : ActorInput
             phrth2 = true;
         }
 
-        if (!enableInput) return;
+        if (!EnableInput) return;
         if(player_sm)
         {
             float r = Random.Range(0, 1.25f);
@@ -63,7 +63,7 @@ public class Artorias : ActorInput
 
     private void MoveToPlayerPos()
     {
-        movingVec = Vector3.forward;
+        MovingVec = Vector3.forward;
         Quaternion r = Quaternion.LookRotation(player_sm.transform.position - transform.position, Vector3.up);
         transform.rotation = Quaternion.Lerp(transform.rotation, r, Time.deltaTime * 2.0f);
     }

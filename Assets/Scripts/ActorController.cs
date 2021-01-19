@@ -66,7 +66,7 @@ public class ActorController : MonoBehaviour
 
     protected void HandleMoveOnNormal()
     {
-        if (!cc.isAI && playerInput.GetInputmag() > 0.1f)
+        if (!cc.isAI && playerInput.GetInputMag() > 0.1f)
         {
             if(!enableTurnDirection) return;
             Vector3 vec = cc.transform.forward;
@@ -77,9 +77,9 @@ public class ActorController : MonoBehaviour
         }
 
         //运动向量 = 输入轴大小 * 模型方向 * 跑/走 给予的速度
-        planarVec = dontMove ? Vector3.zero : playerInput.GetInputmag() * model.transform.forward * (playerInput.running ? runSpeed : walkSpeed);
+        planarVec = dontMove ? Vector3.zero : playerInput.GetInputMag() * model.transform.forward * (playerInput.running ? runSpeed : walkSpeed);
 
-        float newF = playerInput.GetInputmag() * (playerInput.running ? 2.0f : 1.0f);
+        float newF = playerInput.GetInputMag() * (playerInput.running ? 2.0f : 1.0f);
         animator.SetFloat("forward", newF > 0.1f ? newF : 0.0f, 0.25f, Time.deltaTime);
         animator.SetFloat("right", 0);
     }

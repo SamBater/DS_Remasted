@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc52ef565f6f4490b4c7977d15043013, type: 3}
+  m_Name: "\u9ED1\u6697\u5251"
+  m_EditorClassIdentifier: 
+  itemType: 1
+  itemName: "\u9ED1\u6697\u5251"
+  icon: {fileID: -921380057137661141, guid: 42ccc4f15c44b234e8dcb0df2da4f193, type: 3}
+  ATK:
+    physical: 0
+    magical: 0
+    fire: 0
+    dark: 0
+    thunder: 0
+  bounusLv:
+    strength: 0
+    dexterity: 0
+    resistance: 0
+    intelligence: 0
+    faith: 0
+  wpAtkMotionID: 23
+  spAtkMotionID: 23
+  localMotionID1H: 3
+  localMotionID2H: 10

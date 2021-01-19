@@ -13829,37 +13829,6 @@ CapsuleCollider:
   m_Height: 1.8873961
   m_Direction: 1
   m_Center: {x: -0.0007154878, y: -0.6277788, z: -0.000057746518}
---- !u!1 &3848927335940209008
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3848927335940209009}
-  m_Layer: 0
-  m_Name: Fist
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3848927335940209009
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3848927335940209008}
-  m_LocalRotation: {x: 0.00000010430813, y: -0.000000029802322, z: 0.000000037252903,
-    w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3848927337081924341}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3848927336077755625
 GameObject:
   m_ObjectHideFlags: 0
@@ -13907,10 +13876,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wm: {fileID: 0}
-  weaponTransforms: []
   wd_list:
   - {fileID: 0}
-  wdOnUse: {fileID: 0}
+  weaponDataOnUse: {fileID: 0}
 --- !u!1 &3848927336087826721
 GameObject:
   m_ObjectHideFlags: 0
@@ -14328,7 +14296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b8b8ee3a26a5d429e14dc76a98b92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 2.5
   walkSpeed: 1
   runSpeed: 2.5
   turnDirectionSpeed: 7
@@ -14337,14 +14304,12 @@ MonoBehaviour:
   cc: {fileID: 0}
   animator: {fileID: 2205237740278116101}
   planarVec: {x: 0, y: 0, z: 0}
-  thusVec: {x: 0, y: 0, z: 0}
   deltaPos: {x: 0, y: 0, z: 0}
   dontMove: 0
   modelForwardTrackMovingVec: 0
   wineCount: 10
   enableTurnDirection: 1
   neckPos: {fileID: 0}
-  isOnScreen: 0
 --- !u!114 &3848927336977880733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14371,6 +14336,7 @@ MonoBehaviour:
     m_Bits: 256
   OnSkyTime: 0
   OnSkyMaxTime: 5
+  model: {fileID: 0}
 --- !u!114 &3848927336977880732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14502,6 +14468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f1fa8acb8b2d14f85a5fc4f547689c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quickUse: []
   current: 0
 --- !u!143 &3848927336977880729
 CharacterController:
@@ -14671,7 +14638,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2525033716017047507}
-  - {fileID: 3848927335940209009}
   m_Father: {fileID: 4431331142655149159}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -14688,12 +14654,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wm: {fileID: 0}
-  weaponTransforms: []
   wd_list:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  wdOnUse: {fileID: 0}
+  weaponDataOnUse: {fileID: 0}
 --- !u!1 &3848927337670784579
 GameObject:
   m_ObjectHideFlags: 0

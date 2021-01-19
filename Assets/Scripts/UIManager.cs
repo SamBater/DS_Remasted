@@ -34,11 +34,11 @@ public class UIManager : MonoBehaviour
         else weaponIconL.sprite = icon;
     }
 
-    public void UpdateItemIcon(ItemEnum id)
+    public void UpdateItemIcon(int id)
     {
-        Item newItem = ItemFactory.GetItem(id);
-        itemIcon.sprite = newItem.sprite;
-        itemName.text   = newItem.itemName;
+        Item newItem = GameDatabase.GetInstance().GetItem(id);
+        itemIcon.sprite = newItem.GetIcon();
+        itemName.text = newItem.GetName();
     }
 
     public void UpdateSoulsBar()
@@ -58,8 +58,8 @@ public class UIManager : MonoBehaviour
 
     IEnumerator ShowTheItemTips(ItemEnum item,int count)
     {
-        itemOnGroundIcon.sprite = ItemFactory.GetItem(item).sprite;
-        itemOnGroundName.text = ItemFactory.GetItem((int)item).itemName;
+        // itemOnGroundIcon.sprite = ItemFactory.GetItem(item).GetIcon();
+        // itemOnGroundName.text = ItemFactory.GetItem((int)item).GetName();
         itemOnGroundCount.text = count.ToString();
         itemTips.SetActive(true);
         yield return new WaitForSeconds(3.0f);
@@ -70,8 +70,8 @@ public class UIManager : MonoBehaviour
     {
         for(int i=0;i<item.Count;i++)
         {
-            itemOnGroundIcon.sprite = ItemFactory.GetItem(item[i]).sprite;
-            itemOnGroundName.text = ItemFactory.GetItem((int)item[i]).itemName;
+            itemOnGroundIcon.sprite = GameDatabase.GetInstance().GetItem((int)item[i]).GetIcon();
+            itemOnGroundName.text = GameDatabase.GetInstance().GetItem((int)item[i]).GetName();
             itemOnGroundCount.text = count[i].ToString();
             itemTips.SetActive(true);
             yield return new WaitForSeconds(1.5f);

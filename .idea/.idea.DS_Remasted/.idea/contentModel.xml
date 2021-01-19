@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Administrator\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Administrator\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_DS_Remasted.1018123349.00" t="ExcludeRecursive" />
-    <e p="D:\Unity Projects\DS_Remasted" t="IncludeRecursive">
+    <e p="C:\Users\Administrator.DESKTOP-PC4C20E\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator.DESKTOP-PC4C20E\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_DS_Remasted.781094648.00" t="ExcludeRecursive" />
+    <e p="D:\Unity Project\DS_Remasted" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AllSkyFree" t="Include">
-          <e p="AllSkyFree_Menu.cs" t="Include" />
-          <e p="AllSkyFree_Readme.txt" t="Include" />
-        </e>
         <e p="BoneFire.cs" t="Include" />
+        <e p="Button_Select.cs" t="Include" />
         <e p="DontDestoy.cs" t="Include" />
         <e p="DotPos.cs" t="Include" />
         <e p="JSON" t="Include">
@@ -54,6 +51,7 @@
           <e p="BaseStates.cs" t="Include" />
           <e p="BattleManager.cs" t="Include" />
           <e p="CameraController.cs" t="Include" />
+          <e p="Consumable.cs" t="Include" />
           <e p="Damage.cs" t="Include" />
           <e p="Database.cs" t="Include" />
           <e p="DirectorManager.cs" t="Include" />
@@ -65,12 +63,13 @@
           <e p="FSMOnEnter.cs" t="Include" />
           <e p="FSMOnExit.cs" t="Include" />
           <e p="FSMOnUpdate.cs" t="Include" />
+          <e p="GameDataBase.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IActorManagerInterface.cs" t="Include" />
           <e p="IInput.cs" t="Include" />
           <e p="InteractionManager.cs" t="Include" />
           <e p="InventoryManager.cs" t="Include" />
-          <e p="ItemFactory.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
           <e p="ItemOnGround.cs" t="Include" />
           <e p="ObjectPool.cs" t="Include" />
           <e p="OnDrawUpdate.cs" t="Include" />
@@ -80,14 +79,13 @@
           <e p="SoundFactory.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
           <e p="StateManager.cs" t="Include" />
-          <e p="TimeExtendMethod.cs" t="Include" />
           <e p="TransfromHelper.cs" t="Include" />
           <e p="TriggerController.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
           <e p="VFXToggle.cs" t="Include" />
+          <e p="Weapon.cs" t="Include" />
           <e p="WeaponController.cs" t="Include" />
           <e p="WeaponData.cs" t="Include" />
-          <e p="WeaponFactory.cs" t="Include" />
           <e p="WeaponManager.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
@@ -122,14 +120,6 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
-          </e>
-        </e>
-        <e p="TutorialInfo" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="Editor" t="Include">
-              <e p="ReadmeEditor.cs" t="Include" />
-            </e>
-            <e p="Readme.cs" t="Include" />
           </e>
         </e>
         <e p="VFX" t="Include">

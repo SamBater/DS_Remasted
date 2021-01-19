@@ -123,15 +123,15 @@ public class ActorManager : MonoBehaviour,ISaveable
             {
                 wm.SetWeaponOnUseVisiable(false, false);
                 WeaponData wd = wm.GetWeaponDataOnUse(true);
-                SetAtkAnimationInt(wd.wpAtkMotionID);
-                AnimatorFactory.SetLocalMotion(ac.animator,wd.localMotionID2H);
+                SetAtkAnimationInt(wd.weapon.wpAtkMotionID);
+                AnimatorFactory.SetLocalMotion(ac.animator,wd.weapon.localMotionID2H);
             }
             else
             {
                 wm.SetWeaponOnUseVisiable(false, true);
                 WeaponData wd = wm.GetWeaponDataOnUse(false);
-                SetAtkAnimationInt(wd.wpAtkMotionID);
-                AnimatorFactory.SetLocalMotion(ac.animator, wd.localMotionID2H);
+                SetAtkAnimationInt(wd.weapon.wpAtkMotionID);
+                AnimatorFactory.SetLocalMotion(ac.animator, wd.weapon.localMotionID2H);
                 //TODO:并且将左手武器送入又手
             }
            
@@ -140,8 +140,8 @@ public class ActorManager : MonoBehaviour,ISaveable
         else
         {
             wm.SetAllWeaponOnUseVisiable(true);
-            SetAtkAnimationInt(wm.wcR.wdOnUse.wpAtkMotionID);
-            AnimatorFactory.SetLocalMotion(ac.animator, wm.wcR.wdOnUse.localMotionID1H);
+            SetAtkAnimationInt(wm.wcR.weaponDataOnUse.weapon.wpAtkMotionID);
+            AnimatorFactory.SetLocalMotion(ac.animator, wm.wcR.weaponDataOnUse.weapon.localMotionID1H);
         }
 
         ac.animator.SetBool("twoHand",!twoHand); 
@@ -175,7 +175,7 @@ public class ActorManager : MonoBehaviour,ISaveable
     public void UseItem()
     {
         if(!sm.isGround) return;
-        ItemEnum itemId = inventory.GetCurrentItem().iconID;
+        ItemEnum itemId = inventory.GetCurrentItem().GetID();
         ac.animator.SetInteger("itemOnUseID",(int)itemId);
         ac.animator.SetTrigger("useItem");
         inventory.UseItem(itemId);

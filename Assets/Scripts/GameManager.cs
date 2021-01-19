@@ -10,9 +10,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
 
     private static GameManager instance;
-    public Database weaponDB;
-    public WeaponFactory weaponFactory;
-    public WeaponManager playerWm;
     public List<ActorManager> PersistObjs = new List<ActorManager>();
     private void Awake() {
         CheckSingleton();

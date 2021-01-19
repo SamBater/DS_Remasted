@@ -64,10 +64,6 @@ public class StateManager : IActorManagerInterface
         Naili = maxEndurance;
 
     }
-    void Start()
-    {
-
-    }
 
     void Update() 
     {
@@ -86,7 +82,7 @@ public class StateManager : IActorManagerInterface
         isCountBackSuccess =  isCountBack && isCountBackEnable; //isCountBackEnable 由动画事件控制 打开有限时间
         isLock = am.ac.CheckState("lock");
         isHeal = am.ac.CheckStateTag("heal");
-        isWalk = isGround && am.ac.playerInput.GetInputmag() > 0.3f;
+        isWalk = isGround && am.ac.playerInput.GetInputMag() > 0.3f;
         
         //TODO：作为一次修改
         try
@@ -126,9 +122,9 @@ public class StateManager : IActorManagerInterface
         {
             ATK = new Damage();
         }
-        ATK.physical = wd.ATK.physical + wd.bounusLv.strength * baseStates.strength; // TODO:加敏捷
-        ATK.magical = wd.ATK.magical + wd.bounusLv.intelligence * baseStates.intelligence;
-        ATK.fire = wd.ATK.fire + wd.bounusLv.intelligence * baseStates.intelligence;
+        ATK.physical = wd.weapon.ATK.physical + wd.weapon.bounusLv.strength * baseStates.strength; // TODO:加敏捷
+        ATK.magical = wd.weapon.ATK.magical + wd.weapon.bounusLv.intelligence * baseStates.intelligence;
+        ATK.fire = wd.weapon.ATK.fire + wd.weapon.bounusLv.intelligence * baseStates.intelligence;
         return ATK;
     }
 

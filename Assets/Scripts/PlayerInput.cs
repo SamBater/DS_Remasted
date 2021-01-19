@@ -75,7 +75,11 @@ public class PlayerInput : ActorInput
         pressR = Input.GetKeyDown(keyLockOn);
     }
 
-    //将输入映射成球体
+    /// <summary>
+    /// 通过球体映射，平滑化纵轴和横轴的输入
+    /// </summary>
+    /// <param name="input">x为横轴，z为纵轴</param>
+    /// <returns>球体映射后输入向量</returns>
     private Vector3 SquareToCircle(Vector3 input)
     {
         input.x = input.x * Mathf.Sqrt(1-(input.z * input.z) / 2.0f);
@@ -87,15 +91,15 @@ public class PlayerInput : ActorInput
     //根据输入构造移动向量
     protected void MoveInput()
     {
-        if(!enableInput)
+        if(!EnableInput)
         {
             inputMag = 0.0f;
-            movingVec = Vector3.zero;
+            MovingVec = Vector3.zero;
             return;
         }
-        movingVec.x = rightAxis;
-        movingVec.z = forwardAxis;
-        movingVec = SquareToCircle(playerInput);
+        MovingVec.x = rightAxis;
+        MovingVec.z = forwardAxis;
+        MovingVec = SquareToCircle(playerInput);
         
         //输入的运动幅度
         inputMag = Mathf.Sqrt(forwardAxis * forwardAxis + rightAxis * rightAxis);
@@ -104,17 +108,21 @@ public class PlayerInput : ActorInput
         if(inputMag > 0.1f)
         {
             //移动
-            movingVec = forwardAxis * transform.forward + rightAxis * transform.right;
+            MovingVec = forwardAxis * transform.forward + rightAxis * transform.right;
         }
 
         else
         {
-            movingVec = Vector3.zero;
+            MovingVec = Vector3.zero;
         }
     }
+    
+    /// <summary>
+    /// 解析输入，构造命令
+    /// </summary>
     void ParseInput()
     {
-        if(!enableInput) return;
+        if(!EnableInput) return;
         if(am.sm.Naili < 2.5f) return;    //至少Ground 0.5s才能继续行动
         WeaponData leftHand = am.wm.GetWeaponDataOnUse(false);
         WeaponData rightHand = am.wm.GetWeaponDataOnUse(true);
@@ -123,7 +131,7 @@ public class PlayerInput : ActorInput
             //如果左手持盾
             if(leftHand)
             {
-                if (leftHand.wpAtkMotionID == WpAtkMotionID.Shield)
+                if (leftHand.weapon.wpAtkMotionID == WpAtkMotionID.Shield)
                 {
                     // float oldWeight = animator.GetLayerWeight(1);
                     // int index = animator.GetLayerIndex("defence");
@@ -146,7 +154,7 @@ public class PlayerInput : ActorInput
                     int index = ac.animator.GetLayerIndex("defence");
                     ac.animator.SetLayerWeight(index, 0.0f);
                     ac.animator.SetBool("R0L1", true);
-                    ac.animator.SetInteger("attackMotionType", (int)leftHand.wpAtkMotionID);
+                    ac.animator.SetInteger("attackMotionType", (int)leftHand.weapon.wpAtkMotionID);
                     ac.Attack();
                 }
             }
@@ -160,7 +168,7 @@ public class PlayerInput : ActorInput
         if (pressRB)
         {
             ac.animator.SetBool("R0L1", false);
-            ac.animator.SetInteger("attackMotionType", (int)rightHand.wpAtkMotionID);
+            ac.animator.SetInteger("attackMotionType", (int)rightHand.weapon.wpAtkMotionID);
             ac.Attack();
         }
 

@@ -217,7 +217,6 @@ public class FSMManager : MonoBehaviour
         if(wd == null)
         {
             wd = go.AddComponent<WeaponData>();
-            WeaponFactory.SetWeaponData(wd,"Arrow_stick");
         }
         //TODO：WD的攻击力是发射的瞬间决定的.所以此处应该根据角色当前攻击力去设置.
         wd.battleManager = sm.am.bm;

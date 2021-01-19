@@ -11,21 +11,6 @@ public enum ItemEnum
     FireBottle = 23
 }
 
-public class Item
-{
-    public ItemEnum iconID;
-    public string itemName;
-    public Sprite sprite;
-    public Item()
-    {
-
-    }
-    public Item(ItemEnum _iconId)
-    {
-        iconID = _iconId;
-    }
-}
-
 public class InventoryManager : MonoBehaviour
 {
     public Dictionary<ItemEnum,int> inventory;  //物品：数量
@@ -40,12 +25,12 @@ public class InventoryManager : MonoBehaviour
         inventory.Add(ItemEnum.EstusFlask,10);
         inventory.Add(ItemEnum.FlySword,2);
         //TODO:测试用
-        
-        quickUse.Add(ItemFactory.GetItem(5));
-        quickUse.Add(ItemFactory.GetItem(4));
-        quickUse.Add(ItemFactory.GetItem(60));
-        quickUse.Add(ItemFactory.GetItem(23));
-        quickUse.Add(ItemFactory.GetItem(21));
+        //
+        // quickUse.Add(ItemFactory.GetItem(5));
+        // quickUse.Add(ItemFactory.GetItem(4));
+        // quickUse.Add(ItemFactory.GetItem(60));
+        // quickUse.Add(ItemFactory.GetItem(23));
+        // quickUse.Add(ItemFactory.GetItem(21));
     }
 
     private void Start() {
@@ -55,14 +40,14 @@ public class InventoryManager : MonoBehaviour
         {
             Item item = GetCurrentItem();
             if(item != null)
-            UIManager.instance.UpdateItemIcon(item.iconID);
+            UIManager.instance.UpdateItemIcon((int)item.GetID());
         }
     }
 
     public void NextItem()
     {
         current = (current + 1) % quickUse.Count;
-        UIManager.instance.UpdateItemIcon(GetCurrentItem().iconID);
+        UIManager.instance.UpdateItemIcon((int)GetCurrentItem().GetID());
     }
 
     public Item GetCurrentItem()

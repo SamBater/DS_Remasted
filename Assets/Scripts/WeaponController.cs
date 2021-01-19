@@ -6,72 +6,93 @@ using System;
 public class WeaponController : MonoBehaviour
 {
     public WeaponManager wm;
-
-    public List<GameObject> weaponTransforms;
-    public List<WeaponData> wd_list;
-    public WeaponData wdOnUse;
+    public List<WeaponData> weaponDataList;
+    public WeaponData weaponDataOnUse;
+    private int weaponCount = 3;
     private void Awake() 
     {
-        weaponTransforms = new List<GameObject>(3);
-        wd_list = new List<WeaponData>(3);
+        weaponDataList = new List<WeaponData>(weaponCount);
     }
 
     private void Start() 
     {
-        for(int i=0;i<transform.childCount;i++)
+
+        for (int i = 0; i < transform.childCount; i++)
         {
-            Transform child = transform.GetChild(i);
-            WeaponData wd = child.gameObject.AddComponent<WeaponData>();
-            WeaponFactory.SetWeaponData(wd,wd.gameObject.name);
-            wd_list.Add(wd);
-            wd.battleManager = wm.am.bm;    
-             weaponTransforms.Add(child.gameObject);
+            Transform t = transform.GetChild(i);
+            weaponDataList.Add(t.GetComponent<WeaponData>());
         }
         
-        //填充拳头
-        for(int i=0;i<3 - transform.childCount;i++)
+        FillFists();
+
+        //TODO:读取上次退出时的武器数据,这里暂时默认第一个武器.
+        
+        LoadWeapon();
+        
+        if(wm.am.gameObject.tag == "Player" && UIManager.instance != null)
+            UIManager.instance.UpdateWeaponIcon(weaponDataOnUse.weapon.icon,wm.wcR == this);
+        
+        HideWeaponOnUnuse();
+    }
+    
+    /// <summary>
+    /// 读取上次存储的武器
+    /// </summary>
+    private void LoadWeapon()
+    {
+        weaponDataOnUse = weaponDataOnUse == null ? weaponDataList[0] : weaponDataOnUse;
+    }
+    
+    /// <summary>
+    /// 隐藏未使用的武器
+    /// </summary>
+    private void HideWeaponOnUnuse()
+    {
+        for (int i = 0; i < weaponDataList.Count; i++)
+        {
+            if (weaponDataList[i] != weaponDataOnUse)
+            {
+                SetWeaponVisiable(weaponDataList[i].gameObject, false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// 为空武器槽填充拳头
+    /// </summary>
+    private void FillFists()
+    {
+        int blankSlotCount = weaponCount - transform.childCount;
+        for (int i = 0; i < blankSlotCount ; i++)
         {
             GameObject go = new GameObject();
             go.name = "Fist";
             go.transform.parent = transform;
             WeaponData wd = go.AddComponent<WeaponData>();
-            WeaponFactory.SetWeaponData(wd,"Fist");
-        }
-
-        //TODO:读取上次退出时的武器数据,这里暂时默认第一个武器.
-        
-        wdOnUse = wdOnUse == null ? wd_list[0] : wdOnUse;
-        
-        if(wm.am.gameObject.tag == "Player" && UIManager.instance != null)
-            UIManager.instance.UpdateWeaponIcon(wdOnUse.icon,wm.wcR == this);
-
-        //隐藏未使用的武器.
-        for(int i=0;i<wd_list.Count;i++)
-        {
-            if(wd_list[i] != wdOnUse)
-            {
-                SetWeaponVisiable(wd_list[i].gameObject,false);
-            }
+            wd.weapon = (Weapon) GameDatabase.GetInstance().GetItem(1000);
+            weaponDataList.Add(wd);
         }
     }
-
-    //获取正在使用的武器
-    public WeaponData GetWeaponOnUse()
-    {
-        if(wdOnUse) return wdOnUse;
-        return null;
-    }
-
+    
+    /// <summary>
+    /// 切换武器
+    /// </summary>
+    /// <returns>武器数据</returns>
     public WeaponData GetNextWeapon()
     {
-        if(wdOnUse)
+        if(weaponDataOnUse)
         {
-            int next_weapon_index = ( wd_list.IndexOf(wdOnUse) + 1 ) % wd_list.Count;
-            return wd_list[next_weapon_index];
+            int next_weapon_index = ( weaponDataList.IndexOf(weaponDataOnUse) + 1 ) % weaponDataList.Count;
+            return weaponDataList[next_weapon_index];
         }
         return null;
     }
-
+    
+    /// <summary>
+    /// 隐藏武器
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <param name="value">true 左手武器 flase </param>
     public void SetWeaponVisiable(GameObject obj,bool value)
     {
         obj.SetActive(value);
