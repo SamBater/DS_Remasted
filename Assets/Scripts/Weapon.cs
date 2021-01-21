@@ -14,5 +14,7 @@
        spAtkMotionID = int.Parse(col[5]);
        localMotionID1H = int.Parse(col[6]);
        localMotionID2H = int.Parse(col[7]);
+       ATK = new Damage();
+       ATK.physical = int.Parse(col[8]);
     }
 }

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: "\u9ED1\u6697\u5251"
   icon: {fileID: -921380057137661141, guid: 42ccc4f15c44b234e8dcb0df2da4f193, type: 3}
   ATK:
-    physical: 0
+    physical: 5
     magical: 0
     fire: 0
     dark: 0

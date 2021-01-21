@@ -14,6 +14,7 @@ public enum ItemType
     Weapon = 1
 }
 
+[Serializable]
 public class Item : ScriptableObject,ILoadAble
 {
     private int id;

@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: "\u5DE8\u5251"
   icon: {fileID: 6871276748075478654, guid: 42ccc4f15c44b234e8dcb0df2da4f193, type: 3}
   ATK:
-    physical: 0
+    physical: 15
     magical: 0
     fire: 0
     dark: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     resistance: 0
     intelligence: 0
     faith: 0
-  wpAtkMotionID: 25
+  wpAtkMotionID: 23
   spAtkMotionID: 25
   localMotionID1H: 2
-  localMotionID2H: 15
+  localMotionID2H: 12

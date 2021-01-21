@@ -120,11 +120,6 @@ public class FSMManager : MonoBehaviour
 
     public void OnGroundUpdate()
     {
-        //ac.StopMove(false);
-        //ac.modelForwardTrackMovingVec = false;
-
-        //ac.playerInput.InputToggle(true);
-        
         sm.AddEndurance(ac.playerInput.running ? -5.0f * Time.deltaTime : 5.0f * Time.deltaTime);
     }
 
@@ -167,10 +162,11 @@ public class FSMManager : MonoBehaviour
     public void OnRollExit()
     {
         sm.isImmortal = false;
+        ac.modelForwardTrackMovingVec = false;
     }
     public void OnRollUpdate()
     {
-        ac.modelForwardTrackMovingVec = true;
+
     }
 
     public void EnterDrawBow()

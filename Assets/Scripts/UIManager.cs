@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,13 @@ public class UIManager : MonoBehaviour
     public Text itemOnGroundCount;
     public GameObject optionsPanel;
     public GameObject firePanel;
+    public GameObject inventoryPanel;
+
+    private void Awake()
+    {
+        
+    }
+
     public void UpdateWeaponIcon(int id,bool rh)
     {
         Sprite icon = GameDatabase.GetInstance().GetItem(id).icon;
@@ -76,5 +84,19 @@ public class UIManager : MonoBehaviour
     public void ShowFirePanel()
     {
         firePanel.SetActive(!firePanel.activeSelf);
+    }
+
+    public void ShowInventoryPanel()
+    {
+        inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+    }
+
+    public void UpdateItems(ItemEnum id, int count,bool newItem)
+    {
+        if (newItem)
+        {
+            Slot slot = inventoryPanel.GetComponent<InventoryUI>().FindBlankSlot();
+            slot.itemOnSlot.Fresh(GameDatabase.GetInstance().GetItem((int)id),count);
+        }
     }
 }

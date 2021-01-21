@@ -213,15 +213,26 @@ public class ActorManager : MonoBehaviour,ISaveable
     {
         if (CompareTag("Player"))
         {
-            saveData.player_pos = transform.position;
+            saveData.PlayerPos = transform.position;
+            SaveData.AcotrSave acotrSave = new SaveData.AcotrSave();
+            acotrSave.uid = GetInstanceID();
+            acotrSave.ItemSaves = new List<SaveData.ItemSave>();
+            foreach (KeyValuePair<ItemEnum,int> pair in inventory.inventory)
+            {
+                SaveData.ItemSave itemSave = new SaveData.ItemSave();
+                itemSave.itemID = (int)pair.Key;
+                itemSave.count = pair.Value;
+                acotrSave.ItemSaves.Add(itemSave);
+            }
+            saveData.AcotrSaves.Add(acotrSave);
         }
         else if(CompareTag("BornFire"))
         {
             BoneFire boneFire = GetComponent<BoneFire>();
-            SaveData.MyStruct myStruct;
-            myStruct.u_id = GetInstanceID();
-            myStruct.activity = boneFire.lit;
-            saveData.reborn.Add(myStruct);
+            SaveData.InteractObject interactObject;
+            interactObject.uid = GetInstanceID();
+            interactObject.activity = boneFire.lit;
+            saveData.Reborn.Add(interactObject);
         }
     }
 
@@ -229,15 +240,36 @@ public class ActorManager : MonoBehaviour,ISaveable
     {
         if (CompareTag("Player"))
         {
-            transform.position = saveData.player_pos;
+            transform.position = saveData.PlayerPos;
+            for (int i = 0; i < saveData.AcotrSaves.Capacity; i++)
+            {
+                if (saveData.AcotrSaves[i].uid == GetInstanceID())
+                {
+                    if (inventory == null) inventory = GetComponent<InventoryManager>();
+                    SaveData.AcotrSave acotrSave = saveData.AcotrSaves[i];
+                    for (int j = 0; j < acotrSave.ItemSaves.Capacity; j++)
+                    {
+                        SaveData.ItemSave itemSave = acotrSave.ItemSaves[j];
+                        inventory.AddItem((ItemEnum) itemSave.itemID, itemSave.count);
+                    }
+                    // Slot[] slots = ActorUIManager.inventoryPanel.GetComponentsInChildren<Slot>();
+                    //
+                    // for (int j = 0; j < acotrSave.ItemSaves.Capacity; j++)
+                    // {
+                    //     SaveData.ItemSave itemSave = acotrSave.ItemSaves[j];
+                    //     Slot slot = slots[itemSave.index];
+                    //     slot.itemOnSlot.Fresh(GameDatabase.GetInstance().GetItem(itemSave.itemID),itemSave.count);
+                    // }
+                }
+            }
         }
         else if(CompareTag("BornFire"))
         {
-            for (int i = 0; i < saveData.reborn.Capacity; i++)
+            for (int i = 0; i < saveData.Reborn.Capacity; i++)
             {
-                if (saveData.reborn[i].u_id == GetInstanceID())
+                if (saveData.Reborn[i].uid == GetInstanceID())
                 {
-                    GetComponent<BoneFire>().lit = saveData.reborn[i].activity;
+                    GetComponent<BoneFire>().lit = saveData.Reborn[i].activity;
                 }
             }
         }

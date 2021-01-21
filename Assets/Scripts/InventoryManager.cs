@@ -8,27 +8,34 @@ public class NextEvent : UnityEvent<Item>{}
 
 public enum ItemEnum
 {
-    EstusFlask = 5,       //原素瓶
-    EstusFlask_Blank = 4, // 空的原素瓶
-    KingsSoul = 60,       //王魂
-    FlySword = 21,
-    FireBottle = 23
+    EstusFlask = 0,       //原素瓶
+    EstusFlask_Blank = 1, // 空的原素瓶
+    KingsSoul = 2,       //王魂
+    FlySword = 3,
+    FireBottle = 4,
+    BlackSword = 1001
 }
 
-public class InventoryManager : MonoBehaviour
+[Serializable]
+public class AddItemEvent : UnityEvent<ItemEnum,int,bool>{}
+
+public class InventoryManager : IActorManagerInterface
 {
     public Dictionary<ItemEnum,int> inventory;  //物品：数量
     public List<Item> quickUse = new List<Item>();
     public int current;
     public NextEvent NextItemEvent = new NextEvent();
-    
-    private void Awake() 
+    public AddItemEvent MyAddItemEvent;
+    private void Awake()
     {
+
         inventory = new Dictionary<ItemEnum, int>();
         
-        inventory.Add(ItemEnum.EstusFlask,10);
-        inventory.Add(ItemEnum.FlySword,2);
-        
+        AddItem(ItemEnum.EstusFlask,10);
+        AddItem(ItemEnum.FlySword,2);
+        AddItem(ItemEnum.KingsSoul,1);
+        AddItem(ItemEnum.BlackSword,1);
+
         //TODO:测试用
         GameDatabase ItemFactory = GameDatabase.GetInstance();
         quickUse.Add(ItemFactory.GetItem(0));
@@ -60,6 +67,22 @@ public class InventoryManager : MonoBehaviour
         if(quickUse.Capacity > 0)
             return quickUse[current];
         return null;
+    }
+
+    public void AddItem(ItemEnum id,int count)
+    {
+        if (inventory == null) inventory = new Dictionary<ItemEnum, int>();
+        bool newItem = !inventory.ContainsKey(id);
+        if (!newItem)
+        {
+            inventory[id] += count;
+        }
+        else
+        {
+            inventory.Add(id,count);
+        }
+
+        MyAddItemEvent.Invoke(id,count,newItem);
     }
 
     public void UseItem(ItemEnum itemId)

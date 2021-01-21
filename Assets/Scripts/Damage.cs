@@ -48,6 +48,11 @@ public class Damage
         damage.thunder = a.thunder * b.thunder;
         return damage;
     }
+    
+    public float Total()
+    {
+        return physical + magical + fire + thunder + dark;
+    }
 }
 
 

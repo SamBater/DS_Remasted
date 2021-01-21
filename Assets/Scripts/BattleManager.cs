@@ -125,9 +125,7 @@ public class BattleManager : IActorManagerInterface
     {
         Damage weaponPanelATK = sm.GetPanelATK(rh);
         Damage damage = Damage.ComputerFinalDamage(weaponPanelATK,enemySm.defenceRate);
-        print(gameObject.name + "造成面板伤害" + weaponPanelATK.physical + enemySm.gameObject.name + "所受实际伤害" + damage.physical);
-        float totalDamage = damage.physical + damage.magical + damage.fire + damage.thunder + damage.dark;
-        return totalDamage;
+        return damage.Total() ;
     }
 
 

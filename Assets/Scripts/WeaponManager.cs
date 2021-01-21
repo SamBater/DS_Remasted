@@ -19,7 +19,7 @@ public class WeaponManager : IActorManagerInterface
     private Animator animator;
     bool r0l1;
     public GameObject weaponVFX;
-    public UpdateEvent ChangeWeaponEvent = null;
+    public UpdateEvent ChangeWeaponEvent = new UpdateEvent();
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -59,7 +59,7 @@ public class WeaponManager : IActorManagerInterface
 
         }
 
-        if (gameObject.CompareTag("Player"))
+        if (am.gameObject.CompareTag("Player"))
         {
             ChangeWeaponEvent.Invoke((int)wcR.weaponDataOnUse.weapon.GetID(),true);
             ChangeWeaponEvent.Invoke((int)wcL.weaponDataOnUse.weapon.GetID(),false);
@@ -81,18 +81,14 @@ public class WeaponManager : IActorManagerInterface
     //FUNCTION:在攻击判定阶段调用：打开武器的碰撞器、
     public void WeaponEnable()
     {
-        if(weaponColL == null) {
-            Debug.LogError(am.gameObject + "weaponCol doesn't exists.");
-            return;
-        }
-        if(weaponColR == null)
-        {
-            Debug.LogError(am.gameObject + "weaponColR doesn't exists");
-            return;
-        }
         r0l1 = animator.GetBool("R0L1");
-        weaponColR.enabled = !r0l1;
-        weaponColL.enabled = r0l1;
+        if(weaponColL != null) {
+            weaponColL.enabled = r0l1;
+        }
+        if(weaponColR != null)
+        {
+            weaponColR.enabled = !r0l1;
+        }
         SetWeaponVFX(true);
     }
 
@@ -101,8 +97,11 @@ public class WeaponManager : IActorManagerInterface
     /// </summary>
     public void WeaponDisable()
     {
-        if(weaponColL && weaponColR)
-        weaponColL.enabled = weaponColR.enabled = false;
+        if(weaponColL ) 
+            weaponColL.enabled = false;     
+
+        if (weaponColR)
+            weaponColR.enabled = false;
     }
 
     public void CountBackEnable()
@@ -147,7 +146,8 @@ public class WeaponManager : IActorManagerInterface
         wc.weaponDataOnUse = next;
 
         //如果是玩家，则进行UI更新.
-        ChangeWeaponEvent.Invoke((int)wc.weaponDataOnUse.weapon.GetID(),rh);
+        // if(am.gameObject.CompareTag("Player"))
+        // ChangeWeaponEvent.Invoke((int)wc.weaponDataOnUse.weapon.GetID(),rh);
 
         am.SetAtkAnimationInt(wc.weaponDataOnUse.weapon.wpAtkMotionID);
         AnimatorFactory.SetLocalMotion(animator,wc.weaponDataOnUse.weapon.localMotionID1H);
