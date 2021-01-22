@@ -20,119 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47bb101-870f-413d-bb12-19abb39699d1" name="Default Changelist" comment="rename files">
-      <change afterPath="$PROJECT_DIR$/Assets/InventoryUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/InventoryUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ItemClickMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ItemClickMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ItemOnSlot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ItemOnSlot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Item.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Item.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ItemClickMenu.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/ItemClickMenu.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Slot.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Slot.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/itemInfo.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/itemInfo.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Slot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Slot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AttributeUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AttributeUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Attribute_Img_val.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Attribute_Img_val.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StateUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StateUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UsePanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UsePanel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animator/Actor.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animator/Actor.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armLorygin.part1-mat021_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armLorygin.part1-mat021_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armRorygin.part1-mat018_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armRorygin.part1-mat018_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armleftRig.part1-mat002_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armleftRig.part1-mat002_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armleftRig.part1-mat002_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armleftRig.part1-mat002_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armrightRig.part1-mat001_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armrightRig.part1-mat001_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armrightRig.part1-mat001_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+armrightRig.part1-mat001_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+helmetOpen.part1-mat025_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+helmetOpen.part1-mat025_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+helmetOpen.part1-mat025_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+helmetOpen.part1-mat025_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+pauldron.part1-mat007_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+pauldron.part1-mat007_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+pauldron.part1-mat007_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_+pauldron.part1-mat007_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat003_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat003_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat003_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat003_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat004_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat004_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat004_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat004_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat006_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat006_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat006_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat006_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat008_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat008_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat008_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat008_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat009_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat009_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat009_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat009_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat011_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat011_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat011_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat011_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat012_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat012_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat012_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat012_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat014_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat014_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat014_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat014_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat015_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat015_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat015_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat015_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat019_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat019_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat019_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat019_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat020_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat020_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat020_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part1-mat020_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part2-mat001_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part2-mat001_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part2-mat001_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/24_part2-mat001_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_+helmetClose.part1-mat017_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_+helmetClose.part1-mat017_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_+helmetClose.part1-mat017_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_+helmetClose.part1-mat017_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_+helmetOpen.part1-mat026_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_+helmetOpen.part1-mat026_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_+helmetOpen.part1-mat026_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_+helmetOpen.part1-mat026_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat005_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat005_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat005_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat005_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat010_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat010_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat010_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat010_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat016_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat016_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat016_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat016_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat022_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat022_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat022_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat022_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat023_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat023_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat023_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat023_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat024_1_0_0.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat024_1_0_0.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat024_1_0_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/Materials/25_part1-mat024_1_0_1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/eliteKnight.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Character/Astora's Elite Knight/eliteKnight.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Materials/Robot_Color.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Materials/Robot_Color.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Model.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Model/Robot Kyle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Model/Robot Kyle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Textures/Robot_Color.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Textures/Robot_Color.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Textures/Robot_Normal.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Character/Robot Kyle/Textures/Robot_Normal.tga.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AbyssGreatSword.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/AbyssGreatSword.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fist.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fist.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Items.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Items.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDatabase.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/WeaponDatabase.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemOnSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemOnSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Slot.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/b.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/b.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/巨剑.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/巨剑.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/弓箭.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/弓箭.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/拳头.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/拳头.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/深渊大剑.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/深渊大剑.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/银骑士枪.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/银骑士枪.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/骑士盾.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/骑士盾.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/黑暗剑.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/黑暗剑.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorUIBarManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorUIBarManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Damage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tables/Weapons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tables/Weapons.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,25 +59,29 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/21/112af550/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UsePanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BoneFire.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/10/c2a24ab5/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Editor/State/WindowState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/e4/ae739d08/Environment.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ItemClickMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/da/67c8176a/GenericEqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/b8/ae392987/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/556F6DF1-3FB5-4CD9-A7C2-B976BBB72AEA/15/75e87549/BuildPipelineInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/85/78a67988/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Consumable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/20/6f3a823d/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Slot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DontDestoy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/Events/MarkerTrack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.2.17/Runtime/TimelinePlayable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AttributeUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StateUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FF7B004C-2495-4FF9-8F68-A709BE4708C3/b8/ae392987/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/556F6DF1-3FB5-4CD9-A7C2-B976BBB72AEA/15/75e87549/BuildPipelineInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Consumable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Slot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/3a/c2986129/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FileManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9577AC7A-62EF-4317-9789-031239BA8798/43/e9b8f25e/Exception.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -184,28 +94,31 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Consumable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ActorInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Damage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Button_Select.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ActorUIBarManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveData.cs" />
       <option value="$PROJECT_DIR$/Assets/Slot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/InventoryUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/ItemOnSlot.cs" />
       <option value="$PROJECT_DIR$/Assets/ItemClickMenu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/FSMManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Damage.cs" />
+      <option value="$PROJECT_DIR$/Assets/AttributeUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/StateUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/UsePanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/ItemOnSlot.cs" />
+      <option value="$PROJECT_DIR$/Assets/InventoryUI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lF0WLra8sGqZ57rPy3WMcF0HdE" />
@@ -272,7 +185,8 @@
       <workItem from="1611208990518" duration="1209000" />
       <workItem from="1611210232695" duration="142000" />
       <workItem from="1611210449572" duration="10928000" />
-      <workItem from="1611223771390" duration="3456000" />
+      <workItem from="1611223771390" duration="4114000" />
+      <workItem from="1611302431938" duration="11986000" />
     </task>
     <task id="LOCAL-00001" summary="rename files">
       <created>1607183673002</created>
@@ -330,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611040141957</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="背包系统">
+      <created>1611240606675</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611240606675</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +281,8 @@
     <MESSAGE value="Save &amp;&amp; Load" />
     <MESSAGE value="更改WeaponData、ItemData导入方式" />
     <MESSAGE value="UI更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI更新" />
+    <MESSAGE value="背包系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="背包系统" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

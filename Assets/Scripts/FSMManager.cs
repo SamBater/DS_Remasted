@@ -120,7 +120,7 @@ public class FSMManager : MonoBehaviour
 
     public void OnGroundUpdate()
     {
-        sm.AddEndurance(ac.playerInput.running ? -5.0f * Time.deltaTime : 5.0f * Time.deltaTime);
+        sm.AddEndurance(ac.playerInput.running ? -5.0f * Time.deltaTime : 12.0f * Time.deltaTime);
     }
 
     public void OnGroundExit()

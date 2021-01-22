@@ -90,4 +90,15 @@ public class WeaponController : MonoBehaviour
     {
         obj.SetActive(value);
     }
+
+    public List<Item> GetWeapons()
+    {
+        List<Item> weapon = new List<Item>();
+        for (int i = 0; i < weaponDataList.Capacity; i++)
+        {
+            weapon.Add(weaponDataList[i].weapon);
+        }
+
+        return weapon;
+    }
 }

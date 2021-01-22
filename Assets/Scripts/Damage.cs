@@ -53,6 +53,12 @@ public class Damage
     {
         return physical + magical + fire + thunder + dark;
     }
+
+    public override string ToString()
+    {
+        float total = Total();
+        return total.ToString();
+    }
 }
 
 

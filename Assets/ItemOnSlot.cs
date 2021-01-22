@@ -27,7 +27,7 @@ public class ItemOnSlot : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDragH
     {
         item = _item;
         count = _count;
-        icon.sprite = item.icon;
+        icon.sprite = item.icon ? item.icon : null;
         if(count > 1)
             countText.text = count.ToString();
     }

@@ -215,4 +215,10 @@ public class WeaponManager : IActorManagerInterface
         weaponColR.bounds.Expand(-2.0f);
     }
 
+    public List<Item> GetWeapons(bool rh)
+    {
+        if (rh) return wcR.GetWeapons();
+        return wcL.GetWeapons();
+    }
+
 }

@@ -34,7 +34,7 @@ public class InventoryManager : IActorManagerInterface
         AddItem(ItemEnum.EstusFlask,10);
         AddItem(ItemEnum.FlySword,2);
         AddItem(ItemEnum.KingsSoul,1);
-        AddItem(ItemEnum.BlackSword,1);
+        AddItem(ItemEnum.EstusFlask_Blank,1);
 
         //TODO:测试用
         GameDatabase ItemFactory = GameDatabase.GetInstance();
@@ -42,7 +42,6 @@ public class InventoryManager : IActorManagerInterface
         quickUse.Add(ItemFactory.GetItem(1));
         quickUse.Add(ItemFactory.GetItem(2));
         quickUse.Add(ItemFactory.GetItem(3));
-        quickUse.Add(ItemFactory.GetItem(4));
     }
 
     private void Start() {
@@ -85,6 +84,11 @@ public class InventoryManager : IActorManagerInterface
         MyAddItemEvent.Invoke(id,count,newItem);
     }
 
+    public void AddQuickUse(ItemEnum itemEnum,int pos)
+    {
+        quickUse[pos] = GameDatabase.GetInstance().GetItem((int)itemEnum);
+    }
+
     public void UseItem(ItemEnum itemId)
     {
         
@@ -100,5 +104,7 @@ public class InventoryManager : IActorManagerInterface
                 break;
         }
     }
+    
+    
 
 }
