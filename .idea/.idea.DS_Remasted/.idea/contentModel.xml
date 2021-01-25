@@ -9,11 +9,10 @@
       <e p="Assets" t="Include">
         <e p="AttributeUI.cs" t="Include" />
         <e p="BoneFire.cs" t="Include" />
-        <e p="Button_Select.cs" t="Include" />
-        <e p="DontDestoy.cs" t="Include" />
-        <e p="DotPos.cs" t="Include" />
+        <e p="InventorySlotsManager.cs" t="Include" />
         <e p="InventoryUI.cs" t="Include" />
         <e p="ItemClickMenu.cs" t="Include" />
+        <e p="ItemDetailPanel.cs" t="Include" />
         <e p="ItemOnSlot.cs" t="Include" />
         <e p="JSON" t="Include">
           <e p="Editor" t="Include">
@@ -128,7 +127,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="UsePanel.cs" t="Include" />
         <e p="VFX" t="Include">
           <e p="KriptoFX" t="Include">
             <e p="MeshEffect" t="Include">

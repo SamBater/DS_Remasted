@@ -31,3 +31,4 @@ MonoBehaviour:
   spAtkMotionID: 0
   localMotionID1H: 0
   localMotionID2H: 0
+  Model: {fileID: 100000, guid: 5b4335161d9fa504c9ec268fe6a0a12b, type: 3}

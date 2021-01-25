@@ -90,13 +90,4 @@ public class UIManager : MonoBehaviour
     {
         inventoryPanel.SetActive(!inventoryPanel.activeSelf);
     }
-
-    public void UpdateItems(ItemEnum id, int count,bool newItem)
-    {
-        if (newItem)
-        {
-            Slot slot = inventoryPanel.GetComponent<InventoryUI>().FindBlankSlot();
-            slot.itemOnSlot.Fresh(GameDatabase.GetInstance().GetItem((int)id),count);
-        }
-    }
 }

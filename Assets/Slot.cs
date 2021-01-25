@@ -16,9 +16,37 @@ public class Slot : MonoBehaviour
         itemOnSlot = GetComponentInChildren<ItemOnSlot>();
     }
 
-    public void Fresh()
+    public bool IsEmpty()
     {
-        if (itemOnSlot == null) itemOnSlot = GetComponent<ItemOnSlot>();
-        itemOnSlot.Fresh(itemOnSlot.item,itemOnSlot.count);
+         if (itemOnSlot == null) itemOnSlot = GetComponentInChildren<ItemOnSlot>();
+        return itemOnSlot.IsEmpty();
     }
+
+    public int GetIndex()
+    {
+        return transform.GetSiblingIndex();
+    }
+
+    public InventorySlotsManager GetInventorySlotsManager()
+    {
+        return GetComponentInParent<InventorySlotsManager>();
+    }
+
+    public void SetData(Item item, int count)
+    {
+        itemOnSlot.Holder = item;
+        itemOnSlot.Count = count;
+    }
+
+    public void Clear()
+    {
+        itemOnSlot.Count = 0;
+        itemOnSlot.Holder = null;
+    }
+
+    public InventoryType GetInventoryType()
+    {
+        return transform.GetComponentInParent<InventorySlotsManager>().inventoryType;
+    }
+
 }

@@ -138,11 +138,7 @@ public class InteractionManager : IActorManagerInterface
         List<int> counts = itemOnGround.counts;
         for(int i=0;i<items.Count;i++)
         {
-            //UIManager.instance.ShowItemsOnGround(items[i],counts[i]);
-            if(am.inventory.inventory.ContainsKey(items[i]))
-                am.inventory.inventory[items[i]] += counts[i];
-            else
-                am.inventory.inventory.Add(items[i],counts[i]);
+            am.inventory.AddItem(Item.GetItem(items[i]),counts[i]);
         }
         am.ActorUIManager.ShowItemOnGround(items,counts);
     }

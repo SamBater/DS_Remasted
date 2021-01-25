@@ -2,109 +2,178 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;using UnityEngine.Events;
+using UnityEngine.UI;
 
 [Serializable]
 public class NextEvent : UnityEvent<Item>{}
 
 public enum ItemEnum
 {
+    Null = -1,
     EstusFlask = 0,       //原素瓶
     EstusFlask_Blank = 1, // 空的原素瓶
     KingsSoul = 2,       //王魂
     FlySword = 3,
     FireBottle = 4,
-    BlackSword = 1001
+    Fist = 1000,
+    BlackSword = 1001,
+    GreatSword = 1002,
+    LongSpider = 1004,
+    KnightShield = 1005
 }
-
-[Serializable]
-public class AddItemEvent : UnityEvent<ItemEnum,int,bool>{}
 
 public class InventoryManager : IActorManagerInterface
 {
-    public Dictionary<ItemEnum,int> inventory;  //物品：数量
-    public List<Item> quickUse = new List<Item>();
+    public Dictionary<Item,int> inventory;  //物品：数量
+    public Item[] quickUse = new Item[5];
+    public Item[] rhWeapons = new Item[5];
+    public Item[] lhWeapons = new Item[5];
     public int current;
     public NextEvent NextItemEvent = new NextEvent();
-    public AddItemEvent MyAddItemEvent;
+    public InventoryUI InventoryUI;
     private void Awake()
     {
 
-        inventory = new Dictionary<ItemEnum, int>();
-        
-        AddItem(ItemEnum.EstusFlask,10);
-        AddItem(ItemEnum.FlySword,2);
-        AddItem(ItemEnum.KingsSoul,1);
-        AddItem(ItemEnum.EstusFlask_Blank,1);
+        inventory = new Dictionary<Item, int>();
 
-        //TODO:测试用
-        GameDatabase ItemFactory = GameDatabase.GetInstance();
-        quickUse.Add(ItemFactory.GetItem(0));
-        quickUse.Add(ItemFactory.GetItem(1));
-        quickUse.Add(ItemFactory.GetItem(2));
-        quickUse.Add(ItemFactory.GetItem(3));
+        for (int i = 0; i < 4; i++)
+        {
+            AddItem(Item.GetItem((ItemEnum)i),i+1);
+        }
+        
+        AddItem(Item.GetItem(ItemEnum.GreatSword),1);
+
+
+        quickUse = new Item[5];
+        //测试quickuse
+        AddQuickUse(ItemEnum.FlySword,3);
+        AddQuickUse(ItemEnum.FireBottle,1);
     }
 
     private void Start() {
         //TODO:动态读取
         current = 0;
-        if(gameObject.tag == "Player")
+        if(gameObject.CompareTag("Player"))
         {
             Item item = GetCurrentItem();
-            if(item != null)
-            NextItemEvent.Invoke(GetCurrentItem());
+            if(item != null) 
+                NextItemEvent.Invoke(GetCurrentItem());
         }
-    }
+        
+        
+        AddWeapon(true);
+        AddWeapon(false);
 
+    }
+    
+    /// <summary>
+    /// 切换武器
+    /// </summary>
     public void NextItem()
     {
-        current = (current + 1) % quickUse.Count;
+        current = (current + 1) % quickUse.Length;
         NextItemEvent.Invoke(GetCurrentItem());
     }
 
+    /// <summary>
+    /// 获取选中的Item
+    /// </summary>
+    /// <returns></returns>
     public Item GetCurrentItem()
     {
-        if(quickUse.Capacity > 0)
+        if(quickUse.Length > 0)
             return quickUse[current];
         return null;
     }
-
-    public void AddItem(ItemEnum id,int count)
+    
+    /// <summary>
+    /// 添加Item 更新Inventory
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="count"></param>
+    public void AddItem(Item item,int count)
     {
-        if (inventory == null) inventory = new Dictionary<ItemEnum, int>();
-        bool newItem = !inventory.ContainsKey(id);
-        if (!newItem)
+        if (inventory == null) inventory = new Dictionary<Item, int>();
+        if (count == 0)
         {
-            inventory[id] += count;
+            Debug.LogError("Item count should > 0.");
+            return;
+        }
+        bool isNewItemForInventory = !inventory.ContainsKey(item);
+        if (isNewItemForInventory)
+        {
+            inventory.Add(item,count);
         }
         else
         {
-            inventory.Add(id,count);
+            inventory[item] += count;
         }
-
-        MyAddItemEvent.Invoke(id,count,newItem);
+        InventoryUI.AddItem(item,inventory[item]);
     }
-
-    public void AddQuickUse(ItemEnum itemEnum,int pos)
+    
+    /// <summary>
+    /// 从Inventory中转移数据到QuickUse
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="count"></param>
+    public void AddQuickUse(ItemEnum item, int pos)
     {
-        quickUse[pos] = GameDatabase.GetInstance().GetItem((int)itemEnum);
+        quickUse[pos] = Item.GetItem(item);
+        InventoryUI.qkism.Items = quickUse;
     }
-
-    public void UseItem(ItemEnum itemId)
+    
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="pos"></param>
+    /// <param name="rh"></param>
+    public void AddWeapon(bool rh)
     {
-        
-        switch(itemId)
+        if (rh)
         {
-            case ItemEnum.EstusFlask:
-                break;
-                
-            case ItemEnum.FireBottle:
-                break;
-
-            default:
-                break;
+            InventoryUI.rhwpISM.Items = am.wm.GetWeapons(rh).ToArray();
+        }
+        else
+        {
+            InventoryUI.lhwpISM.Items = am.wm.GetWeapons(rh).ToArray();
         }
     }
+
+    /// <summary>
+    /// 减少Item数量
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="count"></param>
+    public void DecreaseItem(Item item,int count)
+    {
+        if (!inventory.ContainsKey(item))
+        {
+            Debug.LogError("drop item is not in inventory.");
+        }
+        int countAfterDrop = inventory[item] - count;
+        if (countAfterDrop > 0)
+        {
+            inventory[item] = countAfterDrop;
+        }
+        else if (countAfterDrop == 0)
+        {
+            inventory.Remove(item);
+        }
+        else
+        {
+            Debug.LogError($"{item}'s count is not enough.");
+        }
+
+        InventoryUI.DecreaseItem(item, countAfterDrop);
+    }
+
     
-    
+    public int GetItemCount(ItemEnum itemEnum)
+    {
+        return inventory[Item.GetItem(itemEnum)];
+    }
+
 
 }

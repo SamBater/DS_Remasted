@@ -59,7 +59,7 @@ public class GameDatabase
                 else if (item.GetItemType() == ItemType.Weapon)
                     item.icon = weaponIcons[item.GetItemIconID()];
                 items.Add((int)item.GetID(),item);
-                Debug.Log("Add " + item);
+                //Debug.Log("Add " + item);
             }
             catch (Exception e)
             {
@@ -67,7 +67,10 @@ public class GameDatabase
                 throw;
             }
 
-            AssetDatabase.CreateAsset(item, $"Assets/ScriptObjects/{csv.Split('.')[0]}/{item.GetName()}.asset");
+            string assetPath = $"Assets/ScriptObjects/{csv.Split('.')[0]}/{item.GetName()}.asset";
+            FileInfo fileInfo = new FileInfo(assetPath);
+            if(!fileInfo.Exists)
+                AssetDatabase.CreateAsset(item, path);
         }
 
         AssetDatabase.SaveAssets();

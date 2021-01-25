@@ -8,16 +8,18 @@ public class ItemClickMenu : MonoBehaviour
 {
     public Button use;
     public Button equip;
-    public Button setQk;
     public Button drop;
-
+    public InventoryManager m_im;
     private static ItemClickMenu instance;
+
+    public ItemOnSlot onPactItem;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            m_im = FindObjectOfType<InventoryManager>();
         }
         gameObject.SetActive(false);
     }
@@ -42,5 +44,11 @@ public class ItemClickMenu : MonoBehaviour
     {
         use.gameObject.SetActive(false);
         equip.gameObject.SetActive(true);
+    }
+    
+    public void DropItem()
+    {
+        m_im.DecreaseItem(onPactItem.Holder, 1);
+        gameObject.SetActive(false);
     }
 }

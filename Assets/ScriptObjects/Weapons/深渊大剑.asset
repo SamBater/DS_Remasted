@@ -31,3 +31,4 @@ MonoBehaviour:
   spAtkMotionID: 23
   localMotionID1H: 2
   localMotionID2H: 15
+  Model: {fileID: 0}

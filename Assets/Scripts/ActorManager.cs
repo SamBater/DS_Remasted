@@ -178,7 +178,6 @@ public class ActorManager : MonoBehaviour,ISaveable
         ItemEnum itemId = inventory.GetCurrentItem().GetID();
         ac.animator.SetInteger("itemOnUseID",(int)itemId);
         ac.animator.SetTrigger("useItem");
-        inventory.UseItem(itemId);
     }
 
     public void NextItem()
@@ -216,15 +215,15 @@ public class ActorManager : MonoBehaviour,ISaveable
             saveData.PlayerPos = transform.position;
             SaveData.AcotrSave acotrSave = new SaveData.AcotrSave();
             acotrSave.uid = GetInstanceID();
-            acotrSave.ItemSaves = new List<SaveData.ItemSave>();
-            foreach (KeyValuePair<ItemEnum,int> pair in inventory.inventory)
-            {
-                SaveData.ItemSave itemSave = new SaveData.ItemSave();
-                itemSave.itemID = (int)pair.Key;
-                itemSave.count = pair.Value;
-                acotrSave.ItemSaves.Add(itemSave);
-            }
-            saveData.AcotrSaves.Add(acotrSave);
+            // acotrSave.ItemSaves = new List<SaveData.ItemSave>();
+            // foreach (KeyValuePair<ItemEnum,CntAndPos> pair in inventory.inventory)
+            // {
+            //     SaveData.ItemSave itemSave = new SaveData.ItemSave();
+            //     itemSave.itemID = (int)pair.Key;
+            //     itemSave.count = pair.Value.m_count;
+            //     acotrSave.ItemSaves.Add(itemSave);
+            // }
+            //saveData.AcotrSaves.Add(acotrSave);
         }
         else if(CompareTag("BornFire"))
         {
@@ -241,27 +240,27 @@ public class ActorManager : MonoBehaviour,ISaveable
         if (CompareTag("Player"))
         {
             transform.position = saveData.PlayerPos;
-            for (int i = 0; i < saveData.AcotrSaves.Capacity; i++)
-            {
-                if (saveData.AcotrSaves[i].uid == GetInstanceID())
-                {
-                    if (inventory == null) inventory = GetComponent<InventoryManager>();
-                    SaveData.AcotrSave acotrSave = saveData.AcotrSaves[i];
-                    for (int j = 0; j < acotrSave.ItemSaves.Capacity; j++)
-                    {
-                        SaveData.ItemSave itemSave = acotrSave.ItemSaves[j];
-                        inventory.AddItem((ItemEnum) itemSave.itemID, itemSave.count);
-                    }
-                    // Slot[] slots = ActorUIManager.inventoryPanel.GetComponentsInChildren<Slot>();
-                    //
-                    // for (int j = 0; j < acotrSave.ItemSaves.Capacity; j++)
-                    // {
-                    //     SaveData.ItemSave itemSave = acotrSave.ItemSaves[j];
-                    //     Slot slot = slots[itemSave.index];
-                    //     slot.itemOnSlot.Fresh(GameDatabase.GetInstance().GetItem(itemSave.itemID),itemSave.count);
-                    // }
-                }
-            }
+            // for (int i = 0; i < saveData.AcotrSaves.Capacity; i++)
+            // {
+            //     if (saveData.AcotrSaves[i].uid == GetInstanceID())
+            //     {
+            //         if (inventory == null) inventory = GetComponent<InventoryManager>();
+            //         SaveData.AcotrSave acotrSave = saveData.AcotrSaves[i];
+            //         for (int j = 0; j < acotrSave.ItemSaves.Capacity; j++)
+            //         {
+            //             SaveData.ItemSave itemSave = acotrSave.ItemSaves[j];
+            //             inventory.AddItem((ItemEnum) itemSave.itemID, itemSave.count);
+            //         }
+            //         // Slot[] slots = ActorUIManager.inventoryPanel.GetComponentsInChildren<Slot>();
+            //         //
+            //         // for (int j = 0; j < acotrSave.ItemSaves.Capacity; j++)
+            //         // {
+            //         //     SaveData.ItemSave itemSave = acotrSave.ItemSaves[j];
+            //         //     Slot slot = slots[itemSave.index];
+            //         //     slot.itemOnSlot.Fresh(GameDatabase.GetInstance().GetItem(itemSave.itemID),itemSave.count);
+            //         // }
+            //     }
+            // }
         }
         else if(CompareTag("BornFire"))
         {

@@ -10,32 +10,51 @@ using UnityEngine.UI;
 public class ItemOnSlot : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDragHandler,IPointerEnterHandler,ISaveable,IPointerClickHandler
 {
     [SerializeField]
-    public Item item;
+    private Item item;
     public Image icon;
+
+    public Item Holder
+    {
+        get { return item; }
+        set
+        {
+            item = value;
+            if(icon == null) icon = GetComponent<Image>();
+            icon.sprite = value != null ? value.icon : null;
+        }
+    }
     [SerializeField]
-    public int count;
+    private int count;
+
     public TextMeshProUGUI countText;
     private Transform parentTransform;
-    private void Awake()
+    public int Count
+    {
+        get { return count; }
+        set 
+        { 
+            count = value; 
+            if(countText == null) countText = transform.GetChild(0).GetComponent<TextMeshProUGUI>(); 
+            countText.SetText(value > 1 ? value.ToString() : "");
+        }
+    }
+
+    private void Start()
     {
         icon = GetComponent<Image>();
         countText = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         parentTransform = transform.parent;
     }
 
-    public void Fresh(Item _item,int _count)
+    public bool IsEmpty()
     {
-        item = _item;
-        count = _count;
-        icon.sprite = item.icon ? item.icon : null;
-        if(count > 1)
-            countText.text = count.ToString();
+        return item == null;
     }
     
     public void OnBeginDrag(PointerEventData eventData)
     {
         parentTransform.position = icon.transform.position;
-        transform.parent = parentTransform.parent;
+        transform.SetParent(parentTransform.parent);
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
     
@@ -47,33 +66,76 @@ public class ItemOnSlot : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDragH
     
     public void OnEndDrag(PointerEventData eventData)
     {
-        Slot slot = eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<Slot>();
-        Debug.Log(eventData.pointerCurrentRaycast.gameObject.name);
-        transform.parent = parentTransform;
+        transform.SetParent(parentTransform);
         icon.transform.position = parentTransform.transform.position;
+        Slot slot = eventData.pointerCurrentRaycast.gameObject.GetComponentInParent<Slot>();
+
+        //交换slot 位置
         if (slot != null)
-        {
-            int newIndex = slot.transform.GetSiblingIndex();
+        {        
+            ItemOnSlot target = slot.itemOnSlot;
+            Slot slotSource = GetComponentInParent<Slot>();
+            
+            InventoryType thisSlotType = GetComponentInParent<Slot>().GetInventoryType();
+            InventoryType targetSlotType = slot.GetInventoryType();
+        
+            InventorySlotsManager ismSource = GetComponentInParent<Slot>().GetInventorySlotsManager();
+            InventorySlotsManager ismDest = slot.GetInventorySlotsManager(); 
+
+            int newIndex = target.transform.GetSiblingIndex();
             int oldIndex = parentTransform.GetSiblingIndex();
             
-            slot.transform.SetSiblingIndex(oldIndex);
-            transform.parent.SetSiblingIndex(newIndex);
             
-            //改变在数组中记录的位置
-        }
-        else
-        {
+            //同槽内的交换
+            if(thisSlotType == targetSlotType)
+                Swap(target);
+            
+            //从其他槽拖拽消耗品到QuickUse
+            else if (item.GetItemType() == ItemType.Consumable && targetSlotType == InventoryType.QuickUseSlots)
+            {
+                ismDest.inventoryUI.im.AddQuickUse(item.GetID(),slot.GetIndex());
+                ismDest.inventoryUI.allItemPos.Remove(item);
+                slotSource.Clear();
+                //清楚消耗品索引
+            }
+            
+            //拖着装备Item
+            else if (item.GetItemType() == ItemType.Weapon && targetSlotType == InventoryType.WeaponsSlots)
+            {
+                //ismDest.inventoryUI.im.AddWeapon();
+                slotSource.Clear();
+            }
+            
 
+            // InventoryUI inventoryUI = GetComponentInParent<Slot>().gameObject.GetComponentInParent<InventoryUI>();
+            // if (inventoryUI.allItemToggle.isOn)
+            // {
+            //     inventoryUI.SwapPos(inventoryUI.allItemPos,target.itemOnSlot.Holder,item,newIndex,oldIndex);
+            // }
+            // else if (inventoryUI.weaponToggle.isOn)
+            // {
+            //     inventoryUI.SwapPos(inventoryUI.weaponItemPos,target.itemOnSlot.Holder,item,newIndex,oldIndex);
+            // }
         }
-
         GetComponent<CanvasGroup>().blocksRaycasts = true;
 
+    }
+
+    public void Swap(ItemOnSlot target)
+    {
+        Item targetItem = target.Holder;
+        int count = target.Count;
+        target.Holder = Holder;
+        target.Count = Count;
+        Holder = targetItem;
+        Count = count;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (item != null)
         {
+            ItemDetailPanel.GetInstance().SetItem(this.item);
         }
     }
 
@@ -92,6 +154,7 @@ public class ItemOnSlot : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDragH
         if(item == null) return;
         ItemClickMenu itemClickMenu  = ItemClickMenu.GetInstance();
         itemClickMenu.transform.position = eventData.position;
+        itemClickMenu.onPactItem = this;
         itemClickMenu.gameObject.SetActive(true);
         switch (item.GetItemType())
         {
@@ -104,10 +167,6 @@ public class ItemOnSlot : MonoBehaviour,IBeginDragHandler,IEndDragHandler,IDragH
             default:
                 Debug.LogError("faild to read ItemType");
                 break;
-        }
-        if (eventData.clickCount == 2)
-        {
-
         }
     }
 }

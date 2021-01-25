@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2192138990575823194}
+  - component: {fileID: -1710942509586131806}
   m_Layer: 0
   m_Name: Knight Shield
   m_TagString: Untagged
@@ -32,6 +33,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -87.065, y: -90.478, z: 166}
+--- !u!114 &-1710942509586131806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524427107914904544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcdb925bff41b847b32e9ded327af17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 49865920cda8ae543b22092aa66001c4, type: 2}
+  battleManager: {fileID: 0}
 --- !u!1 &3470619324954765510
 GameObject:
   m_ObjectHideFlags: 0

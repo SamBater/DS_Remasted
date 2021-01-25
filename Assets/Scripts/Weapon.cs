@@ -1,4 +1,6 @@
-﻿public class Weapon : Item
+﻿using UnityEngine;
+
+public class Weapon : Item
 {
     public Damage ATK;
     public BaseStates bounusLv;
@@ -6,6 +8,7 @@
     public int spAtkMotionID;
     public int localMotionID1H;
     public int localMotionID2H;
+    public GameObject Model;
     public override void LoadData(string[] col)
     {
        base.LoadData(col);

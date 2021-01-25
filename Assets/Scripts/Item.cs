@@ -11,7 +11,8 @@ interface ILoadAble
 public enum ItemType
 {
     Consumable = 0,
-    Weapon = 1
+    Weapon = 1,
+    ItemTypeCount = 2
 }
 
 [Serializable]
@@ -77,5 +78,10 @@ public class Item : ScriptableObject,ILoadAble
     public int GetItemIconID()
     {
         return iconID;
+    }
+
+    public static Item GetItem(ItemEnum itemEnum)
+    {
+        return GameDatabase.GetInstance().GetItem((int) itemEnum);
     }
 }
