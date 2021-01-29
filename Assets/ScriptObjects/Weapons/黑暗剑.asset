@@ -31,4 +31,5 @@ MonoBehaviour:
   spAtkMotionID: 23
   localMotionID1H: 3
   localMotionID2H: 10
-  Model: {fileID: 6793452239346474445, guid: c48cd265122f02641939e234decf4514, type: 3}
+  modelPath: DarkSword
+  model: {fileID: 6793452239346474445, guid: c48cd265122f02641939e234decf4514, type: 3}

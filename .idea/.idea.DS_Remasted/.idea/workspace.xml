@@ -20,28 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b47bb101-870f-413d-bb12-19abb39699d1" name="Default Changelist" comment="rename files">
-      <change afterPath="$PROJECT_DIR$/Assets/InventorySlotsManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ItemDetailPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ItemDetailPanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Fist.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Fist.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Toggle.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Toggle.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DS_Remasted/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotPos.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DotPos.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventoryUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemClickMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemClickMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemOnSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemOnSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ItemOnSlot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ItemOnSlot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/GreatSword/WP_A_0251out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/GreatSword/WP_A_0251out.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Weapon/Silver Knight Spear/WP_A_1101out.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Weapon/Silver Knight Spear/WP_A_1101out.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/DarkSword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DarkSword.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fist.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Fist.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/GreatSword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GreatSword.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ItemClickMenu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ItemClickMenu.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Knight Shield.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Knight Shield.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Sliver Knight Spear.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sliver Knight Spear.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Slot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Icon01.dds.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Icon01.dds.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BossBattle.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/巨剑.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/巨剑.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/弓.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/弓.asset" afterDir="false" />
@@ -53,16 +40,17 @@
       <change beforePath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/黑暗剑.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptObjects/Weapons/黑暗剑.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IInput.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Slot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Slot.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UsePanel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UsePanel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InventorySlotsManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tables/Weapons.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tables/Weapons.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +103,6 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/GameDataBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ItemFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Consumable.cs" />
@@ -123,7 +110,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ActorController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Button_Select.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ActorUIBarManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SaveData.cs" />
@@ -131,7 +117,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Damage.cs" />
       <option value="$PROJECT_DIR$/Assets/AttributeUI.cs" />
       <option value="$PROJECT_DIR$/Assets/StateUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" />
       <option value="$PROJECT_DIR$/Assets/UsePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ActorManager.cs" />
       <option value="$PROJECT_DIR$/Assets/ItemDetailPanel.cs" />
@@ -140,13 +125,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/InteractionManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/InventoryUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Slot.cs" />
       <option value="$PROJECT_DIR$/Assets/InventorySlotsManager.cs" />
       <option value="$PROJECT_DIR$/Assets/ItemOnSlot.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameDatabase.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/WeaponManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/WeaponController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lF0WLra8sGqZ57rPy3WMcF0HdE" />
@@ -170,10 +158,10 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="6376">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="6376" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -217,7 +205,12 @@
       <workItem from="1611302431938" duration="24634000" />
       <workItem from="1611395528809" duration="24368000" />
       <workItem from="1611493987077" duration="4096000" />
-      <workItem from="1611562587330" duration="21859000" />
+      <workItem from="1611562587330" duration="23344000" />
+      <workItem from="1611657143032" duration="1568000" />
+      <workItem from="1611755020123" duration="1366000" />
+      <workItem from="1611870163958" duration="2622000" />
+      <workItem from="1611893442671" duration="5454000" />
+      <workItem from="1611899168943" duration="8010000" />
     </task>
     <task id="LOCAL-00001" summary="rename files">
       <created>1607183673002</created>
@@ -289,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611320487835</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="UI Inventory 初步完成">
+      <created>1611587119153</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611587119153</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +321,8 @@
     <MESSAGE value="UI更新" />
     <MESSAGE value="背包系统" />
     <MESSAGE value="ui 人物状态" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui 人物状态" />
+    <MESSAGE value="UI Inventory 初步完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Inventory 初步完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

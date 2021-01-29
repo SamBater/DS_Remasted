@@ -31,4 +31,5 @@ MonoBehaviour:
   spAtkMotionID: 0
   localMotionID1H: 0
   localMotionID2H: 0
-  Model: {fileID: 100000, guid: 5b4335161d9fa504c9ec268fe6a0a12b, type: 3}
+  modelPath: Arrow_stick
+  model: {fileID: 8079393096223527746, guid: b2b1f5d9e6990fa4bba3d648ee1246a1, type: 3}

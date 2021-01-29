@@ -69,7 +69,6 @@
           <e p="GameDataBase.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="IActorManagerInterface.cs" t="Include" />
-          <e p="IInput.cs" t="Include" />
           <e p="InteractionManager.cs" t="Include" />
           <e p="InventoryManager.cs" t="Include" />
           <e p="Item.cs" t="Include" />

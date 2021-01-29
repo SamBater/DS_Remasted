@@ -83,18 +83,6 @@ public class StateManager : IActorManagerInterface
         isLock = am.ac.CheckState("lock");
         isHeal = am.ac.CheckStateTag("heal");
         isWalk = isGround && am.ac.playerInput.GetInputMag() > 0.3f;
-        
-        //TODO：作为一次修改
-        try
-        {
-            rhATK = ComputerPanelATK(true);
-            lhATK = ComputerPanelATK(false);
-        }
-        catch (System.Exception)
-        {
-            
-            throw;
-        }
     }
 
     public void AddHp(float value)
@@ -113,7 +101,12 @@ public class StateManager : IActorManagerInterface
         onEndurancePctChanged(pct);
     }
 
-    //返回面板伤害：武器伤害+补正
+
+    /// <summary>
+    /// 根据正在使用的武器，计算面板伤害
+    /// </summary>
+    /// <param name="rh"></param>
+    /// <returns></returns>
     public Damage ComputerPanelATK(bool rh)
     {
         Damage ATK = rh ? rhATK : lhATK;

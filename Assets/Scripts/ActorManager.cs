@@ -168,7 +168,7 @@ public class ActorManager : MonoBehaviour,ISaveable
     {
         ac.animator.SetTrigger("ChangeWeapon");
         ac.animator.SetBool("twoHand",false);
-        wm.ChangeWeapon(rh);
+        wm.Switch2NextWeapon(rh);
     }
 
     //找到目前左下角快捷栏显示的物品，然后使用物品

@@ -22,12 +22,10 @@ public class WeaponController : MonoBehaviour
         {
             Transform t = transform.GetChild(i);
             WeaponData wd = t.GetComponent<WeaponData>();
+            wd.battleManager = wm.am.bm;
             weaponDataList.Add(wd);
             Weapons[i] = wd.weapon;
         }
-        if(wm.am.CompareTag("Player"))
-        EquipWeapon((Weapon)Item.GetItem(ItemEnum.LongSpider),2);
-        FillFists();
         LoadWeapon();
         HideWeaponOnUnuse();
     }
@@ -39,16 +37,29 @@ public class WeaponController : MonoBehaviour
     {
         weaponDataOnUse = weaponDataOnUse == null ? weaponDataList[0] : weaponDataOnUse;
     }
-
+    
+    /// <summary>
+    /// 装备武器
+    /// </summary>
+    /// <param name="weapon"></param>
+    /// <param name="pos"></param>
     public void EquipWeapon(Weapon weapon, int pos)
     {
-        GameObject weaponModel = Instantiate<GameObject>(weapon.Model, transform);
-        //Destroy(weaponDataList[pos].gameObject);
-        weaponModel.transform.SetSiblingIndex(pos);
-        weaponDataList[pos] = weaponModel.GetComponent<WeaponData>();
-        weaponDataList[pos].battleManager = wm.am.bm;
-        weaponDataList[pos].weapon = weapon;
+        bool isOnUse = weaponDataList[pos] == weaponDataOnUse;
+        UnEquipWeapon(pos);
+        weaponDataList[pos].m_Weapon = weapon;
+        weaponDataList[pos].gameObject.SetActive(isOnUse);
         Weapons[pos] = weapon;
+    }
+
+    /// <summary>
+    /// 卸载武器
+    /// </summary>
+    /// <param name="pos"></param>
+    public void UnEquipWeapon(int pos)
+    {
+        weaponDataList[pos].m_Weapon = null;
+        Weapons[pos] = null;
     }
     
     /// <summary>
@@ -64,26 +75,9 @@ public class WeaponController : MonoBehaviour
             }
         }
     }
-
-    /// <summary>
-    /// 为空武器槽填充拳头
-    /// </summary>
-    private void FillFists()
-    {
-        int blankSlotCount = weaponCount - transform.childCount;
-        for (int i = 0; i < blankSlotCount ; i++)
-        {
-            GameObject go = new GameObject();
-            go.name = "Fist";
-            go.transform.parent = transform;
-            WeaponData wd = go.AddComponent<WeaponData>();
-            wd.weapon = (Weapon) GameDatabase.GetInstance().GetItem(1000);
-            weaponDataList.Add(wd);
-        }
-    }
     
     /// <summary>
-    /// 切换武器
+    /// 获得下一个武器的索引
     /// </summary>
     /// <returns>武器数据</returns>
     public WeaponData GetNextWeapon()

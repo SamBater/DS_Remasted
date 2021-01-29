@@ -31,4 +31,5 @@ MonoBehaviour:
   spAtkMotionID: 23
   localMotionID1H: 3
   localMotionID2H: 15
-  Model: {fileID: 1524427107914904544, guid: 8638cf915ce244446ab6adaa61c7f80f, type: 3}
+  modelPath: Knight Shield
+  model: {fileID: 1524427107914904544, guid: 8638cf915ce244446ab6adaa61c7f80f, type: 3}

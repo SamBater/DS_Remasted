@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Weapon : Item
 {
@@ -8,7 +9,8 @@ public class Weapon : Item
     public int spAtkMotionID;
     public int localMotionID1H;
     public int localMotionID2H;
-    public GameObject Model;
+    public string modelPath;
+    public GameObject model;
     public override void LoadData(string[] col)
     {
        base.LoadData(col);
@@ -19,5 +21,20 @@ public class Weapon : Item
        localMotionID2H = int.Parse(col[7]);
        ATK = new Damage();
        ATK.physical = int.Parse(col[8]);
+
+       try
+       {
+           modelPath = col[9];
+           if(modelPath == null) return;
+           model = Resources.Load<GameObject>(modelPath);
+           if(model == null) return;
+           //model = Instantiate(model);
+       }
+       catch (Exception e)
+       {
+           Console.WriteLine(e);
+           throw;
+       }
+
     }
 }

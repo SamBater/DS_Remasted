@@ -44,7 +44,6 @@ public class WeaponManager : IActorManagerInterface
         {
 
         }
-
     }
 
     private void Start() {
@@ -63,6 +62,7 @@ public class WeaponManager : IActorManagerInterface
         {
             ChangeWeaponEvent.Invoke((int)wcR.weaponDataOnUse.weapon.GetID(),true);
             ChangeWeaponEvent.Invoke((int)wcL.weaponDataOnUse.weapon.GetID(),false);
+            EquipWeapon((Weapon)Item.GetItem(ItemEnum.LongSpider),0,true);
         }
     }
 
@@ -78,7 +78,10 @@ public class WeaponManager : IActorManagerInterface
         return tempWc;
     }
     
-    //FUNCTION:在攻击判定阶段调用：打开武器的碰撞器、
+    
+    /// <summary>
+    /// 打开当前武器的碰撞器
+    /// </summary>
     public void WeaponEnable()
     {
         r0l1 = animator.GetBool("R0L1");
@@ -131,8 +134,12 @@ public class WeaponManager : IActorManagerInterface
         if(rightCol) weaponColR = col;
         else weaponColL = col;
     }
-
-    public void ChangeWeapon(bool rh)
+    
+    /// <summary>
+    /// 切换到下一把武器
+    /// </summary>
+    /// <param name="rh"></param>
+    public void Switch2NextWeapon(bool rh)
     {
         WeaponController wc = rh ? wcR : wcL;
         WeaponData current = wc.weaponDataOnUse;
@@ -155,6 +162,26 @@ public class WeaponManager : IActorManagerInterface
         SetAllWeaponOnUseVisiable(true);
     }
 
+    /// <summary>
+    /// 装备武器
+    /// </summary>
+    /// <param name="weapon"></param>
+    /// <param name="pos"></param>
+    /// <param name="rh"></param>
+    public void EquipWeapon(Weapon weapon, int pos, bool rh)
+    {
+        WeaponController wc = rh ? wcR : wcL;
+        wc.EquipWeapon(weapon,pos); //更改模型、wd引用
+        
+        //tips:黑魂以右手作为localMothion动画的判断
+        if (wc.weaponDataOnUse == GetWeaponDataOnUse(true))
+        {
+            AnimatorFactory.SetLocalMotion(animator,wc.weaponDataOnUse.weapon.localMotionID1H);
+        }
+        
+        //更新UI
+    }
+
     public void SetWeaponVFX(bool v)
     {
         if (weaponVFX)
@@ -162,12 +189,20 @@ public class WeaponManager : IActorManagerInterface
             weaponVFX.SetActive(v);
         }
     }
-
+    
+    /// <summary>
+    /// 获取正在使用的武器
+    /// </summary>
+    /// <param name="right"></param>
+    /// <returns></returns>
     public WeaponData GetWeaponDataOnUse(bool right)
     {
-        if (!wcR && !wcL) return null;
-        if (right) return wcR.weaponDataOnUse;
-        else return wcL.weaponDataOnUse;
+        if (right && wcR) 
+            return wcR.weaponDataOnUse;
+        else if (!right && wcL) 
+            return wcL.weaponDataOnUse;
+        else 
+            return null;
     }
     
     /// <summary>

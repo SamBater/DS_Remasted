@@ -31,4 +31,5 @@ MonoBehaviour:
   spAtkMotionID: 44
   localMotionID1H: 3
   localMotionID2H: 15
-  Model: {fileID: 100054, guid: 0be2ba322dd85494db39a44ee439af41, type: 3}
+  modelPath: Bow
+  model: {fileID: 4940246523892997748, guid: c67e59d55cb614b46b57addec07ba71d, type: 3}

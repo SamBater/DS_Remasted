@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3569325806156457353}
   - component: {fileID: 1615734128849178947}
   - component: {fileID: -5886561401654300372}
-  - component: {fileID: -6833426751796004888}
   m_Layer: 12
   m_Name: Sliver Knight Spear
   m_TagString: Weapon
@@ -27,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967361123490230422}
-  m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.010000003, y: 0.0100000035, z: 0.0100000035}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3569325806156457353
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -95,17 +94,3 @@ CapsuleCollider:
   m_Height: 3.09
   m_Direction: 1
   m_Center: {x: -0.0000005066797, y: -1.32, z: 0.00033031232}
---- !u!114 &-6833426751796004888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967361123490230422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adcdb925bff41b847b32e9ded327af17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: bdfd1aa7ffcde9349b08e5be445f36b6, type: 2}
-  battleManager: {fileID: 0}

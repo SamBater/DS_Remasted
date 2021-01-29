@@ -40,8 +40,11 @@ public class InventoryManager : IActorManagerInterface
         {
             AddItem(Item.GetItem((ItemEnum)i),i+1);
         }
-        
-        AddItem(Item.GetItem(ItemEnum.GreatSword),1);
+
+        for (int i = 1001; i < 1006; i++)
+        {
+            AddItem(Item.GetItem((ItemEnum)i),i-1000);
+        }
 
 
         quickUse = new Item[5];

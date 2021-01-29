@@ -5,6 +5,8 @@ using System.IO;
 using System.Runtime.Versioning;
 using System.Text;
 using UnityEditor;
+using UnityEditor.EditorTools;
+using UnityEditor.Experimental;
 using UnityEngine;
 
 public class GameDatabase
@@ -50,34 +52,50 @@ public class GameDatabase
             string s = allLines[i];
             string[] line = s.Split(',');
 
-            T item = ScriptableObject.CreateInstance<T>();
-            try
-            {
-                item.LoadData(line);
-                if (item.GetItemType() == ItemType.Consumable)
-                    item.icon = consumableIcons[item.GetItemIconID()];
-                else if (item.GetItemType() == ItemType.Weapon)
-                    item.icon = weaponIcons[item.GetItemIconID()];
-                items.Add((int)item.GetID(),item);
-                //Debug.Log("Add " + item);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
+            T item = null;
 
-            string assetPath = $"Assets/ScriptObjects/{csv.Split('.')[0]}/{item.GetName()}.asset";
+
+            string assetPath = $"Assets/ScriptObjects/{csv.Split('.')[0]}/{line[1]}.asset";
             FileInfo fileInfo = new FileInfo(assetPath);
-            if(!fileInfo.Exists)
+            if (!fileInfo.Exists)
+            {
+                item = ScriptableObject.CreateInstance<T>();
+                LoadItem(item,line);
                 AssetDatabase.CreateAsset(item, path);
+            }
+            else
+            {
+                item = AssetDatabase.LoadAssetAtPath<T>(assetPath);
+                LoadItem(item,line);
+            }
+            EditorUtility.SetDirty(item);
         }
-
+        
         AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
     }
 
     public Item GetItem(int id)
     {
         return instance.items[id];
+    }
+
+    public void LoadItem(Item item,string[] line)
+    {
+        try
+        {
+            item.LoadData(line);
+            if (item.GetItemType() == ItemType.Consumable)
+                item.icon = consumableIcons[item.GetItemIconID()];
+            else if (item.GetItemType() == ItemType.Weapon)
+                item.icon = weaponIcons[item.GetItemIconID()];
+            items.Add((int)item.GetID(),item);
+            //Debug.Log("Add " + item);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 }
