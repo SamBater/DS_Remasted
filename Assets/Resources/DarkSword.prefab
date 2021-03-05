@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7107590506022652114}
   - component: {fileID: 4992183706819738648}
   - component: {fileID: 3136391051160624325}
+  - component: {fileID: 4066490480036320022}
   m_Layer: 0
   m_Name: DarkSword
   m_TagString: Weapon
@@ -94,3 +95,18 @@ CapsuleCollider:
   m_Height: 0.009
   m_Direction: 1
   m_Center: {x: -0.0000005143383, y: -0.006, z: -0.00000031442138}
+--- !u!114 &4066490480036320022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6793452239346474445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcdb925bff41b847b32e9ded327af17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponItem: {fileID: 11400000, guid: db0f9a4d191ad7645b1eaa814b706472, type: 2}
+  battleManager: {fileID: 0}
+  col: {fileID: 3136391051160624325}

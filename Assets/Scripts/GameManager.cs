@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
         //执行后会加载原有物件、不删除的物体就不用管了
         //重要的时如何删除一个物品
-        SceneManager.LoadScene("Scenes/BossBattle",LoadSceneMode.Single);
+        //SceneManager.LoadScene("Scenes/BossBattle",LoadSceneMode.Single);
     }
 
     private void SaveJsonData()

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,6 +31,7 @@ public class ActorManager : MonoBehaviour,ISaveable
     public GameObject model;
     private ISaveable saveableImplementation;
     public UIManager ActorUIManager = new UIManager();
+    public Action deathHandler = null;
     private void Awake()
     {
         try
@@ -123,15 +125,15 @@ public class ActorManager : MonoBehaviour,ISaveable
             {
                 wm.SetWeaponOnUseVisiable(false, false);
                 WeaponData wd = wm.GetWeaponDataOnUse(true);
-                SetAtkAnimationInt(wd.weapon.wpAtkMotionID);
-                AnimatorFactory.SetLocalMotion(ac.animator,wd.weapon.localMotionID2H);
+                SetAtkAnimationInt(wd.weaponItem.wpAtkMotionID);
+                AnimatorFactory.SetLocalMotion(ac.animator,wd.weaponItem.localMotionID2H);
             }
             else
             {
                 wm.SetWeaponOnUseVisiable(false, true);
                 WeaponData wd = wm.GetWeaponDataOnUse(false);
-                SetAtkAnimationInt(wd.weapon.wpAtkMotionID);
-                AnimatorFactory.SetLocalMotion(ac.animator, wd.weapon.localMotionID2H);
+                SetAtkAnimationInt(wd.weaponItem.wpAtkMotionID);
+                AnimatorFactory.SetLocalMotion(ac.animator, wd.weaponItem.localMotionID2H);
                 //TODO:并且将左手武器送入又手
             }
            
@@ -140,8 +142,8 @@ public class ActorManager : MonoBehaviour,ISaveable
         else
         {
             wm.SetAllWeaponOnUseVisiable(true);
-            SetAtkAnimationInt(wm.wcR.weaponDataOnUse.weapon.wpAtkMotionID);
-            AnimatorFactory.SetLocalMotion(ac.animator, wm.wcR.weaponDataOnUse.weapon.localMotionID1H);
+            SetAtkAnimationInt(wm.wcR.weaponDataOnUse.weaponItem.wpAtkMotionID);
+            AnimatorFactory.SetLocalMotion(ac.animator, wm.wcR.weaponDataOnUse.weaponItem.localMotionID1H);
         }
 
         ac.animator.SetBool("twoHand",!twoHand); 
@@ -198,12 +200,16 @@ public class ActorManager : MonoBehaviour,ISaveable
 
             //重载场景,插入过渡LoadScene
             //不重载的物体：玩家信息；Boss、精英怪；宝箱、拉杆、门的状态；
+            
+            
+            
             GameManager.LoadScene();
         }
 
         else if (CompareTag("Enemy"))
         {
-            
+            deathHandler.Invoke();
+            GetComponent<CharacterController>().enabled = false;
         }
     }
 

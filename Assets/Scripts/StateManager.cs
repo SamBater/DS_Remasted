@@ -115,9 +115,9 @@ public class StateManager : IActorManagerInterface
         {
             ATK = new Damage();
         }
-        ATK.physical = wd.weapon.ATK.physical + wd.weapon.bounusLv.strength * baseStates.strength; // TODO:加敏捷
-        ATK.magical = wd.weapon.ATK.magical + wd.weapon.bounusLv.intelligence * baseStates.intelligence;
-        ATK.fire = wd.weapon.ATK.fire + wd.weapon.bounusLv.intelligence * baseStates.intelligence;
+        ATK.physical = wd.weaponItem.ATK.physical + wd.weaponItem.bounusLv.strength * baseStates.strength; // TODO:加敏捷
+        ATK.magical = wd.weaponItem.ATK.magical + wd.weaponItem.bounusLv.intelligence * baseStates.intelligence;
+        ATK.fire = wd.weaponItem.ATK.fire + wd.weaponItem.bounusLv.intelligence * baseStates.intelligence;
         return ATK;
     }
 

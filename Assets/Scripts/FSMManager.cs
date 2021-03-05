@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class FSMManager : MonoBehaviour
 {
@@ -11,11 +12,13 @@ public class FSMManager : MonoBehaviour
     public Transform shootPoint;
     //TODO:修改玩家引用
     private Transform target;
+    private AINormal aI;
     private void Start() {
         ac = GetComponentInParent<ActorController>();
         sm = GetComponentInParent<StateManager>();
         soundManager = GetComponent<SoundManager>();
         target = GameObject.FindWithTag("Player").transform;
+        aI = GetComponent<AINormal>();
     }
 
     public void EnableInput()
@@ -38,16 +41,9 @@ public class FSMManager : MonoBehaviour
         ac.enableTurnDirection = false;
     }
 
-    private void FacePlayer()
+    public void FacePlayer()
     {
-        //TODO:旋转速度改成参数，供各自定义调用.
-        const float speed = 15f;
-        if(ac.enableTurnDirection)
-        {
-            Quaternion r = Quaternion.LookRotation(target.position - sm.gameObject.transform.position,Vector3.up);
-            r.x = r.z = 0.0f;
-            sm.gameObject.transform.rotation = Quaternion.Lerp(sm.gameObject.transform.rotation,r,Time.deltaTime * speed);
-        }
+        aI.turnToTarget = true;
     }
 
     public void OnAttackEnter()
@@ -142,9 +138,9 @@ public class FSMManager : MonoBehaviour
         Vector3 vec = ac.cc.transform.forward;
         vec.y = 0;
         transform.forward =  vec;
-        ac.model.transform.forward = ac.playerInput.GetMoveVec();
+        ac.model.transform.forward = ac.playerInput.MovingVec;
         
-        Vector3 dir = ac.playerInput.GetMoveVec().normalized;
+        Vector3 dir = ac.playerInput.MovingVec.normalized;
         dir.y = 0;
         if (dir == Vector3.zero) dir = Vector3.forward;
         ac.model.transform.forward = dir;
@@ -206,19 +202,20 @@ public class FSMManager : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject go = ObjectPool.instance.GetObject("Arrow_stick");
-        go.transform.position = shootPoint.position;
-        go.transform.forward = shootPoint.forward;
-        WeaponData wd = go.GetComponent<WeaponData>();
-        if(wd == null)
-        {
-            wd = go.AddComponent<WeaponData>();
-        }
+        GameObject arrow = ObjectPool.instance.GetObject("Arrow_stick");
+        arrow.transform.position = shootPoint.position + shootPoint.forward;
+        arrow.transform.forward = shootPoint.forward;
+        AINormal ai = ac.playerInput as AINormal;
+        float r = UnityEngine.Random.Range(0, 0.2f);
+        Vector3 randVec = new Vector3(r, 1.0f + r, r);
+        if(ai)
+            arrow.transform.LookAt(ai.player.position + randVec);
+        WeaponData wd = arrow.GetComponent<WeaponData>();
         //TODO：WD的攻击力是发射的瞬间决定的.所以此处应该根据角色当前攻击力去设置.
         wd.battleManager = sm.am.bm;
-        go.SetActive(true);
-        //Time.timeScale = 0.0f;
+        arrow.SetActive(true);
         soundManager.PlayGunShoot();
+        ac.enableTurnDirection = false;
     }
 
     public void JustTestEnvent()
@@ -239,6 +236,11 @@ public class FSMManager : MonoBehaviour
     public void OnDrinkEnter()
     {
         sm.AddHp(200.0f);
+    }
+
+    public void SetTurnAble(bool val)
+    {
+        ac.enableTurnDirection = val;
     }
 
     

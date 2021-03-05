@@ -97,8 +97,6 @@ public class PlayerInput : ActorInput
             MovingVec = Vector3.zero;
             return;
         }
-        MovingVec.x = rightAxis;
-        MovingVec.z = forwardAxis;
         MovingVec = SquareToCircle(playerInput);
         
         //输入的运动幅度
@@ -131,7 +129,7 @@ public class PlayerInput : ActorInput
             //如果左手持盾
             if(leftHand)
             {
-                if (leftHand.weapon.wpAtkMotionID == WpAtkMotionID.Shield)
+                if (leftHand.weaponItem.wpAtkMotionID == WpAtkMotionID.Shield)
                 {
                     // float oldWeight = animator.GetLayerWeight(1);
                     // int index = animator.GetLayerIndex("defence");
@@ -154,7 +152,7 @@ public class PlayerInput : ActorInput
                     int index = ac.animator.GetLayerIndex("defence");
                     ac.animator.SetLayerWeight(index, 0.0f);
                     ac.animator.SetBool("R0L1", true);
-                    ac.animator.SetInteger("attackMotionType", (int)leftHand.weapon.wpAtkMotionID);
+                    ac.animator.SetInteger("attackMotionType", (int)leftHand.weaponItem.wpAtkMotionID);
                     ac.Attack();
                 }
             }
@@ -168,7 +166,7 @@ public class PlayerInput : ActorInput
         if (pressRB)
         {
             ac.animator.SetBool("R0L1", false);
-            ac.animator.SetInteger("attackMotionType", (int)rightHand.weapon.wpAtkMotionID);
+            ac.animator.SetInteger("attackMotionType", (int)rightHand.weaponItem.wpAtkMotionID);
             ac.Attack();
         }
 

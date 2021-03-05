@@ -79,7 +79,7 @@ public class BattleManager : IActorManagerInterface
         }
 
         sm.AddHp(-damage);
-        
+        Debug.Log(gameObject.name + "get damage " + damage);
         if (sm.hp > 0)
         {
             if(doHitAnimation)

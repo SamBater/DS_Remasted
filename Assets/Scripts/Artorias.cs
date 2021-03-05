@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Artorias : ActorInput
+public class Artorias : AINormal
 {
     enum Action
     {
@@ -15,41 +15,58 @@ public class Artorias : ActorInput
         WolfAtkX3 = 6,
         SlashBack = 7,
         SwordRotation360 = 8,
+        SlowWolfAtk = 9,
         wolfcharge_slashback_charge = 10
     }
-    private Animator animator;
     private bool phrth2 = false;
     public float distance;
-    private ActorManager player_sm;
-    public float againstTime = 0;
-    
     private void Start() 
     {
-        animator = transform.GetChild(0).gameObject.GetComponent<Animator>();
-        player_sm = GameObject.FindWithTag("Player").GetComponent<ActorManager>();
-        //ac.cc.LockOnToggle();
+        player_sm = GameObject.FindWithTag("Player").GetComponent<StateManager>();
+        EnableInput = true;
     }
     private void Update()
     {
+        Attack((Action)9);
+        if(ac.enableTurnDirection)
+        {
+            SetMoveDirectionAndInputMag(player_sm.transform,rotateSpeed);
+        }
         distance = Vector3.Distance(transform.position,player_sm.transform.position);
-        againstTime += distance < 5.0f ? Time.deltaTime : 0.0f;
         if(am.sm.hp <= am.sm.hp / 2.0f)
         {
             phrth2 = true;
         }
 
+                return;
         if (!EnableInput) return;
         if(player_sm)
         {
             float r = Random.Range(0, 1.25f);
-            if (distance > 5.0f)
+
+            // 10m之外
+            if(distance > 10f)
             {
+                running = true;
+                MoveForward(distance > 12.0 ? 2.0f : 1.0f );
+            }
+            
+            //5米~10米
+            else if (distance > 5.0f)
+            {
+                if(am.sm.Naili / am.sm.maxEndurance < 0.3f)
+                {
+                    SetMoveDirectionAndInputMag(player_sm.transform,12.0f);
+                    MoveForward(1.0f);
+                    return;
+                }
                 if( r < 0.25) Attack(Action.wolfcharge_slashback_charge);
                 else if( r < 0.5) Attack(Action.Charge);
                 else if( r < 0.75) Attack(Action.RunSlash);
                 else if(r < 1.0f) Attack(Action.WolfAtkX3);
                 else if(r < 1.25f) Attack(Action.RunAttack);
             }
+            //5米内
             else
             {
                 if(r < 0.2f) Attack(Action.SwordRotation360);
@@ -71,6 +88,13 @@ public class Artorias : ActorInput
     private void Attack(Action actionID)
     {
         ac.Attack((int)actionID);
+    }
+
+    public void SetMoveDirectionAndInputMag(Transform target, float speed)
+    {
+        Quaternion r = Quaternion.LookRotation(target.position - transform.position,Vector3.up);
+        r.x = r.z = 0.0f;
+        transform.rotation = Quaternion.Lerp(transform.rotation,r,Time.deltaTime * speed);
     }
     
 }

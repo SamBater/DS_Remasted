@@ -1,9 +1,10 @@
 ﻿Id,Name,Description,IconID,AtkMotionID,SpAtkMotionID,LocalMotionID1h,LocalMotionID2h,physical,ModelName
 1000,拳头,原素瓶饮用后恢复血量,0,42,23,3,15,1,Fist
 1001,黑暗剑,空了的原素瓶,16,23,23,3,10,5,DarkSword
-1002,巨剑,,29,23,25,2,12,15,GreatSword
+1002,巨剑,,29,25,25,2,12,15,GreatSword
 1003,深渊大剑,,25,23,23,2,15,25,
 1004,银骑士枪,,78,36,23,3,10,7,Sliver Knight Spear
 1005,骑士盾,,122,48,23,3,15,2,Knight Shield
-1006,弓,0,0,45,44,3,15,0,Bow
+1006,弓,0,0,45,44,3,15,4,Bow
 1007,弓箭,0,0,1,0,0,0,10,Arrow_stick
+1008,斩龙剑,若要说那是剑便太大了沉重破旧完全就是一个铁块,29,25,25,3,2,30,dragon_slayer

@@ -8,24 +8,14 @@ public class WeaponController : MonoBehaviour
     public WeaponManager wm;
     public List<WeaponData> weaponDataList;
     public WeaponData weaponDataOnUse;
-    private readonly int weaponCount = 3;
-    public Weapon[] Weapons = new Weapon[3];
+    public WeaponItem[] Weapons = new WeaponItem[3];
     private void Awake() 
     {
-        weaponDataList = new List<WeaponData>(weaponCount);
+        
     }
 
     private void Start() 
     {
-
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Transform t = transform.GetChild(i);
-            WeaponData wd = t.GetComponent<WeaponData>();
-            wd.battleManager = wm.am.bm;
-            weaponDataList.Add(wd);
-            Weapons[i] = wd.weapon;
-        }
         LoadWeapon();
         HideWeaponOnUnuse();
     }
@@ -34,22 +24,38 @@ public class WeaponController : MonoBehaviour
     /// 读取上次存储的武器
     /// </summary>
     private void LoadWeapon()
-    {
+    {   
+        //根据在inspert中的数据适配模型
+        for (int i = 0; i < Weapons.Length; i++)
+        {
+            if(transform.childCount > 0 ) break;
+            GameObject weapon = Instantiate<GameObject>(Weapons[i].model,transform);
+            WeaponData wd = weapon.GetComponent<WeaponData>();
+            wd.battleManager = wm.am.bm;
+            weaponDataList.Add(wd);
+        }
+        weaponDataList.Add(transform.GetChild(0).gameObject.GetComponent<WeaponData>());
         weaponDataOnUse = weaponDataOnUse == null ? weaponDataList[0] : weaponDataOnUse;
     }
     
     /// <summary>
     /// 装备武器
     /// </summary>
-    /// <param name="weapon"></param>
+    /// <param name="weaponItem"></param>
     /// <param name="pos"></param>
-    public void EquipWeapon(Weapon weapon, int pos)
+    public void EquipWeapon(WeaponItem weaponItem, int pos)
     {
         bool isOnUse = weaponDataList[pos] == weaponDataOnUse;
-        UnEquipWeapon(pos);
-        weaponDataList[pos].m_Weapon = weapon;
+        Destroy(weaponDataList[pos].gameObject);
+        GameObject model = Instantiate<GameObject>(weaponItem.model, transform);
+        model.transform.SetSiblingIndex(pos);
+        WeaponData wd = model.GetComponent<WeaponData>();
+        wd.battleManager = wm.am.bm;
+        if (isOnUse)
+            weaponDataOnUse = wd;
+        weaponDataList[pos] = wd;
         weaponDataList[pos].gameObject.SetActive(isOnUse);
-        Weapons[pos] = weapon;
+        Weapons[pos] = weaponItem;
     }
 
     /// <summary>
@@ -58,8 +64,12 @@ public class WeaponController : MonoBehaviour
     /// <param name="pos"></param>
     public void UnEquipWeapon(int pos)
     {
-        weaponDataList[pos].m_Weapon = null;
-        Weapons[pos] = null;
+        Destroy(weaponDataList[pos].gameObject);
+        WeaponItem fist = (WeaponItem)WeaponItem.GetItem(ItemEnum.Fist);
+        Weapons[pos] = fist;
+        GameObject fistObject = Instantiate<GameObject>(fist.model, transform);
+        fistObject.transform.SetSiblingIndex(pos);
+        weaponDataList[pos] = fistObject.GetComponent<WeaponData>();
     }
     
     /// <summary>
@@ -100,14 +110,8 @@ public class WeaponController : MonoBehaviour
         obj.SetActive(value);
     }
 
-    public List<Item> GetWeapons()
+    public Item[] GetWeapons()
     {
-        List<Item> weapon = new List<Item>();
-        for (int i = 0; i < weaponDataList.Capacity; i++)
-        {
-            weapon.Add(weaponDataList[i].weapon);
-        }
-
-        return weapon;
+        return Weapons;
     }
 }

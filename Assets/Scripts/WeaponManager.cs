@@ -10,8 +10,6 @@ public class UpdateEvent : UnityEvent<int,bool>{}
 
 public class WeaponManager : IActorManagerInterface
 {
-    public Collider weaponColL;
-    public Collider weaponColR;
     GameObject weaponHandleL;
     GameObject weaponHandleR;
     public WeaponController wcL;
@@ -27,7 +25,6 @@ public class WeaponManager : IActorManagerInterface
         {
             weaponHandleL = transform.DeepFind("weaponHandleL").gameObject;
             wcL = BindWeaponController(weaponHandleL);
-            weaponColL = weaponHandleL.GetComponentInChildren<Collider>();  
         }
         catch (System.Exception)
         {
@@ -38,7 +35,6 @@ public class WeaponManager : IActorManagerInterface
         {
             weaponHandleR = transform.DeepFind("weaponHandleR").gameObject;
             wcR = BindWeaponController(weaponHandleR);
-            weaponColR = weaponHandleR.GetComponentInChildren<Collider>();
         }
         catch (System.Exception e)
         {
@@ -51,7 +47,7 @@ public class WeaponManager : IActorManagerInterface
         try
         {
             WeaponData wd = GetWeaponDataOnUse(true);
-            animator.SetInteger("attackMotionType",(int)wd.weapon.wpAtkMotionID);
+            animator.SetInteger("attackMotionType",(int)wd.weaponItem.wpAtkMotionID);
         }
         catch (System.Exception)
         {
@@ -60,9 +56,8 @@ public class WeaponManager : IActorManagerInterface
 
         if (am.gameObject.CompareTag("Player"))
         {
-            ChangeWeaponEvent.Invoke((int)wcR.weaponDataOnUse.weapon.GetID(),true);
-            ChangeWeaponEvent.Invoke((int)wcL.weaponDataOnUse.weapon.GetID(),false);
-            EquipWeapon((Weapon)Item.GetItem(ItemEnum.LongSpider),0,true);
+            ChangeWeaponEvent.Invoke((int)wcR.weaponDataOnUse.weaponItem.GetID(),true);
+            ChangeWeaponEvent.Invoke((int)wcL.weaponDataOnUse.weaponItem.GetID(),false);
         }
     }
 
@@ -85,13 +80,7 @@ public class WeaponManager : IActorManagerInterface
     public void WeaponEnable()
     {
         r0l1 = animator.GetBool("R0L1");
-        if(weaponColL != null) {
-            weaponColL.enabled = r0l1;
-        }
-        if(weaponColR != null)
-        {
-            weaponColR.enabled = !r0l1;
-        }
+        GetWeaponDataOnUse(!r0l1).col.enabled = true;
         SetWeaponVFX(true);
     }
 
@@ -100,11 +89,9 @@ public class WeaponManager : IActorManagerInterface
     /// </summary>
     public void WeaponDisable()
     {
-        if(weaponColL ) 
-            weaponColL.enabled = false;     
-
-        if (weaponColR)
-            weaponColR.enabled = false;
+        r0l1 = animator.GetBool("R0L1");
+        GetWeaponDataOnUse(!r0l1).col.enabled = false;
+        SetWeaponVFX(false);
     }
 
     public void CountBackEnable()
@@ -129,12 +116,6 @@ public class WeaponManager : IActorManagerInterface
         else wcL.weaponDataOnUse.gameObject.SetActive(false);
     }
 
-    public void UpdateWeaponCollider(Collider col,bool rightCol=true)
-    {
-        if(rightCol) weaponColR = col;
-        else weaponColL = col;
-    }
-    
     /// <summary>
     /// 切换到下一把武器
     /// </summary>
@@ -148,16 +129,17 @@ public class WeaponManager : IActorManagerInterface
         wc.SetWeaponVisiable(current.gameObject,false);
         wc.SetWeaponVisiable(next.gameObject,true);
 
-        UpdateWeaponCollider(next.gameObject.GetComponent<Collider>(),rh);
-
         wc.weaponDataOnUse = next;
 
         //如果是玩家，则进行UI更新.
         // if(am.gameObject.CompareTag("Player"))
         // ChangeWeaponEvent.Invoke((int)wc.weaponDataOnUse.weapon.GetID(),rh);
-
-        am.SetAtkAnimationInt(wc.weaponDataOnUse.weapon.wpAtkMotionID);
-        AnimatorFactory.SetLocalMotion(animator,wc.weaponDataOnUse.weapon.localMotionID1H);
+        if (wc.weaponDataOnUse.weaponItem == null)
+        {
+            wc.EquipWeapon((WeaponItem)Item.GetItem(ItemEnum.Fist),next.transform.GetSiblingIndex());
+        }
+        am.SetAtkAnimationInt(wc.weaponDataOnUse.weaponItem.wpAtkMotionID);
+        AnimatorFactory.SetLocalMotion(animator,wc.weaponDataOnUse.weaponItem.localMotionID1H);
 
         SetAllWeaponOnUseVisiable(true);
     }
@@ -165,21 +147,25 @@ public class WeaponManager : IActorManagerInterface
     /// <summary>
     /// 装备武器
     /// </summary>
-    /// <param name="weapon"></param>
+    /// <param name="weaponItem"></param>
     /// <param name="pos"></param>
     /// <param name="rh"></param>
-    public void EquipWeapon(Weapon weapon, int pos, bool rh)
+    public void EquipWeapon(WeaponItem weaponItem, int pos, bool rh)
     {
         WeaponController wc = rh ? wcR : wcL;
-        wc.EquipWeapon(weapon,pos); //更改模型、wd引用
+        wc.EquipWeapon(weaponItem,pos); //更改模型、wd引用
         
         //tips:黑魂以右手作为localMothion动画的判断
         if (wc.weaponDataOnUse == GetWeaponDataOnUse(true))
         {
-            AnimatorFactory.SetLocalMotion(animator,wc.weaponDataOnUse.weapon.localMotionID1H);
+            AnimatorFactory.SetLocalMotion(animator,wc.weaponDataOnUse.weaponItem.localMotionID1H);
         }
         
         //更新UI
+        if(rh)
+            am.inventory.InventoryUI.rhwpISM.UpdateItem(pos,weaponItem);
+        else
+            am.inventory.InventoryUI.lhwpISM.UpdateItem(pos,weaponItem);
     }
 
     public void SetWeaponVFX(bool v)
@@ -243,14 +229,7 @@ public class WeaponManager : IActorManagerInterface
         SetWeaponVFX(false);
     }
 
-    IEnumerator ExtendAttackBoxForSeconds(float sec)
-    {
-        weaponColR.bounds.Expand(2.0f);
-        yield return new WaitForSecondsRealtime(sec);
-        weaponColR.bounds.Expand(-2.0f);
-    }
-
-    public List<Item> GetWeapons(bool rh)
+    public Item[] GetWeapons(bool rh)
     {
         if (rh) return wcR.GetWeapons();
         return wcL.GetWeapons();

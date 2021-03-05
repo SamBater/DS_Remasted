@@ -23,7 +23,7 @@ ModelImporter:
       copied configuration does not match position in animation file:\n\t'Spine'
       : position error = 3.857282 mm\nCopied Avatar Rig Configuration mis-match.
       Inbetween bone rotation in copied configuration does not match rotation in
-      animation file:\n\t'Upper_Root' : rotation error = 92.834930 deg\n"
+      animation file:\n\t'Upper_Root' : rotation error = 92.834938 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Noesis Frames' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -67,7 +67,32 @@ ModelImporter:
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: attackSpeed
+        curve:
+          serializedVersion: 2
+          curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 2
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          preInfinity: 2
+          postInfinity: 2
+          rotationOrder: 4
       events:
       - time: 0.23243244
         functionName: AttackStart

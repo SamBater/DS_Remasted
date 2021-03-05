@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ActorController : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     [Header("==== Speed Settings")]
     public float walkSpeed = 1.0f;
     public float runSpeed = 2.0f;
@@ -33,6 +31,7 @@ public class ActorController : MonoBehaviour
     private bool combo = false;
 
     public Transform neckPos;
+    public Transform lockOnTarget;
     
     void Awake()
     {
@@ -66,14 +65,15 @@ public class ActorController : MonoBehaviour
 
     protected void HandleMoveOnNormal()
     {
-        if (!cc.isAI && playerInput.GetInputMag() > 0.1f)
+        if(dontMove) return;
+        if (cc!=null  && playerInput.GetInputMag() > 0.1f)
         {
             if(!enableTurnDirection) return;
             Vector3 vec = cc.transform.forward;
             vec.y = 0;
             transform.forward = Vector3.Lerp(transform.forward, vec, turnDirectionSpeed);
-            if(playerInput.GetMoveVec() != Vector3.zero)
-                model.transform.forward = Vector3.Lerp(model.transform.forward, playerInput.GetMoveVec(), turnDirectionSpeed);
+            if(playerInput.MovingVec != Vector3.zero)
+                model.transform.forward = Vector3.Lerp(model.transform.forward, playerInput.MovingVec, turnDirectionSpeed);
         }
 
         //运动向量 = 输入轴大小 * 模型方向 * 跑/走 给予的速度
@@ -86,13 +86,7 @@ public class ActorController : MonoBehaviour
 
     protected void HandleMoveWhenLockOn()
     {
-        //because the movingVec is worldSpace,and the forward to the target. so
-        //when you just push forward without right,the movingVec.x would not be zero.
-        //resulution1: 转换成局部坐标（这样局部forward永远是Vector3.forward(0,0,1),right同理）
-        //resulution2: 用水平轴和竖直轴的输入构造向量.上面同理
-        //TODO:BUGS:在root mothion下 仍然会圆周运动.
-        
-        Vector3 localMovingVec = transform.InverseTransformVector(playerInput.GetMoveVec());
+        Vector3 localMovingVec = transform.InverseTransformVector(playerInput.MovingVec);
         if (modelForwardTrackMovingVec)
         {
             if (planarVec != Vector3.zero)
@@ -103,21 +97,20 @@ public class ActorController : MonoBehaviour
             model.transform.forward = transform.forward;
         }
         //planarVec = dontMove ? Vector3.zero : playerInput.inputMag * playerInput.GetMoveVec() * (playerInput.running ? runSpeed : walkSpeed);
-        planarVec = dontMove ? Vector3.zero : playerInput.GetMoveVec();
+        planarVec = dontMove ? Vector3.zero : playerInput.MovingVec;
         animator.SetFloat("forward", localMovingVec.z * (playerInput.running ? 2.0f : 1.0f), 0.35f, Time.deltaTime);
         animator.SetFloat("right", localMovingVec.x * (playerInput.running ? 2.0f : 1.0f), 0.35f, Time.deltaTime);
     }
 
     private void FixedUpdate()
     { 
-        PhysicalMove();
+        PerformMove();
     }
-
-    private void LateUpdate() {
-
-    }
-
-    protected void PhysicalMove()
+    
+    /// <summary>
+    /// 根据向量移动角色
+    /// </summary>
+    protected void PerformMove()
     {
         if(characterController)
         {
@@ -139,34 +132,38 @@ public class ActorController : MonoBehaviour
         animator.SetInteger("hitID",1);
         animator.SetTrigger("hit");
     }
-
+    
+    /// <summary>
+    /// 播放攻击动画
+    /// </summary>
     public void Attack()
     {
-
-        
+        if(sm.Naili < 1.0f) return;
+        //处理特殊事件"弹反"攻击
         if (CheckState("Ground"))
         {
-            EventCasterManager ecm = playerInput.am.im.GetFirstContactEventCaster();
-            if (ecm && ecm.active && ecm.interractionEvent == InterractionEvent.FrontStab && planarVec.magnitude < 0.1f && cc.cameraStatus == CameraStatus.FOLLOW)
-            {
-                transform.position = ecm.am.transform.position +
-                                     ecm.am.transform.TransformVector(ecm.offset);
-                model.transform.LookAt(ecm.am.transform.position, Vector3.up);
-                Stab();
-                ecm.am.ac.Stabed();
-            }
-            else
-                animator.SetTrigger("attack");
+            // EventCasterManager ecm = playerInput.am.im.GetFirstContactEventCaster();
+            // if (ecm && ecm.active && ecm.interractionEvent == InterractionEvent.FrontStab && planarVec.magnitude < 0.1f && cc.cameraStatus == CameraStatus.FOLLOW)
+            // {
+            //     transform.position = ecm.am.transform.position +
+            //                          ecm.am.transform.TransformVector(ecm.offset);
+            //     model.transform.LookAt(ecm.am.transform.position, Vector3.up);
+            //     Stab();
+            //     ecm.am.ac.Stabed();
+            //     return;
+            // }
         }
-
-        else if(CheckStateTag("attack") && combo)
+        
+        //普通攻击
+        if(!sm.isAttack)
+            animator.SetTrigger("attack");
+            
+        //连击
+        else if(combo)
         {
             animator.SetTrigger("attack");
         }
-        
-        else
-            animator.SetTrigger("attack");
-        
+
     }
 
     public void Attack(int atkMotionID)
@@ -174,20 +171,29 @@ public class ActorController : MonoBehaviour
         animator.SetInteger("attackMotionType",atkMotionID);
         Attack();
     }
-
+    
+    /// <summary>
+    /// 播放翻滚动画
+    /// </summary>
     public void Roll()
     {
-        if(playerInput.GetMoveVec() != Vector3.zero)
+        if(playerInput.MovingVec != Vector3.zero)
             animator.SetTrigger("roll");
         else
             animator.SetTrigger("jab");
     }
-
+    
+    /// <summary>
+    /// 播放防御动画
+    /// </summary>
     public void Defence()
     {
         animator.SetBool("defence", true);
     }
-
+    
+    /// <summary>
+    /// 取消防御动画
+    /// </summary>
     public void DefenceOff()
     {
         animator.SetBool("defence", false);
@@ -221,7 +227,7 @@ public class ActorController : MonoBehaviour
     {
         playerInput.InputToggle(true);
     }
-
+    
     public void PlayHeal()
     {
         if (wineCount > 0)
@@ -232,18 +238,24 @@ public class ActorController : MonoBehaviour
     {
         dontMove = value;
     }
-
-    //function:v 为 true时 允许进行连续攻击.
+    
+    /// <summary>
+    /// 开启combo trigger 允许角色进行连击
+    /// </summary>
+    /// <param name="v"></param>
     public void EnableCombo(bool v)
     {
         combo = v;
     }
-
+    
+    /// <summary>
+    /// 点火
+    /// </summary>
     public void LitFire()
     {
         animator.Play("bonefire_lit");
     }
-
+    
     public void SitFire()
     {
         animator.Play("bonefire_rest");

@@ -24,10 +24,6 @@ public class CameraController : MonoBehaviour
     public LockTarget lockOnTarget = null;
     public Image lockDot;
     public bool lockOn = false;
-    public bool followAI = false;
-
-    public bool isAI = false;
-
     public LayerMask whatISEnemy;
 
     public float minVerticalMove = -30f;
@@ -119,7 +115,7 @@ public class CameraController : MonoBehaviour
             {
                 cameraStatus = CameraStatus.LOCKON;
                 lockOnTarget = new LockTarget(nearestCol.gameObject.transform, nearestCol.bounds.extents.y);
-                lockDot.enabled = isAI ? lockDot.enabled : true;
+                lockDot.enabled = true;
             }
             else
             {

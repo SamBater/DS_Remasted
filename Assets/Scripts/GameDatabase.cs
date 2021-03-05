@@ -37,7 +37,7 @@ public class GameDatabase
         instance = new GameDatabase();
         instance.consumableIcons = Resources.LoadAll<Sprite>("UI/item");
         instance.weaponIcons = Resources.LoadAll<Sprite>("UI/weapon1");
-        instance.LoadData<Weapon>(weaponCSVPath);
+        instance.LoadData<WeaponItem>(weaponCSVPath);
         instance.LoadData<Consumable>(consumableCSVPath);
     }
     
@@ -53,15 +53,23 @@ public class GameDatabase
             string[] line = s.Split(',');
 
             T item = null;
-
-
-            string assetPath = $"Assets/ScriptObjects/{csv.Split('.')[0]}/{line[1]}.asset";
+            
+            string assetPath = $"Assets/Resources/ScriptObjects/{csv.Split('.')[0]}/{line[1]}.asset";
             FileInfo fileInfo = new FileInfo(assetPath);
             if (!fileInfo.Exists)
             {
                 item = ScriptableObject.CreateInstance<T>();
                 LoadItem(item,line);
-                AssetDatabase.CreateAsset(item, path);
+                try
+                {
+                    AssetDatabase.CreateAsset(item, assetPath);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+
             }
             else
             {

@@ -2,15 +2,17 @@
 
 public abstract class ActorInput : IActorManagerInterface
 {
-    protected Vector3 MovingVec;
+    private Vector3 movingVec;
+
+    public Vector3 MovingVec
+    {
+        get => movingVec;
+        protected set => movingVec = value;
+    }
+
     protected bool EnableInput;
     public bool running;
     public ActorController ac;
-  
-    public Vector3 GetMoveVec()
-    {
-        return MovingVec;
-    }
     
     /// <summary>
     /// 允许/禁止控制器输入
@@ -33,7 +35,17 @@ public abstract class ActorInput : IActorManagerInterface
     /// <returns>输入力度</returns>
     public float GetInputMag()
     {
-        return MovingVec.magnitude;
+        return Mathf.Clamp(MovingVec.magnitude,0,1);
+    }
+
+    public void MoveForward(float val)
+    {
+        movingVec.z = val;
+    }
+
+    public void MoveRight(float val)
+    {
+        movingVec.x = val;
     }
 
 }

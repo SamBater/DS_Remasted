@@ -1,259 +1,296 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 
-public class AINormal : PlayerInput
-{
-    public enum FSMState
-    {
-        idle,patrol,chase,dead,agianst,attack,defence
-    }
-    public Transform player;
-    public StateManager player_sm;
-    public Transform dest;
-    NavMeshAgent agent;
-    public Transform[] partorlPoints;
-    private int currentPratrolPoints;
-    public FSMState currentState;
-    float disBetweenAI_Player = 0;
-    public float attackTime ;
-    [SerializeField]
-    float attackCD = 1.5f;
-    float attackMaxCD = 3.0f;
-    [SerializeField]
-    float againstMaxCD;    //最大对抗时间
+ public class AINormal : ActorInput
+ {
+     public enum FSMState
+     {
+         idle,
+         patrol,
+         chase,
+         dead,
+         agianst,
+         attack,
+         defence
+     }
 
-    [SerializeField]
-    float againstCD;
-    [SerializeField]
-    float againstTime;  //实际对抗实际
+     public Transform player;
+     public StateManager player_sm;
+     public Transform dest;
+    [Range(1,32)]
+    public float rotateSpeed;
+    public bool turnToTarget;
+     NavMeshAgent agent;
+     public Transform[] partorlPoints;
+     private int currentPratrolPoints;
+     public FSMState currentState;
+     float disBetweenAI_Player = 0;
+     [SerializeField] float againstMaxCD; //最大对抗时间
 
-    public float attackDistance = 3.0f;
-    public float chaseDistance = 10.0f;
-    private float defenceTime;
+     [SerializeField] float againstCD;
+     [SerializeField] float againstTime; //实际对抗实际
 
-    private void Start() {
-        agent = GetComponent<NavMeshAgent>(); 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        player_sm = GameObject.FindGameObjectWithTag("Player").GetComponent<StateManager>();
+     public float attackDistance = 3.0f;
+     public float chaseDistance = 10.0f;
 
+     
+     [Range(15,90)]public float viewAngle;
+     [Range(5,20)]public float viewDistance;
+     private void Start()
+     {
+         agent = GetComponent<NavMeshAgent>();
+         player = GameObject.FindGameObjectWithTag("Player").transform;
+         player_sm = GameObject.FindGameObjectWithTag("Player").GetComponent<StateManager>();
+         am = GetComponent<ActorManager>();
+         ac = am.ac;
 
-        if(partorlPoints.Length == 0)
-            currentState = FSMState.idle;
-        else
-            currentState = FSMState.patrol;
-    }
-    private void Update() 
-    {
-       // if(!enableInput) return;
-        MoveInput();
-        disBetweenAI_Player = Vector3.Distance(player.position,transform.position);
-        switch(currentState)
-        {
-            case FSMState.patrol:
-            Partrol();
-            break;
+         if (partorlPoints.Length == 0)
+             currentState = FSMState.idle;
+         else
+             currentState = FSMState.patrol;
+     }
 
-            case FSMState.chase:
-            Chase();
-            break;
+     private void Update()
+     {
+         // if(!enableInput) return;
+         if(am.sm.isDead) return;
+         disBetweenAI_Player = Vector3.Distance(player.position, transform.position);
+         switch (currentState)
+         {
+             case FSMState.patrol:
+                 Partrol();
+                 break;
 
-            case FSMState.attack:
-            Attack();
-            break;
+             case FSMState.chase:
+                 Chase();
+                 break;
 
-            case FSMState.agianst:
-            Agianst();
-            break;
+             case FSMState.attack:
+                 Attack();
+                 break;
 
-            case FSMState.defence:
-            Defence();
-            break;
+             case FSMState.agianst:
+                 Holding();
+                 break;
 
-            default:
+             case FSMState.defence:
+                 Defence();
+                 break;
 
-            //Debug.LogError("Did not exsist this state.");
-            break;
-        }
-    }
+             default:
 
-    private void Defence()
-    {
-        defenceTime += Time.deltaTime;
-        if(defenceTime < 2.0f || player_sm.isAttack)
-        {
-            pressOnLB = true;
-        }
-        else if(disBetweenAI_Player > attackDistance)
-        {
-            pressOnLB = false;
-            defenceTime = 0.0f;
-            currentState = FSMState.chase;
-        }
-        else if(disBetweenAI_Player < attackDistance)
-        {
-            pressOnLB = false;
-            defenceTime = 0.0f;
-            currentState = FSMState.attack;
-        }
-    }
+                 //Debug.LogError("Did not exsist this state.");
+                 break;
+         }
+     }
 
-    void Partrol()
-    {
-        agent.isStopped = false;
-        forwardAxis = 0.4f;
-        agent.speed = ac.walkSpeed * 0.4f;
-        Vector3 destPos = partorlPoints[currentPratrolPoints].position;
-        float distance = Vector3.Distance(destPos,transform.position);
-        if(distance <= 1.5f)
-        {
-            currentPratrolPoints++;
-            currentPratrolPoints = currentPratrolPoints % partorlPoints.Length;
-        }
-        agent.destination = destPos;
+     private void Defence()
+     {
+         if (am.sm.Naili / am.sm.maxEndurance < 0.6)
+         {
+             ac.Defence();
+         }
 
-        if(disBetweenAI_Player < chaseDistance)
-        {
-            currentState = FSMState.chase;
-            return ;
-        }
-        //进入攻击范围
-        else if(disBetweenAI_Player <= attackDistance)
-        {
-            currentState = FSMState.attack;
-            forwardAxis = 0.0f;
-            agent.isStopped = true;
-            ac.Attack();
-            return;
-        }
+         if (am.sm.Naili / am.sm.maxEndurance < 0.2)
+         {
+             ac.DefenceOff();
+         }
 
-    }
+         if (player_sm.isHeal)
+         {
+             ac.DefenceOff();
+             currentState = FSMState.attack;
+             return;
+         }
 
-    void Agianst()
-    {        
-        againstTime += Time.deltaTime;
+         if (player_sm.isAttack)
+         {
+             ac.DefenceOff();
+             
+         }
+     }
 
-        rightAxis = 0.5f;
-        
-        if(ac.cc.lockOnTarget == null)
-        {
-            ac.cc.LockOnToggle();
-        }
+     void Partrol()
+     {
+         agent.isStopped = false;
+         MoveForward(0.4f);
+         //agent.speed = ac.walkSpeed * 0.4f;
+         Vector3 destPos = partorlPoints[currentPratrolPoints].position;
+         float distance = Vector3.Distance(destPos, transform.position);
+         agent.destination = destPos;
+         if (distance <= 0.5f)
+         {
+             currentPratrolPoints++;
+             currentPratrolPoints = currentPratrolPoints % partorlPoints.Length;
+         }
 
-        if(againstCD < 0.01)
-        {
-            againstCD = Random.Range(1.0f,againstMaxCD);
-        }
+         if (disBetweenAI_Player < chaseDistance)
+         {
+             currentState = FSMState.chase;
+             return;
+         }
+         //进入攻击范围
+         else if (disBetweenAI_Player <= attackDistance)
+         {
+             currentState = FSMState.attack;
+             MoveForward(0);
+             agent.isStopped = true;
+             ac.Attack();
+             return;
+         }
 
-        if(disBetweenAI_Player > attackDistance)
-        {
-            currentState = FSMState.chase;
-            return;
-        }
-        //将决策时间随机化
-        if(againstTime > againstCD)
-        {
-            againstTime = againstCD = rightAxis = 0.0f;
-            pressOnLB = false;
-            ac.DefenceOff();
-            if(disBetweenAI_Player > attackDistance)
-            {
-                currentState = FSMState.chase;
-                Debug.Log("against -> chase");
-                return;
-            }
-            else
-            {
-                currentState = FSMState.attack;
-                return;
-            }
-        }
-        else if(player_sm.isAttack)
-        {
-            Debug.Log("该防御了!");
-            currentState = FSMState.defence;
-            againstTime = againstCD = rightAxis = 0.0f;
-            return;
-        }
-        else if(player_sm.isHeal)
-        {
-            Debug.Log("重拳出击!");
-            againstTime = againstCD = rightAxis = 0.0f;
-            pressOnLB = false;
-            ac.DefenceOff();
-            currentState = FSMState.attack;
-            return;
-        }
-    }
+     }
 
-    void Attack()
-    {   
-        attackTime += Time.deltaTime;
-        //攻击时间片已分配完毕
+     /// <summary>
+     /// 僵持阶段
+     /// </summary>
+     void Holding()
+     {
+         againstTime += Time.deltaTime;
 
-        if(attackCD < 0.01f)
-        {
-            attackCD = Random.Range(0.5f,attackMaxCD);
-        }
-        if(disBetweenAI_Player > attackDistance && !am.sm.isAttack)
-        {
-            attackTime = attackCD = 0.001f;
-            currentState = FSMState.chase;
-            Debug.Log("attack -> chase");
-        }
-        else if(disBetweenAI_Player < attackDistance && attackTime < attackCD)
-        {
-            ac.turnDirectionSpeed = 0.3f;
-            
-            //ac.Attack();
-        }
-        else
-        {
-            //如果正在攻击，则等待动画播放完毕后再进行转换
-            if(!am.sm.isAttack)
-            {
-                attackTime = attackCD = 0.001f;
-                currentState = FSMState.agianst;
-                return;
-            }
-        }
-    }
+         MoveRight(0.5f);
 
-    void Chase()
-    {
-        if(am.sm.isAttack) return;
-        if(disBetweenAI_Player > chaseDistance)
-        {
-            currentState = FSMState.patrol;
-            forwardAxis = 0.0f;
-            return ;
-        }
+         if (ac.lockOnTarget == null)
+         {
+             SetMoveDirectionAndInputMag(player,12.0f);
+         }
 
-        else if(disBetweenAI_Player <= attackDistance)
-        {
-            currentState = FSMState.attack;
-            agent.isStopped = true;
-            forwardAxis = 0.0f;
-            ac.Attack();
-            return;
-        }
-        forwardAxis = 1.2f;
-        agent.speed = ac.walkSpeed;
-        agent.isStopped = false;
-        agent.destination = player.position;
-        //SetMoveDirectionAndInputMag(player.position,1.0f);
-    }
+         if (againstCD < 0.01)
+         {
+             againstCD = Random.Range(1.0f, againstMaxCD);
+         }
 
-    public void SetMoveDirectionAndInputMag(Vector3 pos,float mag)
-    {
-        Quaternion targetRotation = Quaternion.LookRotation(pos - transform.position);
-        targetRotation.z= 0;
-        //if(ac.enableTurnDirection)
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 8.0f);
-        
-        MovingVec = Vector3.forward;
-        inputMag = mag;
-    }
-}
+         if (disBetweenAI_Player > attackDistance)
+         {
+             currentState = FSMState.chase;
+             return;
+         }
+
+         //将决策时间随机化
+         if (againstTime > againstCD)
+         {
+             againstTime = againstCD;
+             MoveRight(0);
+             //pressOnLB = false;
+             ac.DefenceOff();
+             if (disBetweenAI_Player > attackDistance)
+             {
+                 currentState = FSMState.chase;
+                 Debug.Log("against -> chase");
+                 return;
+             }
+             else
+             {
+                 currentState = FSMState.attack;
+                 return;
+             }
+         }
+         else if (player_sm.isAttack)
+         {
+             Debug.Log("该防御了!");
+             currentState = FSMState.defence;
+             againstTime = againstCD = 0;
+             MoveRight(0);
+             return;
+         }
+         else if (player_sm.isHeal)
+         {
+             Debug.Log("重拳出击!");
+             againstTime = againstCD = 0;
+             MoveRight(0);
+             MoveForward(0);
+             agent.isStopped = true;
+             ac.DefenceOff();
+             currentState = FSMState.attack;
+             return;
+         }
+     }
+
+     /// <summary>
+     /// 攻击条件：在攻击范围内；耐力大于；在前方
+     /// </summary>
+     void Attack()
+     {
+         agent.isStopped = true;
+         if(ac.enableTurnDirection)
+             SetMoveDirectionAndInputMag(player,12.0f);
+         
+         if (am.sm.Naili / am.sm.maxEndurance > 0.5)
+         {
+             ac.Attack();
+         }
+
+         else
+         {
+             currentState = FSMState.defence;
+             return;
+         }
+
+         if (!am.sm.isAttack)
+         {
+             if (disBetweenAI_Player > attackDistance)
+             {
+                 currentState = FSMState.chase;
+                 return;
+             }
+         }
+     }
+
+     void Chase()
+     {
+         if (am.sm.isAttack) return;
+         if (disBetweenAI_Player > chaseDistance)
+         {
+             currentState = FSMState.patrol;
+             MoveForward(0f);
+             return;
+         }
+
+         else if (disBetweenAI_Player <= attackDistance)
+         {
+             currentState = FSMState.attack;
+             agent.isStopped = true;
+             MoveForward(0f);
+             ac.Attack();
+             return;
+         }
+
+         MoveForward(1.0f);
+         agent.speed = ac.walkSpeed;
+         agent.isStopped = false;
+         agent.destination = player.position;
+         //SetMoveDirectionAndInputMag(player.position,1.0f);
+     }
+
+     public void SetMoveDirectionAndInputMag(Transform target, float speed)
+     {
+         Quaternion r = Quaternion.LookRotation(target.position - am.sm.gameObject.transform.position,Vector3.up);
+         r.x = r.z = 0.0f;
+         am.sm.gameObject.transform.rotation = Quaternion.Lerp(am.sm.gameObject.transform.rotation,r,Time.deltaTime * speed);
+     }
+     
+     public void SetMoveDirectionAndInputMag(Vector3 target,float speed)
+     {
+         Quaternion r = Quaternion.LookRotation(target - am.sm.gameObject.transform.position,Vector3.up);
+         r.x = r.z = 0.0f;
+         transform.rotation = Quaternion.Lerp(transform.rotation,r,Time.deltaTime * speed);
+     }
+
+     public bool SpottedPlayer()
+     {
+         Vector3 dir = player.position - transform.position;
+         float angle = Vector3.Angle(transform.forward, dir);
+         bool inViewField = angle <= viewAngle / 2;
+         RaycastHit hitinfo;
+         int playerMask = LayerMask.GetMask("Player");
+         int defaultMask = LayerMask.GetMask("Default");
+         int both = (1 << playerMask) | (1 << defaultMask); 
+         Physics.Raycast(transform.position + Vector3.up, dir, out hitinfo, viewDistance,both);
+         Debug.DrawRay(transform.position + Vector3.up,dir,Color.red);
+         inViewField = inViewField && hitinfo.collider == null;
+         return inViewField;
+     }
+ }

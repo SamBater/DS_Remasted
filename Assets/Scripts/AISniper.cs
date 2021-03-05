@@ -3,42 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AISniper : ActorInput
+public class AISniper : AINormal
 {
-    enum FSMState 
+    new enum SniperFSMState 
     {
         idle,draw,shoot,load,dead
     }
-    float shootRange = 10.0f;
-    float distanceAI_player;
-    Transform player;
     [SerializeField]
-    float attackCd = 1.5f;
-    float attackInterval;
-    FSMState state;
-    float atkTime;
+    SniperFSMState state;
     [SerializeField]
     private Transform shootPotint;
 
+    public Vector3 shootFixPos;
     private void Start() 
     {
         ac = GetComponent<ActorController>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        state = FSMState.idle;
+        state = SniperFSMState.idle;
     }
     private void Update() 
     {
-        ac.animator.SetInteger("attackMotionType",45);
-        distanceAI_player = Vector3.Distance(transform.position,player.position);
-        Aiming();
+        float distance = Vector3.Distance(transform.position,player.position);
+        if (SpottedPlayer())
+        {
+            Aiming();
+            Debug.Log("Time to aimming");
+        }
     }
 
     public void Aiming()
     {
-        ac.Attack();
-        Vector3 dir = player.position;
-        dir.y = 0;
-        transform.LookAt(player.position);
-        shootPotint.LookAt(player.position + 1.0f * Vector3.up);
+        Vector3 dir = player.position - (transform.position + shootFixPos);
+        float angle = Vector3.Angle(dir,transform.forward);
+
+        if (Mathf.Abs(angle) >= 5.0f && ac.enableTurnDirection)
+        {
+            SetMoveDirectionAndInputMag(player,ac.turnDirectionSpeed);
+        }
+        else
+        {
+            ac.Attack(45);
+        }
     }
 }

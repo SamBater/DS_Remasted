@@ -21,51 +21,20 @@ public enum WpAtkMotionID{
 
 public class WeaponData : MonoBehaviour
 {
-    public Weapon weapon;
-    
-    /// <summary>
-    /// 通过m_Weapon更改武器接口
-    /// </summary>
-    public Weapon m_Weapon
-    {
-        get => weapon;
-        set
-        {
-            weapon = value;
-            if (weapon && weapon.model)
-            {
-                GameObject go = Instantiate(weapon.model,transform);
-                col = go.GetComponent<Collider>();
-            }
-            else
-            {
-                try
-                {
-                    Destroy(transform.GetChild(0).gameObject);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                    throw;
-                }
-            }
-        }
-    }
-
+    public WeaponItem weaponItem;
     public BattleManager battleManager;
     public Collider col;
     public Action<int,Vector3,Vector3> HitSurfaceEvent;
     private void Awake() {
         HitSurfaceEvent = InitialSparkOnSurface;
-        if (weapon && weapon.model)
+        if (weaponItem && weaponItem.model)
         {
-            GameObject go = Instantiate(weapon.model,transform);
-            col = go.GetComponent<Collider>();
+            col = GetComponent<Collider>();
         }
     }
     public static bool IsShield(WeaponData wd)
     {
-        return wd.weapon.wpAtkMotionID == WpAtkMotionID.Shield;
+        return wd.weaponItem.wpAtkMotionID == WpAtkMotionID.Shield;
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -75,7 +44,7 @@ public class WeaponData : MonoBehaviour
         Vector3 hitPoint = other.ClosestPoint(transform.position);
         Vector3 normal = hitPoint - transform.position;
         
-        battleManager.TryDoDmage(go, hitPoint, normal, weapon.wpAtkMotionID == WpAtkMotionID.Arrow);
+        battleManager.TryDoDmage(go, hitPoint, normal, weaponItem.wpAtkMotionID == WpAtkMotionID.Arrow);
         HitSurfaceEvent.Invoke(other.gameObject.layer,hitPoint,normal);
     }
 

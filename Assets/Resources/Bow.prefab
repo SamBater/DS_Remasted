@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4940246523892997751}
   - component: {fileID: 4940246523892997750}
+  - component: {fileID: -5018782990545236728}
   m_Layer: 12
   m_Name: Bow
   m_TagString: Untagged
@@ -95,3 +96,18 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.93786854, y: 1.4313549, z: -0.05908893}
     m_Extent: {x: 0.5346194, y: 0.44173217, z: 0.110953376}
   m_DirtyAABB: 0
+--- !u!114 &-5018782990545236728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4940246523892997748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcdb925bff41b847b32e9ded327af17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: daf262ef7b2cc1b40b76a51bef68f166, type: 2}
+  battleManager: {fileID: 0}
+  col: {fileID: 0}

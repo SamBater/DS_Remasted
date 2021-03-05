@@ -7,21 +7,6 @@ using UnityEngine.UI;
 [Serializable]
 public class NextEvent : UnityEvent<Item>{}
 
-public enum ItemEnum
-{
-    Null = -1,
-    EstusFlask = 0,       //原素瓶
-    EstusFlask_Blank = 1, // 空的原素瓶
-    KingsSoul = 2,       //王魂
-    FlySword = 3,
-    FireBottle = 4,
-    Fist = 1000,
-    BlackSword = 1001,
-    GreatSword = 1002,
-    LongSpider = 1004,
-    KnightShield = 1005
-}
-
 public class InventoryManager : IActorManagerInterface
 {
     public Dictionary<Item,int> inventory;  //物品：数量
@@ -62,11 +47,9 @@ public class InventoryManager : IActorManagerInterface
             if(item != null) 
                 NextItemEvent.Invoke(GetCurrentItem());
         }
-        
-        
-        AddWeapon(true);
-        AddWeapon(false);
 
+        rhWeapons = am.wm.GetWeapons(true);
+        lhWeapons = am.wm.GetWeapons(false);
     }
     
     /// <summary>
@@ -127,7 +110,7 @@ public class InventoryManager : IActorManagerInterface
     
     
     /// <summary>
-    /// 
+    /// 更新UI
     /// </summary>
     /// <param name="item"></param>
     /// <param name="pos"></param>
@@ -136,11 +119,11 @@ public class InventoryManager : IActorManagerInterface
     {
         if (rh)
         {
-            InventoryUI.rhwpISM.Items = am.wm.GetWeapons(rh).ToArray();
+            InventoryUI.rhwpISM.Items = am.wm.GetWeapons(rh);
         }
         else
         {
-            InventoryUI.lhwpISM.Items = am.wm.GetWeapons(rh).ToArray();
+            InventoryUI.lhwpISM.Items = am.wm.GetWeapons(rh);
         }
     }
 

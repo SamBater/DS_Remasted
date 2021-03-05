@@ -5,22 +5,18 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     private Rigidbody rbd;
-    public float v;
-    public float maxFlyDistance;
     public float maxTime = 5.0f;
     public float curTime;
     public Vector3 origin;
-    public bool flyable = true;
-    public float rotationChangeSpeed = 1.5f;
+    public float speed = 25.0f;
     WeaponData wd;
     Collider col;
     ParticleSystem trail;
     private void Awake()
     {
         origin = transform.position;
-        wd = gameObject.AddComponent<WeaponData>();
         rbd = GetComponent<Rigidbody>();
-        wd.HitSurfaceEvent += ReadyToHide;
+//        wd.HitSurfaceEvent += ReadyToHide;
         col = GetComponent<Collider>();
         trail = GetComponentInChildren<ParticleSystem>();
     }
@@ -32,12 +28,13 @@ public class Arrow : MonoBehaviour
     private void OnEnable() 
     {
         col.enabled = true;
+        rbd.AddForce(100.0f * transform.forward);
     }
     private void Update()
     {
         curTime += Time.deltaTime;
         float distanceNow = Vector3.Distance(origin,transform.position);
-        transform.Translate(Vector3.forward * v * Time.deltaTime);
+        rbd.velocity = transform.forward * speed;
         //bool hit = Physics.Raycast(transform.position,transform.forward,0.5f,1);
         if(curTime >= maxTime) 
         {
@@ -51,12 +48,7 @@ public class Arrow : MonoBehaviour
         gameObject.SetActive(false);
         curTime = 0;
     }
-
-    private void OnTriggerEnter(Collider other) 
-    {
-        
-    }
-
+    
     void ReadyToHide(int a,Vector3 b,Vector3 c)
     {
         if(a==0 || a== 9)

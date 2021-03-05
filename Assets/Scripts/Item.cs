@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface ILoadAble
+/// <summary>
+/// 从表格读取配置数据
+/// </summary>
+interface ILoadFromTable
 {
     void LoadData(string[] col);
 }
@@ -15,8 +18,25 @@ public enum ItemType
     ItemTypeCount = 2
 }
 
+
+public enum ItemEnum
+{
+    Null = -1,
+    EstusFlask = 0,       //原素瓶
+    EstusFlask_Blank = 1, // 空的原素瓶
+    KingsSoul = 2,       //王魂
+    FlySword = 3,
+    FireBottle = 4,
+    Fist = 1000,
+    BlackSword = 1001,
+    GreatSword = 1002,
+    LongSpider = 1004,
+    KnightShield = 1005,
+    DragonSlayer = 1008
+}
+
 [Serializable]
-public class Item : ScriptableObject,ILoadAble
+public class Item : ScriptableObject,ILoadFromTable
 {
     private int id;
     [SerializeField]

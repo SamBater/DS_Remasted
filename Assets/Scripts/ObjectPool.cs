@@ -17,6 +17,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField]
     public List<ObjAndSize> objNames = new List<ObjAndSize>();
 
+    public GameObject itemOnWorld;
     private void Awake() {
         if(instance)
             Destroy(this);
@@ -61,5 +62,11 @@ public class ObjectPool : MonoBehaviour
             list.Add(go);
             list[i].SetActive(false);
         }
+    }
+
+    public ItemOnGround GenerateLoot()
+    {
+        GameObject itemOnGround = Instantiate<GameObject>(itemOnWorld);
+        return itemOnGround.GetComponent<ItemOnGround>();
     }
 }
